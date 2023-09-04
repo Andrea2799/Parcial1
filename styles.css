@@ -2,7 +2,7 @@
 .black-container {
     background-color: #000; /* Color negro */
     min-height: 100vh; /* Alto mínimo igual al viewport */
-    width: 200px; /* Ancho del contenedor negro */
+    width: 240px; /* Ancho del contenedor negro */
     position: fixed; /* Fijar posición para que quede a la izquierda */
 }
 
@@ -41,8 +41,15 @@ body {
     font-family: 'Source Sans 3', sans-serif; /* Fuente 'Source Sans 3' */
     color: white; /* Color blanco */
     text-decoration: none; /* Sin subrayado */
+    width: 111px;
 }
 
 .menu a:hover {
     text-decoration: none; /* Sin subrayado al pasar el mouse */
+}
+
+.logo img {
+    width: 143px; /* Ajusta el tamaño según tus necesidades */
+    height: auto; /* Para mantener la proporción de aspecto */
+    margin-bottom: 10px; /* Espacio opcional entre el logotipo y el menú */
 }
