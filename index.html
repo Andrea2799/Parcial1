@@ -7,8 +7,8 @@
     <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap-reboot.min.css">
     <ion-icon name="grid-outline"></ion-icon>
     <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -20,18 +20,34 @@
           <div class="logo">
             <img src="logo.jpg" alt="Logotipo TECNOSERVICE">
                 <div class="menu">
-                    <a href="#" class="d-block"><i class="ion-md-apps"></i>Overview</a>
-                    <a href="#" class="my-custom-block"><i class="ion-md-funnel"></i>Summary</a>
-                    <a href="#" class="my-custom-block"><i class="ion-md-arrow-dropdown"></i></i>custom view</a>
-                    <a href="#" class="my-custom-block"><i class="ion-md-mail"></i>Messages</a>
-                    <a href="#" class="my-custom-block"><i class="ion-md-cart"></i></i>Products</a>
-                    <a href="#" class="my-custom-block"><i class="ion-md-book"></i>Orders</a>
-                    <a href="#" class="my-custom-block"><i class="ion-md-person"></i>Costumers</a>
+                    <a href="#" class="my-custom-block"><i class="ion-md-apps"></i>Overview</a>
+                    <a href="#" class="my-custom-block" id="Summary-button"><i class="ion-md-funnel"></i>Summary</a>
+                    <a href="#" class="my-custom-block" id="custom-view-button"><i class="ion-md-arrow-dropdown"></i></i>Custom view</a>
+                    <div id="hidden-buttons-container">
+                      <a href="#" class="my-custom-block" id="hidden-button-1"><i class="ion-md-mail"></i>Messages</a>
+                      <a href="#" class="my-custom-block" id="hidden-button-2"><i class="ion-md-cart"></i>Products</a>
+                      <a href="#" class="my-custom-block" id="hidden-button-3"><i class="ion-md-book"></i>Orders</a>
+                      <a href="#" class="my-custom-block" id="hidden-button-4"><i class="ion-md-person"></i>Customers</a>
+                      
+                    </div>
+                    <hr style="width: 186px; height: 1px; background-color: grey; border: none; margin: 10px 0;">
+                      <a href="#" class="my-custom-block" id="settings-button"><i class="ion-md-cog"></i>Settings</a>
+                      <a href="#" class="my-custom-block" id="Help-button">Help</a>
+                      <a href="#" class="my-custom-block" id="Contact-button">Contact us</a>
+                      <a href="#" class="my-custom-block" id="Log-button"><i class="ion-md-open"></i>Log out</a>
                 </div>
             </div>
         </div>
     </div>
   </div>
+  <script>
+    const customViewButton = document.getElementById('custom-view-button');
+const hiddenButtonsContainer = document.getElementById('hidden-buttons-container');
+
+customViewButton.addEventListener('click', () => {
+    hiddenButtonsContainer.classList.toggle('show');
+});
+  </script>
 </body>
 <script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
 </html>

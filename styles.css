@@ -33,23 +33,82 @@ body {
     width: 18rem;
 }
 
-.my-custom-block {
-    display: block;
-}
-
 .menu a {
     font-family: 'Source Sans 3', sans-serif; /* Fuente 'Source Sans 3' */
     color: white; /* Color blanco */
     text-decoration: none; /* Sin subrayado */
-    width: 111px;
-}
-
-.menu a:hover {
-    text-decoration: none; /* Sin subrayado al pasar el mouse */
+    width: 10px;
+    
+    
 }
 
 .logo img {
     width: 143px; /* Ajusta el tamaño según tus necesidades */
     height: auto; /* Para mantener la proporción de aspecto */
-    margin-bottom: 10px; /* Espacio opcional entre el logotipo y el menú */
+    margin-bottom: 15px; /* Espacio opcional entre el logotipo y el menú */
+}
+.my-custom-block {
+    display: block;
+    margin-bottom: 25px; /* separa los botones del menu uno del otro verticalmente*/
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 18px; 
+    white-space: nowrap; /* para que el texto no se divida en varias líneas */
+}
+.my-custom-block i {
+    margin-right: 14px; /* Ajusta este valor según el espacio deseado entre el icono y el texto */
+}
+
+.my-custom-block:first-child {
+    font-weight: bold;
+
+}
+
+#hidden-buttons-container { /* para ocultar los botones sin que se defacen */
+
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease; /* Agregamos una transición suave */
+}
+
+#hidden-buttons-container.show {
+    height: auto; /* Mostrar el contenedor ajustando su altura automáticamente */
+    opacity: 1;
+}
+
+#custom-view-button.active + .hidden-button {
+    margin-left: 0; /* Cuando el botón "Custom View" está activo, muestra los botones ocultos */
+}
+#hidden-button-1,
+#hidden-button-2,
+#hidden-button-3,
+#hidden-button-4 {
+    color: gray; /* Cambia el color del texto a gris */
+
+}
+#custom-view-button{
+
+    font-size: 16px;
+}
+
+#Summary-button {
+    font-size: 16px;
+}
+#Help-button{
+    font-size: 16px;
+    color: gray;
+}
+#Contact-button{
+    font-size: 16px;
+    color: gray;
+}
+#Log-button{
+
+    font-size: 16px;
+    color: gray;
+}
+#settings-button{
+    color: gray;
 }
