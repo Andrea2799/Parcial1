@@ -1,0 +1,48 @@
+/* Estilos para el contenedor de color negro */
+.black-container {
+    background-color: #000; /* Color negro */
+    min-height: 100vh; /* Alto mínimo igual al viewport */
+    width: 200px; /* Ancho del contenedor negro */
+    position: fixed; /* Fijar posición para que quede a la izquierda */
+}
+
+/* Estilos para el contenido dentro del contenedor */
+#sidebar-container {
+    padding: 0.875rem 1.25rem;
+}
+
+/* Resto de tus estilos */
+:root {
+    --primary: #000000;
+    --light: #000000;
+    --grey: #fefefe;
+}
+
+body {
+    overflow: hidden;
+    font-family: "Muli", sans-serif;
+    font-weight: 300;
+    color: var(--primary);
+}
+
+.bg-primary {
+    background-color: var(--primary) !important;
+}
+
+.menu {
+    width: 18rem;
+}
+
+.my-custom-block {
+    display: block;
+}
+
+.menu a {
+    font-family: 'Source Sans 3', sans-serif; /* Fuente 'Source Sans 3' */
+    color: white; /* Color blanco */
+    text-decoration: none; /* Sin subrayado */
+}
+
+.menu a:hover {
+    text-decoration: none; /* Sin subrayado al pasar el mouse */
+}
