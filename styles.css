@@ -4,6 +4,8 @@
     min-height: 100vh; /* Alto mínimo igual al viewport */
     width: 240px; /* Ancho del contenedor negro */
     position: fixed; /* Fijar posición para que quede a la izquierda */
+    overflow-y: auto; /* Aplicar scroll al contenedor completo */
+    max-height: 100vh; /* Establecer una altura máxima igual al viewport */
 }
 
 /* Estilos para el contenido dentro del contenedor */
