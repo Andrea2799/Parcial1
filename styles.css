@@ -1,4 +1,4 @@
-/* Estilos para el contenedor de color negro */
+/* ////////////////////////////////////// aqui todo los relacionado con los contenedores y menus/////////////// */
 .black-container {
     background-color: #000; /* Color negro */
     min-height: 100vh; /* Alto mínimo igual al viewport */
@@ -16,7 +16,7 @@
 .horizontal-container {
     font-family: 'Source Sans 3', sans-serif;
     background-color: #fff; /* Color de fondo */
-    color: #000; /* Color de texto */
+    color: #202123; /* Color de texto */
     padding: 10px; /* Espaciado interno */
     text-align: center; /* Alineación del texto al centro */
     font-size: 30px; /* Tamaño del texto */
@@ -27,7 +27,18 @@
     right: 0; /* Alineación en el borde derecho */
     margin-top: 40px; /* Margen superior para separar del menú */
 }
+.menu {
+    width: 18rem;
+}
 
+.menu a {
+    font-family: 'Source Sans 3', sans-serif; /* Fuente 'Source Sans 3' */
+    color: white; /* Color blanco */
+    text-decoration: none; /* Sin subrayado */
+    width: 10px;
+    
+    
+}
 
 /* Resto de tus estilos */
 :root {
@@ -46,19 +57,7 @@ body {
 .bg-primary {
     background-color: var(--primary) !important;
 }
-
-.menu {
-    width: 18rem;
-}
-
-.menu a {
-    font-family: 'Source Sans 3', sans-serif; /* Fuente 'Source Sans 3' */
-    color: white; /* Color blanco */
-    text-decoration: none; /* Sin subrayado */
-    width: 10px;
-    
-    
-}
+/* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
 
 .logo img {
     width: 143px; /* Ajusta el tamaño según tus necesidades */
