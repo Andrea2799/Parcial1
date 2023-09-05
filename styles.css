@@ -12,6 +12,22 @@
 #sidebar-container {
     padding: 0.875rem 1.25rem;
 }
+/* Estilos para el contenedor horizontal */
+.horizontal-container {
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: #fff; /* Color de fondo */
+    color: #000; /* Color de texto */
+    padding: 10px; /* Espaciado interno */
+    text-align: center; /* Alineación del texto al centro */
+    font-size: 30px; /* Tamaño del texto */
+    width: calc(100% - 340px); ; /* Ancho total */
+    position: fixed; /* Fijar posición */
+    top: 0; /* Alineación en la parte superior */
+    left: 250px; /* Alineación en el borde izquierdo */
+    right: 0; /* Alineación en el borde derecho */
+    margin-top: 40px; /* Margen superior para separar del menú */
+}
+
 
 /* Resto de tus estilos */
 :root {
