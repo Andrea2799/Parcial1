@@ -12,20 +12,24 @@
 #sidebar-container {
     padding: 0.875rem 1.25rem;
 }
-/* Estilos para el contenedor horizontal */
+/* Estilos para el contenedor de bienvenida */
 .horizontal-container {
     font-family: 'Source Sans 3', sans-serif;
     background-color: #fff; /* Color de fondo */
     color: #202123; /* Color de texto */
     padding: 10px; /* Espaciado interno */
-    text-align: center; /* Alineación del texto al centro */
+    text-align: left; /* Alineación del texto a la izquierda */
     font-size: 30px; /* Tamaño del texto */
-    width: calc(100% - 340px); ; /* Ancho total */
+    width: calc(100% -  290px); ; /* Ancho total */
     position: fixed; /* Fijar posición */
     top: 0; /* Alineación en la parte superior */
-    left: 250px; /* Alineación en el borde izquierdo */
+    left: 290px; /* Alineación en el borde izquierdo */
     right: 0; /* Alineación en el borde derecho */
-    margin-top: 40px; /* Margen superior para separar del menú */
+    margin-top:20px; /* Margen superior para separar del menú */
+    display: flex;
+    align-items: center;
+    flex-grow: 1; /* Hace que este contenedor ocupe todo el espacio disponible */
+    text-align: left; /* Alinea el texto a la izquierda */
 }
 .menu {
     width: 18rem;
@@ -49,14 +53,20 @@
 
 body {
     overflow: hidden;
-    font-family: "Muli", sans-serif;
-    font-weight: 300;
+   font-weight: 300;
     color: var(--primary);
 }
 
 .bg-primary {
     background-color: var(--primary) !important;
 }
+
+  .left-column {
+    flex: 1; /* La columna izquierda se expandirá para ocupar todo el espacio disponible */
+    margin-right: 20px; /* Añade un espacio entre las columnas si lo deseas */
+  }
+  
+
 /* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
 
 .logo img {
@@ -64,16 +74,21 @@ body {
     height: auto; /* Para mantener la proporción de aspecto */
     margin-bottom: 15px; /* Espacio opcional entre el logotipo y el menú */
 }
+
 .my-custom-block {
     display: block;
-    margin-bottom: 25px; /* separa los botones del menu uno del otro verticalmente*/
+    margin-bottom: 25px;
     display: flex;
     align-items: center;
     margin-right: 10px;
-    font-size: 18px; 
-    white-space: nowrap; /* para que el texto no se divida en varias líneas */
-}
-.my-custom-block i {
+    font-size: 18px;
+    white-space: nowrap;
+    border-radius: 20px; /* Bordes circulares */
+    padding: 8px; /* Espaciado interno para hacer que el elemento sea más grande */
+    transition: background-color 0.3s ease; /* Agregamos una transición suave para el cambio de color de fondo */
+} 
+
+    .my-custom-block i {
     margin-right: 14px; /* Ajusta este valor según el espacio deseado entre el icono y el texto */
 }
 
@@ -129,3 +144,20 @@ body {
 #settings-button{
     color: gray;
 }
+
+.my-custom-block:hover {
+     background-color: gray; /* Fondo gris cuando se pasa el ratón por encima */
+    color: white; /* Cambia el color del texto a blanco */
+}
+#profil{
+
+    font-size: 16px;
+    color: black;
+    font-family: 'Source Sans 3', sans-serif;
+    margin-right: 400px;
+    text-decoration: none; /* Quita el subrayado */
+    
+    
+
+}
+    
