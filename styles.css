@@ -54,11 +54,7 @@
 body {
     overflow: hidden;
    font-weight: 300;
-    color: var(--primary);
-}
-
-.bg-primary {
-    background-color: var(--primary) !important;
+    color: black;
 }
 
   .left-column {

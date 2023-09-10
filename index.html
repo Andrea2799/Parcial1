@@ -11,6 +11,10 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
 </head>
 
 <body>
@@ -18,7 +22,7 @@
     <!-- Contenedor de color negro -->
     <div class="black-container">
       <!-- Contenido del contenedor -->
-      <div id="sidebar-container" class="bg-primary">
+      <div id="sidebar-container">
         <div class="logo">
           <img src="logo.jpg" alt="Logotipo TECNOSERVICE">
           <!-- Contenido del scroll -->
@@ -54,18 +58,21 @@
             
             <!-- Columna Derecha -->
             <div class="right-column">
-              <div style="text-align:center;">
-               <a href="#" class="my-custom-block" id="profil"><i class="ion-md-contact"></i>David Pimienta</a>
+              <div style="text-align: center;">
+                <div class="dropdown">
+                  <button class="my-custom-block dropdown-toggle" type="button" id="profile-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    <i class="ion-md-contact"></i> David Pimienta
+                  </button>
+                  <div class="dropdown-menu" aria-labelledby="profile-dropdown">
+                    <a class="dropdown-item" href="#">Profile</a>
+                    <a class="dropdown-item" href="#">Settings</a>
+                    <div class="dropdown-divider"></div>
+                    <a class="dropdown-item" href="#"><i class="ion-md-open"></i> Log out</a>
+                  </div>
+                </div>
               </div>
             </div>
-          </div>
-         </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!-- para hacer que el bootn se desplieque -->
+  <!-- para hacer que el bootn custom-view se desplieque -->
   <script>
     const customViewButton = document.getElementById('custom-view-button');
     const hiddenButtonsContainer = document.getElementById('hidden-buttons-container');
