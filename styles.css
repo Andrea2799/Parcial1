@@ -1,18 +1,18 @@
 /* ////////////////////////////////////// aqui todo los relacionado con los contenedores y menus/////////////// */
 .black-container {
     background-color: #000; /* Color negro */
-    min-height: 100vh; /* Alto mínimo igual al viewport */
+    min-height: 100vh; /* Alto mínimo igual al viewport para el scroll */
     width: 240px; /* Ancho del contenedor negro */
     position: fixed; /* Fijar posición para que quede a la izquierda */
     overflow-y: auto; /* Aplicar scroll al contenedor completo */
     max-height: 100vh; /* Establecer una altura máxima igual al viewport */
 }
 
-/* Estilos para el contenido dentro del contenedor */
+/* para el contenido dentro del contenedor */
 #sidebar-container {
     padding: 0.875rem 1.25rem;
 }
-/* Estilos para el contenedor de bienvenida */
+/* contenedor de bienvenida */
 .horizontal-container {
     font-family: 'Source Sans 3', sans-serif;
     background-color: #fff; /* Color de fondo */
@@ -117,7 +117,7 @@ body {
 #hidden-button-2,
 #hidden-button-3,
 #hidden-button-4 {
-    color: gray; /* Cambia el color del texto a gris */
+    color: gray; 
 
 }
 #custom-view-button{
@@ -157,7 +157,5 @@ body {
     margin-right: 100px;
     text-decoration: none; /* Quita el subrayado */
     
-    
-
 }
     
