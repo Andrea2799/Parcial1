@@ -57,6 +57,7 @@ body {
     color: black;
 }
 
+
   .left-column {
     flex: 1; /* La columna izquierda se expandirá para ocupar todo el espacio disponible */
     margin-right: 20px; /* Añade un espacio entre las columnas si lo deseas */
@@ -65,8 +66,13 @@ body {
 
 /* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
 
-.logo img {
-    width: 143px; /* Ajusta el tamaño según tus necesidades */
+.small-avatar{
+    width: 30px;
+
+}
+
+.logo {
+    width: 147px; /* Ajusta el tamaño según tus necesidades */
     height: auto; /* Para mantener la proporción de aspecto */
     margin-bottom: 15px; /* Espacio opcional entre el logotipo y el menú */
 }
@@ -135,7 +141,7 @@ body {
 #Log-button{
 
     font-size: 16px;
-    color: gray;
+    
 }
 #settings-button{
     color: gray;
@@ -144,14 +150,26 @@ body {
 .my-custom-block:hover {
      background-color: gray; /* Fondo gris cuando se pasa el ratón por encima */
     color: white; /* Cambia el color del texto a blanco */
-}
-#profil{
-
-    font-size: 16px;
-    color: black;
-    font-family: 'Source Sans 3', sans-serif;
-    margin-right: 100px;
     text-decoration: none; /* Quita el subrayado */
-    
 }
+
+
+  .my-custom-button {
+    font-family: 'Source Sans 3', sans-serif;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: inherit;
+    color: inherit;
+    font-size: 16px;
+    margin-right: 100px;
+    text-decoration: none;
+  }
+  .show {
+    display: block !important;
+  }
+ 
+
     
