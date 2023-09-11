@@ -10,9 +10,10 @@
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="styles.css">
-  
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
   <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
@@ -31,8 +32,8 @@
             <div class="menu">
               <a href="#" class="my-custom-block"><i class="ion-md-apps"></i>Overview</a>
               <a href="#" class="my-custom-block" id="Summary-button"><i class="ion-md-funnel"></i>Summary</a>
-              <a href="#" class="my-custom-block" id="custom-view-button"><i
-                  class="ion-md-arrow-dropdown"></i></i>Custom view</a>
+              <a href="#" class="my-custom-block" id="custom-view-button"><i class="ion-md-arrow-dropdown"></i>Custom
+                view</a>
               <div id="hidden-buttons-container">
                 <a href="#" class="my-custom-block" id="hidden-button-1"><i class="ion-md-mail"></i>Messages</a>
                 <a href="#" class="my-custom-block" id="hidden-button-2"><i class="ion-md-cart"></i>Products</a>
@@ -59,11 +60,12 @@
 
             <!-- Columna Derecha -->
             <div class="right-column">
-              <div style="text-align: center;">
-                <div class="dropdown">
-                  <button class="my-custom-button" type="button" id="profile-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                    <span style="font-family: inherit;"><img src="perfil.png" class="img-fluid rounded-circle avatar mr-2 small-avatar"> David Cordoba</span>
-                  </button>
+              <ul class="navbar-nav ml-auto">
+                <li class="navbar-nav dropdown " >
+                  <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown"
+                    aria-haspopup="true" aria-expanded="false">
+                    <img src="perfil.png" class="img-fluid rounded-circle avatar mr-2 small-avatar"> David Cordoba
+                  </a>
                   <div class="dropdown-menu" aria-labelledby="profile-dropdown">
                     <a class="dropdown-item" href="#">Profile</a>
                     <a class="dropdown-item" href="#">Settings</a>
@@ -71,8 +73,8 @@
                     <!-- Agrega el botón "Cerrar Sesión" aquí -->
                     <button class="dropdown-item" id="logout-button">Cerrar Sesión</button>
                   </div>
-                </div>
-              </div>
+                </li>
+              </ul>
             </div>
           </div>
         </div>
@@ -88,19 +90,8 @@
     });
 
     const profileDropdown = document.getElementById('profile-dropdown');
-
-    profileDropdown.addEventListener('click', (event) => {
-      // Evitar que el menú desaparezca al hacer clic en él
-      event.stopPropagation();
-    });
-
-    // Función para manejar el clic en el botón "Cerrar Sesión"
-    document.getElementById('logout-button').addEventListener('click', function() {
-      // Aquí puedes agregar el código para cerrar la sesión del usuario
-      alert('Sesión cerrada'); // Este es un ejemplo, debes reemplazarlo con tu lógica de cierre de sesión real
-    });
   </script>
 </body>
-<script src="bootstrap-4.4.1-dist/js/bootstrap.min.js"></script>
+
 
 </html>
