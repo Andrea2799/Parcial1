@@ -14,9 +14,9 @@
 
   <link rel="stylesheet" href="styles.css">
    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
-   
    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
-   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.3/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
    
 
 </head>
@@ -63,7 +63,7 @@
             <!-- Columna Derecha -->
             <div class="right-column">
               <ul class="navbar-nav ml-auto">
-                <li class="navbar-nav dropdown" >
+                <li class="navbar-nav dropdown">
                   <a class="nav-link dropdown-toggle" href="#" id="navbar-navDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                     <img src="perfil.png" class="img-fluid rounded-circle avatar mr-2 small-avatar"> David Cordoba
                   </a>
@@ -71,18 +71,34 @@
                     <a class="dropdown-item" href="#">Profile</a>
                     <a class="dropdown-item" href="#">Settings</a>
                     <div class="dropdown-divider"></div>
-                    <!-- Agrega el botón "Cerrar Sesión" aquí -->
-                    <a class="dropdown-item" href="#">cerrar sesion</a>
+                    <!-- Agrega un botón oculto para mostrar los botones -->
+                    <button class="dropdown-item" id="show-buttons-button" style="display: none;">Mostrar Botones</button>
+                    <a class="dropdown-item" href="#">Cerrar Sesión</a>
                   </div>
                 </li>
               </ul>
             </div>
-          </div>
+           </div>
         </div>
       </div>
     </div>
   </div>
 
+  <script>
+    const showButtonsButton = document.getElementById('navbar-navDropdown');
+    const hiddenButtonsContainer1 = document.getElementById('dropdown-menu');
+    let buttonsVisible = false;
+  
+    showButtonsButton.addEventListener('click', () => {
+      if (!buttonsVisible) {
+        hiddenButtonsContainer1.style.display = 'block';
+        buttonsVisible = true;
+      } else {
+        hiddenButtonsContainer1.style.display = 'none';
+        buttonsVisible = false;
+      }
+    });
+  </script>
  
   <!-- para hacer que el botón custom-view se despliegue -->
   <script>
