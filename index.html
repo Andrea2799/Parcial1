@@ -59,37 +59,46 @@
             </div>
 
             <!-- Columna Derecha -->
-            <div class="right-column">
-              <!--<ul class="navbar-nav ml-auto">-->
-               <!-- <li class="navbar-nav dropdown" >-->
-                  <a href="#" class="my-custom-block" id="prefil-button">
-                    <img src="perfil.png" class="img-fluid rounded-circle avatar mr-2 small-avatar"> David Cordoba
-                    <i class="ion-md-arrow-dropdown"></i>
-                    <div id="hidden-buttons-container2">
-                      <a href="#" class="my-custom-block" id="hidden-button-5">Cerrar sesion</a>
-                     </div>
+            <div class="position-relative"> <!-- Agrega un contenedor con posición relativa -->
+              <a href="#" class="my-custom-block" id="perfil-button" style="color: black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 16px !important; background-color: transparent !important;">
+                <img src="perfil.png" class="img-fluid rounded-circle avatar mr-2 small-avatar "> David Cordoba
+                <i class="ion-md-arrow-dropdown"></i>
+              </a>
+              <div id="hidden-buttons-container5" class="position-absolute" style="top: 100%; left: 0; display: none;">
+                <!-- Utiliza position-absolute y top para posicionar el menú desplegable -->
+                <a href="#" class="my-custom-block" id="hidden-button-5" style="color: black; text-decoration: none; font-family: 'Source Sans 3', sans-serif; font-size: 14px ; background-color: transparent !important;"> Cerrar sesión </a>
+              </div>
                   </a>
-                  <!-- </li>-->
-              <!--</ul>-->
+                </li>
+              </ul>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-  <!-- para hacer que el botón custom-view se despliegue -->
   
-    
-  </script>
+  <!-- para hacer que el botón custom-view se despliegue -->
   <script>
-    const prefilbutton = document.getElementById('prefil-button');
-    const hiddenButtonsContainer2 = document.getElementById('hidden-buttons-container2');
+    const customViewButton = document.getElementById('custom-view-button');
+    const hiddenButtonsContainer = document.getElementById('hidden-buttons-container');
     customViewButton.addEventListener('click', () => {
       hiddenButtonsContainer.classList.toggle('show');
     });
 
     
   </script>
+   <!-- para hacer que el botón custom-view se despliegue -->
+   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+   <script>
+   $(document).ready(function() {
+     $("#perfil-button").click(function(e) {
+       e.preventDefault(); // Previene el comportamiento predeterminado del enlace
+       $("#hidden-buttons-container5").toggle(); // Muestra u oculta el botón "Cerrar sesión" al hacer clic en "perfil-button"
+     });
+   });
+   </script>
+       
 </body>
 
 
