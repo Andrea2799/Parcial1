@@ -171,14 +171,16 @@ body {
     display: block !important;
   }
 
-  #navbardropdown {
+  #prefil-button{
     font-family: 'Source Sans 3', sans-serif; /* Fuente 'Source Sans 3' */
     font-size: 16px; /* Tamaño de fuente 16px */
     color: black; /* Color del texto */
     margin-right: 100px;
-
+    color: inherit;
   }
   
- 
+  #refil-button.active + .hidden-button {
+    margin-left: 0; /* Cuando el botón "Custom View" está activo, muestra los botones ocultos */
+}
 
     

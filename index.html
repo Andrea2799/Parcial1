@@ -60,21 +60,17 @@
 
             <!-- Columna Derecha -->
             <div class="right-column">
-              <ul class="navbar-nav ml-auto">
-                <li class="navbar-nav dropdown " >
-                  <a class="nav-link dropdown-toggle" href="#" id="navbardropdown" role="button" data-toggle="dropdown"
-                    aria-haspopup="true" aria-expanded="false">
+              <!--<ul class="navbar-nav ml-auto">-->
+               <!-- <li class="navbar-nav dropdown" >-->
+                  <a href="#" class="my-custom-block" id="prefil-button">
                     <img src="perfil.png" class="img-fluid rounded-circle avatar mr-2 small-avatar"> David Cordoba
+                    <i class="ion-md-arrow-dropdown"></i>
+                    <div id="hidden-buttons-container2">
+                      <a href="#" class="my-custom-block" id="hidden-button-5">Cerrar sesion</a>
+                     </div>
                   </a>
-                  <div class="dropdown-menu" aria-labelledby="profile-dropdown">
-                    <a class="dropdown-item" href="#">Profile</a>
-                    <a class="dropdown-item" href="#">Settings</a>
-                    <div class="dropdown-divider"></div>
-                    <!-- Agrega el botón "Cerrar Sesión" aquí -->
-                    <button class="dropdown-item" id="logout-button">Cerrar Sesión</button>
-                  </div>
-                </li>
-              </ul>
+                  <!-- </li>-->
+              <!--</ul>-->
             </div>
           </div>
         </div>
@@ -82,14 +78,17 @@
     </div>
   </div>
   <!-- para hacer que el botón custom-view se despliegue -->
+  
+    
+  </script>
   <script>
-    const customViewButton = document.getElementById('custom-view-button');
-    const hiddenButtonsContainer = document.getElementById('hidden-buttons-container');
+    const prefilbutton = document.getElementById('prefil-button');
+    const hiddenButtonsContainer2 = document.getElementById('hidden-buttons-container2');
     customViewButton.addEventListener('click', () => {
       hiddenButtonsContainer.classList.toggle('show');
     });
 
-    const profileDropdown = document.getElementById('profile-dropdown');
+    
   </script>
 </body>
 
