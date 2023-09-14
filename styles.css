@@ -31,6 +31,16 @@
     flex-grow: 1; /* Hace que este contenedor ocupe todo el espacio disponible */
     text-align: left; /* Alinea el texto a la izquierda */
 }
+/* Estilo para el contenedor principal d-flex */
+.d-flex {
+    display: flex;
+}
+/* Estilo para el contenedor de la imagen */
+.additional-container {
+    /* Agrega estilos según sea necesario */
+    margin-left: 300px; /* Espacio entre el contenedor negro y la imagen */
+    margin-top: 100px;
+}
 .menu {
     width: 18rem;
 }
