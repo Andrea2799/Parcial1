@@ -170,3 +170,6 @@ body {
   .show {
     display: block !important;
   }
+  #hidden-buttons-container2 {
+    display: none;
+  }
