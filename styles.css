@@ -36,10 +36,21 @@
     display: flex;
 }
 /* Estilo para el contenedor de la imagen */
+
 .additional-container {
     /* Agrega estilos según sea necesario */
     margin-left: 250px; /* Espacio entre el contenedor negro y la imagen */
     margin-top: 180px;
+    max-height: 300px;
+    overflow-y: auto; 
+    flex-wrap: wrap; 
+   
+    
+}
+.additional-container section {
+    width: 33%; /* Establece el ancho deseado para cada elemento en una fila (ajusta según tus necesidades) */
+    padding: 10px; /* Espaciado interno entre elementos */
+    box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
 .menu {
     width: 18rem;
