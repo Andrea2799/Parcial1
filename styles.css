@@ -38,8 +38,8 @@
 /* Estilo para el contenedor de la imagen */
 .additional-container {
     /* Agrega estilos según sea necesario */
-    margin-left: 300px; /* Espacio entre el contenedor negro y la imagen */
-    margin-top: 100px;
+    margin-left: 250px; /* Espacio entre el contenedor negro y la imagen */
+    margin-top: 180px;
 }
 .menu {
     width: 18rem;
@@ -77,7 +77,7 @@ body {
 /* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
 
 .small-avatar{
-    width: 30px;
+    width: 30px ;
 
 }
 
