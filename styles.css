@@ -91,9 +91,14 @@ body {
     display: flex; /* Hace que los elementos dentro del contenedor se muestren en línea */
     align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
     width: auto;
+    font-size: 22px
 }
 .custom-section{
-    height: 100px;
+    width:100%;
+    margin-left: 80px;
+    margin-top: 40px;
+    
+
 }
  
 
@@ -212,13 +217,17 @@ body {
 
 /* Estilo para el título "Sales Performance" */
 .title {
+    font-family: 'Source Sans 3', sans-serif;
     font-size: 22px; /* Tamaño del título */
     margin-right: 80px; /* Añade 40px de espacio a la derecha del título para separarlo del botón */
+    font-weight: bolder;
+    color: #202123;
 }
 
 /* Estilo para el botón "Export Data" */
 .export-button {
-    margin-left: 80px;
+    margin-left: 300px;
+    
 }
 
 
