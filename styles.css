@@ -1,69 +1,105 @@
 /* ////////////////////////////////////// aqui todo los relacionado con los contenedores y menus/////////////// */
 .black-container {
-    background-color: #000; /* Color negro */
-    min-height: 100vh; /* Alto mínimo igual al viewport para el scroll */
-    width: 240px; /* Ancho del contenedor negro */
-    position: fixed; /* Fijar posición para que quede a la izquierda */
-    overflow-y: auto; /* Aplicar scroll al contenedor completo */
-    max-height: 100vh; /* Establecer una altura máxima igual al viewport */
+    background-color: #000;
+    /* Color negro */
+    min-height: 100vh;
+    /* Alto mínimo igual al viewport para el scroll */
+    width: 240px;
+    /* Ancho del contenedor negro */
+    position: fixed;
+    /* Fijar posición para que quede a la izquierda */
+    overflow-y: auto;
+    /* Aplicar scroll al contenedor completo */
+    max-height: 100vh;
+    /* Establecer una altura máxima igual al viewport */
 }
 
 /* para el contenido dentro del contenedor */
 #sidebar-container {
     padding: 0.875rem 1.25rem;
 }
+
 /* contenedor de bienvenida */
 .horizontal-container {
     font-family: 'Source Sans 3', sans-serif;
-    background-color: #fff; /* Color de fondo */
-    color: #202123; /* Color de texto */
-    padding: 10px; /* Espaciado interno */
-    text-align: left; /* Alineación del texto a la izquierda */
-    font-size: 30px; /* Tamaño del texto */
-    width: calc(100% -  290px); ; /* Ancho total */
-    position: fixed; /* Fijar posición */
-    top: 0; /* Alineación en la parte superior */
-    left: 290px; /* Alineación en el borde izquierdo */
-    right: 0; /* Alineación en el borde derecho */
-    margin-top:20px; /* Margen superior para separar del menú */
+    background-color: #fff;
+    /* Color de fondo */
+    color: #202123;
+    /* Color de texto */
+    padding: 10px;
+    /* Espaciado interno */
+    text-align: left;
+    /* Alineación del texto a la izquierda */
+    font-size: 30px;
+    /* Tamaño del texto */
+    width: calc(100% - 290px);
+    ;
+    /* Ancho total */
+    position: fixed;
+    /* Fijar posición */
+    top: 0;
+    /* Alineación en la parte superior */
+    left: 290px;
+    /* Alineación en el borde izquierdo */
+    right: 0;
+    /* Alineación en el borde derecho */
+    margin-top: 20px;
+    /* Margen superior para separar del menú */
     display: flex;
     align-items: center;
-    flex-grow: 1; /* Hace que este contenedor ocupe todo el espacio disponible */
-    text-align: left; /* Alinea el texto a la izquierda */
+    flex-grow: 1;
+    /* Hace que este contenedor ocupe todo el espacio disponible */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
 }
+
 /* Estilo para el contenedor principal d-flex */
 .d-flex {
     display: flex;
 }
+
 /* Estilo para el contenedor de la imagen */
 
 .additional-container {
     /* Agrega estilos según sea necesario */
-    margin-left: 250px; /* Espacio entre el contenedor negro y la imagen */
-    margin-top: 180px;/* Espacio entre el contenedor horizontal y la imagen */
-    max-height: 300px;/* Ancho del contenedor */
-    overflow-y: auto; /* para el scroll*/
-    flex-wrap: wrap; /* para bajar la secciones a la siguiente fila*/
-   
-    
+    margin-left: 250px;
+    /* Espacio entre el contenedor negro y la imagen */
+    margin-top: 180px;
+    /* Espacio entre el contenedor horizontal y la imagen */
+    max-height: 300px;
+    /* Ancho del contenedor */
+    overflow-y: auto;
+    /* para el scroll*/
+    flex-wrap: wrap;
+    /* para bajar la secciones a la siguiente fila*/
+
+
 }
+
 .additional-container section {
-    width: 33%; /* para establecer el ancho deseado para cada elemento en una fila, en este caso
+    width: 33%;
+    /* para establecer el ancho deseado para cada elemento en una fila, en este caso
     se queria el ultimo elemento en la suiguiente fila */
-    padding: 10px; /* Espaciado interno entre elementos */
-    box-sizing: border-box; /* Incluye el padding en el ancho total */
+    padding: 10px;
+    /* Espaciado interno entre elementos */
+    box-sizing: border-box;
+    /* Incluye el padding en el ancho total */
 }
+
 .menu {
     width: 18rem;
 }
 
 .menu a {
-    font-family: 'Source Sans 3', sans-serif; /* Fuente 'Source Sans 3' */
-    color: white; /* Color blanco */
-    text-decoration: none; /* Sin subrayado */
+    font-family: 'Source Sans 3', sans-serif;
+    /* Fuente 'Source Sans 3' */
+    color: white;
+    /* Color blanco */
+    text-decoration: none;
+    /* Sin subrayado */
     width: 10px;
-    
-    
+
+
 }
 
 /* Resto de tus estilos */
@@ -75,46 +111,55 @@
 
 body {
     overflow: hidden;
-   font-weight: 300;
+    font-weight: 300;
     color: black;
 }
 
 
-  .left-column {
-    flex: 1; /* La columna izquierda se expandirá para ocupar todo el espacio disponible */
-    margin-right: 20px; /* Añade un espacio entre las columnas si lo deseas */
-  }
-  
-  
-  /* Estilo para el contenedor del título y el botón */
+.left-column {
+    flex: 1;
+    /* La columna izquierda se expandirá para ocupar todo el espacio disponible */
+    margin-right: 20px;
+    /* Añade un espacio entre las columnas si lo deseas */
+}
+
+
+/* Estilo para el contenedor del título y el botón */
 .title-container {
-    display: flex; /* Hace que los elementos dentro del contenedor se muestren en línea */
-    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    display: flex;
+    /* Hace que los elementos dentro del contenedor se muestren en línea */
+    align-items: center;
+    /* Centra verticalmente los elementos dentro del contenedor */
     width: auto;
     font-size: 22px
 }
-.custom-section{
-    width:100%;
+
+.custom-section {
+    width: 100%;
     margin-left: 80px;
     margin-top: 40px;
-    
+
+
 
 }
- 
 
- 
+
+
 
 /* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
 
-.small-avatar{
-    width: 30px ;
+.small-avatar {
+    width: 30px;
 
 }
 
 .logo {
-    width: 147px; /* Ajusta el tamaño según tus necesidades */
-    height: auto; /* Para mantener la proporción de aspecto */
-    margin-bottom: 15px; /* Espacio opcional entre el logotipo y el menú */
+    width: 147px;
+    /* Ajusta el tamaño según tus necesidades */
+    height: auto;
+    /* Para mantener la proporción de aspecto */
+    margin-bottom: 15px;
+    /* Espacio opcional entre el logotipo y el menú */
 }
 
 .my-custom-block {
@@ -125,13 +170,17 @@ body {
     margin-right: 10px;
     font-size: 18px;
     white-space: nowrap;
-    border-radius: 20px; /* Bordes circulares */
-    padding: 8px; /* Espaciado interno para hacer que el elemento sea más grande */
-    transition: background-color 0.3s ease; /* Agregamos una transición suave para el cambio de color de fondo */
-} 
+    border-radius: 20px;
+    /* Bordes circulares */
+    padding: 8px;
+    /* Espaciado interno para hacer que el elemento sea más grande */
+    transition: background-color 0.3s ease;
+    /* Agregamos una transición suave para el cambio de color de fondo */
+}
 
-    .my-custom-block i {
-    margin-right: 14px; /* Ajusta este valor según el espacio deseado entre el icono y el texto */
+.my-custom-block i {
+    margin-right: 14px;
+    /* Ajusta este valor según el espacio deseado entre el icono y el texto */
 }
 
 .my-custom-block:first-child {
@@ -139,30 +188,36 @@ body {
 
 }
 
-#hidden-buttons-container { /* para ocultar los botones sin que se defacen */
+#hidden-buttons-container {
+    /* para ocultar los botones sin que se defacen */
 
     height: 0;
     overflow: hidden;
     opacity: 0;
-    transition: height 0.3s ease, opacity 0.3s ease; /* Agregamos una transición suave */
+    transition: height 0.3s ease, opacity 0.3s ease;
+    /* Agregamos una transición suave */
 }
 
 #hidden-buttons-container.show {
-    height: auto; /* Mostrar el contenedor ajustando su altura automáticamente */
+    height: auto;
+    /* Mostrar el contenedor ajustando su altura automáticamente */
     opacity: 1;
 }
 
-#custom-view-button.active + .hidden-button {
-    margin-left: 0; /* Cuando el botón "Custom View" está activo, muestra los botones ocultos */
+#custom-view-button.active+.hidden-button {
+    margin-left: 0;
+    /* Cuando el botón "Custom View" está activo, muestra los botones ocultos */
 }
+
 #hidden-button-1,
 #hidden-button-2,
 #hidden-button-3,
 #hidden-button-4 {
-    color: gray; 
+    color: gray;
 
 }
-#custom-view-button{
+
+#custom-view-button {
 
     font-size: 16px;
 }
@@ -170,31 +225,38 @@ body {
 #Summary-button {
     font-size: 16px;
 }
-#Help-button{
+
+#Help-button {
     font-size: 16px;
     color: gray;
 }
-#Contact-button{
+
+#Contact-button {
     font-size: 16px;
     color: gray;
 }
-#Log-button{
+
+#Log-button {
 
     font-size: 16px;
-    
+
 }
-#settings-button{
+
+#settings-button {
     color: gray;
 }
 
 .my-custom-block:hover {
-     background-color: gray; /* Fondo gris cuando se pasa el ratón por encima */
-    color: white; /* Cambia el color del texto a blanco */
-    text-decoration: none; /* Quita el subrayado */
+    background-color: gray;
+    /* Fondo gris cuando se pasa el ratón por encima */
+    color: white;
+    /* Cambia el color del texto a blanco */
+    text-decoration: none;
+    /* Quita el subrayado */
 }
 
 
-  .my-custom-button {
+.my-custom-button {
     font-family: 'Source Sans 3', sans-serif;
     background: none;
     border: none;
@@ -206,20 +268,24 @@ body {
     font-size: 16px;
     margin-right: 200px;
     text-decoration: none;
-  }
-  .show {
+}
+
+.show {
     display: block !important;
-  }
-  #hidden-buttons-container2 {
+}
+
+#hidden-buttons-container2 {
     display: none;
-  }
-  
+}
+
 
 /* Estilo para el título "Sales Performance" */
 .title {
     font-family: 'Source Sans 3', sans-serif;
-    font-size: 22px; /* Tamaño del título */
-    margin-right: 80px; /* Añade 40px de espacio a la derecha del título para separarlo del botón */
+    font-size: 22px;
+    /* Tamaño del título */
+    margin-right: 80px;
+    /* Añade 40px de espacio a la derecha del título para separarlo del botón */
     font-weight: bolder;
     color: #202123;
 }
@@ -227,15 +293,42 @@ body {
 /* Estilo para el botón "Export Data" */
 .export-button {
     margin-left: 130px;
-    
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ebebeb;
+    /* Borde gris delgado */
+    color: #606060;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bolder;
 }
 
+.days-button {
+    margin-left: 40px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ebebeb;
+    /* Borde gris delgado */
+    color: #606060;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
 
-
-
-
-
-
-
-
-
+}
+/*Para evitar que los botones cambien de color a azul y no tengan subrayado al pasar el ratón sobre ellos 
+*/.days-button:hover {
+  text-decoration: none; /* Elimina el subrayado al pasar el ratón */
+  color: gray; /* Mantén el color del texto gris al pasar el ratón */
+  background-color: white; /* Mantén el fondo blanco al pasar el ratón */
+}
+.export-button:hover{
+    text-decoration: none; /* Elimina el subrayado al pasar el ratón */
+    color: gray; /* Mantén el color del texto gris al pasar el ratón */
+    background-color: white; /* Mantén el fondo blanco al pasar el ratón */
+  }
