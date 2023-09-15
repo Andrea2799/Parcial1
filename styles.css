@@ -40,15 +40,16 @@
 .additional-container {
     /* Agrega estilos según sea necesario */
     margin-left: 250px; /* Espacio entre el contenedor negro y la imagen */
-    margin-top: 180px;
-    max-height: 300px;
-    overflow-y: auto; 
-    flex-wrap: wrap; 
+    margin-top: 180px;/* Espacio entre el contenedor horizontal y la imagen */
+    max-height: 300px;/* Ancho del contenedor */
+    overflow-y: auto; /* para el scroll*/
+    flex-wrap: wrap; /* para bajar la secciones a la siguiente fila*/
    
     
 }
 .additional-container section {
-    width: 33%; /* Establece el ancho deseado para cada elemento en una fila (ajusta según tus necesidades) */
+    width: 33%; /* para establecer el ancho deseado para cada elemento en una fila, en este caso
+    se queria el ultimo elemento en la suiguiente fila */
     padding: 10px; /* Espaciado interno entre elementos */
     box-sizing: border-box; /* Incluye el padding en el ancho total */
 }
@@ -84,6 +85,19 @@ body {
     margin-right: 20px; /* Añade un espacio entre las columnas si lo deseas */
   }
   
+  
+  /* Estilo para el contenedor del título y el botón */
+.title-container {
+    display: flex; /* Hace que los elementos dentro del contenedor se muestren en línea */
+    align-items: center; /* Centra verticalmente los elementos dentro del contenedor */
+    width: auto;
+}
+.custom-section{
+    height: 100px;
+}
+ 
+
+ 
 
 /* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
 
@@ -194,3 +208,25 @@ body {
   #hidden-buttons-container2 {
     display: none;
   }
+  
+
+/* Estilo para el título "Sales Performance" */
+.title {
+    font-size: 22px; /* Tamaño del título */
+    margin-right: 80px; /* Añade 40px de espacio a la derecha del título para separarlo del botón */
+}
+
+/* Estilo para el botón "Export Data" */
+.export-button {
+    margin-left: 80px;
+}
+
+
+
+
+
+
+
+
+
+
