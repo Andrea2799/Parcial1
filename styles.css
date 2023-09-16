@@ -66,7 +66,7 @@
     /* Espacio entre el contenedor negro y la imagen */
     margin-top: 180px;
     /* Espacio entre el contenedor horizontal y la imagen */
-    max-height: 300px;
+    max-height: 450px;
     /* Ancho del contenedor */
     overflow-y: auto;
     /* para el scroll*/
@@ -134,18 +134,20 @@ body {
     font-size: 22px
 }
 
-.custom-section {
-    width: 100%;
-    margin-left: 80px;
-    margin-top: 40px;
-
+.card-header {
+    width: 740px;
+    height: 447px;
+    margin-left:45px;
+  border-radius: 34px;
 
 
 }
+.card-header1{
+    
 
+    
 
-
-
+}
 /* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
 
 .small-avatar {
@@ -308,7 +310,7 @@ body {
 }
 
 .days-button {
-    margin-left: 40px;
+    margin-left: 20px;
     border-radius: 20px;
     padding: 10px 20px;
     border: 1px solid #ebebeb;
@@ -331,4 +333,15 @@ body {
     text-decoration: none; /* Elimina el subrayado al pasar el ratón */
     color: gray; /* Mantén el color del texto gris al pasar el ratón */
     background-color: white; /* Mantén el fondo blanco al pasar el ratón */
+  }
+  #myChart{
+    width: 300px !important;
+    height: 300px !important;
+    margin-left: 200px;
+  }
+  #myChart1{
+    width: 100% !important;
+    height: 10% !important;
+    margin-left: 20px;
+   
   }

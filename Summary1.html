@@ -82,11 +82,11 @@
 
 
         </div>
-        <div class="additional-container" style="display: flex; flex-wrap: wrap; align-items: center;">
+        <div class="additional-container" style="display: flex; flex-wrap: wrap; align-items: flex-start;">
             <section>
                 <div class="container">
                     <row>
-                        <div class="col-lg-9">
+                        <div class="col-lg-9 ">
                             <img src="totalsales.png">
                         </div>
                     </row>
@@ -110,44 +110,112 @@
                     </row>
                 </div>
             </section>
-            <div class="custom-section">
+
+            <div class="card-header bg-light" style="flex: 1; margin-right: 10px;margin-top: 20px;"">
                 <div class="title-container">
                     <div class="title">Sales Performance
-    
-                        <a href="#" class="export-button font-family: 'Source Sans 3', sans-serif" id="hidden-button-6,">Export data</a>
-                        <a href="#" class="days-button font-family: 'Source Sans 3', sans-serif  margin-left: 40px;" id="hidden-button-6">Last 14 Days</a>
+                        <a href="#" class="export-button font-family: 'Source Sans 3', sans-serif"
+                            id="hidden-button-6,">Export data</a>
+                        <a href="#" class="days-button font-family: 'Source Sans 3', sans-serif  margin-left: 40px;"
+                            id="hidden-button-6">Last 14 Days</a>
                     </div>
-    
+
                 </div>
-    
+                <div class="card-header1 bg-light" style="flex: 1; margin-left: 10px; margin-top: 20px;">
+                    <div>
+                        <canvas id="myChart"></canvas>
+                    </div>
+                </div>
+
             </div>
 
 
+            <div class="card-header1 bg-ligth " style="width: 260px!important; height: 553px!important; ">
+                <div class="title ">Top Categories </div>
+                <div class="card-body1 bg-ligth">
+                    <canvas id="myChart1"></canvas>
+                </div>
+            </div>
         </div>
-        
+    </div>
+
+
+    </div>
 
 
 
-        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-        <script>
-            $(document).ready(function () {
-                $("#perfil-button").click(function (e) {
-                    e.preventDefault(); // Previene el comportamiento predeterminado del enlace
-                    $("#hidden-buttons-container5").toggle(); // Muestra u oculta el botón "Cerrar sesión" al hacer clic en "perfil-button"
-                });
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#perfil-button").click(function (e) {
+                e.preventDefault(); // Previene el comportamiento predeterminado del enlace
+                $("#hidden-buttons-container5").toggle(); // Muestra u oculta el botón "Cerrar sesión" al hacer clic en "perfil-button"
             });
-        </script>
-        <!-- para hacer que el botón custom-view se despliegue -->
-        <script>
-            const customViewButton = document.getElementById('custom-view-button');
-            const hiddenButtonsContainer = document.getElementById('hidden-buttons-container');
-            customViewButton.addEventListener('click', () => {
-                hiddenButtonsContainer.classList.toggle('show');
-            });
+        });
+    </script>
+    <!-- para hacer que el botón custom-view se despliegue -->
+    <script>
+        const customViewButton = document.getElementById('custom-view-button');
+        const hiddenButtonsContainer = document.getElementById('hidden-buttons-container');
+        customViewButton.addEventListener('click', () => {
+            hiddenButtonsContainer.classList.toggle('show');
+        });
 
-            const profileDropdown = document.getElementById('profile-dropdown');
-        </script>
-        <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.2.0/dist/chart.umd.min.js"></script>
+        const profileDropdown = document.getElementById('profile-dropdown');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        const data = {
+            labels: ['cost', 'Earnings'],
+            datasets: [{
+                label: 'My First Dataset',
+                data: [300, 150],
+                backgroundColor: ['#d6d6d6', '#3a3a3a'],
+                hoverOffset: 4
+            }]
+        };
+
+        const config = {
+            type: 'pie',
+            data: data
+        };
+
+        const ctx = document.getElementById('myChart').getContext('2d');
+        const myChart = new Chart(ctx, config);
+        /////////////////////////////////////////////////////////////////////////////////////
+
+        const data2 = {
+            labels: ['Category 1', 'Category 2', 'Category 3'],
+            datasets: [{
+                label: 'My Second Dataset',
+                data: [300, 50, 100],
+                backgroundColor: [
+                    '000000',
+                    '8c8c8d',
+                    'd6d6d6'
+                ],
+                hoverOffset: 4
+            }]
+        };
+
+        const config2 = {
+            type: 'doughnut',
+            data: data2
+        };
+
+        const ctx2 = document.getElementById('myChart1').getContext('2d');
+        const myChart2 = new Chart(ctx2, config2);
+
+    </script>
+
+</body>
+
+</html>
+</script>
+
 </body>
 
 </html>
