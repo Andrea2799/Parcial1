@@ -82,11 +82,12 @@
 
 
         </div>
-        <div class="additional-container" style="display: flex; flex-wrap: wrap; align-items: flex-start;">
+
+        <div class="additional-container " style="display: flex; flex-wrap: wrap; align-items: flex-start;">
             <section>
                 <div class="container">
                     <row>
-                        <div class="col-lg-9 ">
+                        <div class="col-lg-9 " style="margin-top: 3px;  cursor: pointer;">
                             <img src="totalsales.png">
                         </div>
                     </row>
@@ -95,7 +96,7 @@
             <section>
                 <div class="container">
                     <row>
-                        <div class="col-lg-9">
+                        <div class="col-lg-9" style="margin-left: 10px; cursor: pointer;" >
                             <img src="visitors.png">
                         </div>
                     </row>
@@ -104,14 +105,14 @@
             <section>
                 <div class="container">
                     <row>
-                        <div class="col-lg-9">
+                        <div class="col-lg-9" style="margin-top: 5px; margin-left: 10px; cursor: pointer;">
                             <img src="refurns.png">
                         </div>
                     </row>
                 </div>
             </section>
 
-            <div class="card-header bg-light" style="flex: 1; margin-right: 10px;margin-top: 20px;"">
+            <div class="card-header bg-light" style="flex: 1; margin-right: 10px;margin-top: 20px;">
                 <div class="title-container">
                     <div class="title">Sales Performance
                         <a href="#" class="export-button font-family: 'Source Sans 3', sans-serif"
@@ -121,21 +122,24 @@
                     </div>
 
                 </div>
-                <div class="card-header1 bg-light" style="flex: 1; margin-left: 10px; margin-top: 20px;">
+            
                     <div>
                         <canvas id="myChart"></canvas>
                     </div>
                 </div>
-
-            </div>
-
-
-            <div class="card-header1 bg-ligth " style="width: 260px!important; height: 553px!important; ">
-                <div class="title ">Top Categories </div>
-                <div class="card-body1 bg-ligth">
-                    <canvas id="myChart1"></canvas>
+                <div class="card-header1 bg-light" >
+                    <div class="title-container ">
+                        <div class="title1">Top Categories </div>
+    
+                    </div>
+                    <div class="card-body1" style="width: 553px !important; height: 250px!important; margin-top: 10%;">
+                        <canvas id="myChart1"></canvas>
+                    </div>
                 </div>
             </div>
+
+
+            
         </div>
     </div>
 
@@ -188,15 +192,11 @@
         /////////////////////////////////////////////////////////////////////////////////////
 
         const data2 = {
-            labels: ['Category 1', 'Category 2', 'Category 3'],
+            labels: ['Electronics', 'Laptops', 'Phones'],
             datasets: [{
                 label: 'My Second Dataset',
-                data: [300, 50, 100],
-                backgroundColor: [
-                    '000000',
-                    '8c8c8d',
-                    'd6d6d6'
-                ],
+                data: [300, 100, 50],
+                backgroundColor: ['#000000', '#d6d6d6', '#8c8c8d'],
                 hoverOffset: 4
             }]
         };
@@ -208,6 +208,14 @@
 
         const ctx2 = document.getElementById('myChart1').getContext('2d');
         const myChart2 = new Chart(ctx2, config2);
+
+        const chartLabelsList = document.getElementById('chartLabelsList').querySelector('ul');
+        data2.labels.forEach(label => {
+            const listItem = document.createElement('li');
+            listItem.textContent = label;
+            chartLabelsList.appendChild(listItem);
+        });
+
 
     </script>
 

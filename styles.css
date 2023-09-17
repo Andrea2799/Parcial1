@@ -32,18 +32,18 @@
     /* Alineación del texto a la izquierda */
     font-size: 30px;
     /* Tamaño del texto */
-    width: calc(100% - 290px);
-    ;
+    width: 1126px;
+    height: 300;
     /* Ancho total */
     position: fixed;
     /* Fijar posición */
-    top: 0;
+    top: 0px;
     /* Alineación en la parte superior */
-    left: 290px;
+    left: 240px;
     /* Alineación en el borde izquierdo */
-    right: 0;
+    right: 0px;
     /* Alineación en el borde derecho */
-    margin-top: 20px;
+    margin-top: 0px;
     /* Margen superior para separar del menú */
     display: flex;
     align-items: center;
@@ -62,17 +62,20 @@
 
 .additional-container {
     /* Agrega estilos según sea necesario */
-    margin-left: 250px;
+    margin-left: 230px;
     /* Espacio entre el contenedor negro y la imagen */
-    margin-top: 180px;
+    margin-top: 100px;
     /* Espacio entre el contenedor horizontal y la imagen */
-    max-height: 450px;
+    max-height: 440px;
+
+    max-height: 520px;
     /* Ancho del contenedor */
     overflow-y: auto;
     /* para el scroll*/
     flex-wrap: wrap;
     /* para bajar la secciones a la siguiente fila*/
-
+    background-color: #f3f3f3;
+    
 
 }
 
@@ -134,20 +137,29 @@ body {
     font-size: 22px
 }
 
-.card-header {
-    width: 740px;
-    height: 447px;
+.card-header  {
+    width: 700px !important;
+    height: 387px;
     margin-left:45px;
+   border-radius: 34px;
+    margin-top:20px;
+
+
+}
+
+.card-header1  {
+    width: 250px;
+    height: 387px;;
+    margin-left: 30px;
   border-radius: 34px;
+  margin-top:20px;
 
 
 }
-.card-header1{
-    
+
 
     
 
-}
 /* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
 
 .small-avatar {
@@ -290,6 +302,18 @@ body {
     /* Añade 40px de espacio a la derecha del título para separarlo del botón */
     font-weight: bolder;
     color: #202123;
+    margin-top: 10px;
+
+}
+.title1 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 22px;
+    /* Tamaño del título */
+    font-weight: bolder;
+    color: #202123;
+    margin-left: 50px;
+    margin-top: 20px;
+
 }
 
 /* Estilo para el botón "Export Data" */
@@ -335,13 +359,7 @@ body {
     background-color: white; /* Mantén el fondo blanco al pasar el ratón */
   }
   #myChart{
-    width: 300px !important;
-    height: 300px !important;
+    width: 40% !important;
+    height: 40%!important ;
     margin-left: 200px;
-  }
-  #myChart1{
-    width: 100% !important;
-    height: 10% !important;
-    margin-left: 20px;
-   
   }
