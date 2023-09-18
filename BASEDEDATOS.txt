@@ -1,0 +1,27 @@
+create table PRODUCTOS (
+ID_Productos int (5) primary key,
+Nombre varchar(25),
+Descripcion varchar(25),
+Precio double,
+Tipo_De_Licencia varchar(25),
+Version double );
+
+create table VENTA (
+
+ID_Venta int (5) primary key,
+Cliente int(15),
+Producto varchar(30),
+Fecha date,
+Unidades int(20));
+
+
+create table ACTUALIZACION (
+
+ID_Actualizacion int (5) primary key,
+Producto varchar(30),
+Version_Anterior varchar(30),
+Version_Nueva varchar(30),
+Notas varchar(50));
+
+describe ACTUALIZACION
+
