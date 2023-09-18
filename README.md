@@ -19,9 +19,9 @@ This screen serves as the entry point to the application. Provides access to the
 The summary screen presents a consolidated view of data critical to decision making. Here, users can get an overview of key metrics and track their progress.
 
 # Multimedia Resources
-1. Logotipo de la Empresa.
-2. Foto de Perfil.
-3. Otras Imágenes.
+1. Company logo.
+2. Profile Photo.
+3. Other Images.
 
 # Files and Documentation
 1. CSS File: The project includes a custom CSS file for the look and feel of the app. You can find it in path to the CSS file.
@@ -30,9 +30,9 @@ The summary screen presents a consolidated view of data critical to decision mak
 
 # Base de Datos MySQL
 The system uses a MySQL database to store data. Specific tables have been created to manage the information. Some of the key tables are listed below: 
-1. PRODUCTOS.
-2. VENTA.
-3. ACTUALIZACION.
+1. PRODUCTS.
+2. SALE.
+3. UPDATE.
 
 # set up
 To run it locally you need:
