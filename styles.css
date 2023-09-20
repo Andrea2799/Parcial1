@@ -156,7 +156,13 @@ body {
 
 
 }
-
+.card-header2  {
+    width: 1050px;
+    height: 387px;;
+    margin-left: 30px;
+  border-radius: 34px;
+  margin-top:20px;
+}
 
     
 
@@ -341,12 +347,26 @@ body {
     /* Borde gris delgado */
     color: #606060;
     text-align: center;
-    text-decoration: none;
+    text-decoration: none ;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;}
+
+.product-button {
+    margin-left: 20px;
+    padding: 10px 30px;
+    text-align: center;
+    color: #ffff;
+    text-decoration: none !important; 
     display: inline-block;
     font-size: 16px;
     font-weight: bolder;
+    border: 1px solid #202123;
+    border-radius: 20px;
+    background-color: #202123;
 
 }
+
 /*Para evitar que los botones cambien de color a azul y no tengan subrayado al pasar el ratón sobre ellos 
 */.days-button:hover {
   text-decoration: none; /* Elimina el subrayado al pasar el ratón */
@@ -357,6 +377,11 @@ body {
     text-decoration: none; /* Elimina el subrayado al pasar el ratón */
     color: gray; /* Mantén el color del texto gris al pasar el ratón */
     background-color: white; /* Mantén el fondo blanco al pasar el ratón */
+  }
+  .product-button:hover{
+    text-decoration: none; /* Elimina el subrayado al pasar el ratón */
+    color: gray; /* Mantén el color del texto gris al pasar el ratón */
+    background-color:#202123 /*Mantén el fondo blanco al pasar el ratón */
   }
   #myChart{
     width: 40% !important;
