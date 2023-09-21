@@ -32,7 +32,7 @@
     /* Alineación del texto a la izquierda */
     font-size: 30px;
     /* Tamaño del texto */
-    width: 1126px;
+    width: 100hv;
     height: 300;
     /* Ancho total */
     position: fixed;
@@ -51,6 +51,8 @@
     /* Hace que este contenedor ocupe todo el espacio disponible */
     text-align: left;
     /* Alinea el texto a la izquierda */
+   
+
 }
 
 /* Estilo para el contenedor principal d-flex */
