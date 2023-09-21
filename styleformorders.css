@@ -32,11 +32,7 @@
     /* Alineación del texto a la izquierda */
     font-size: 30px;
     /* Tamaño del texto */
-<<<<<<< HEAD
-    width: 100hv;
-=======
-    max-height: 100vh;
->>>>>>> eebd24bb8cc97326932010507a98a66c54b76d3e
+    width: 1126px;
     height: 300;
     /* Ancho total */
     position: fixed;
@@ -55,8 +51,6 @@
     /* Hace que este contenedor ocupe todo el espacio disponible */
     text-align: left;
     /* Alinea el texto a la izquierda */
-   
-
 }
 
 /* Estilo para el contenedor principal d-flex */
@@ -72,9 +66,9 @@
     /* Espacio entre el contenedor negro y la imagen */
     margin-top: 100px;
     /* Espacio entre el contenedor horizontal y la imagen */
-    max-height: 100vh;
-  
-   
+    max-height: 440px;
+
+    max-height: 520px;
     /* Ancho del contenedor */
     overflow-y: auto;
     /* para el scroll*/
@@ -93,8 +87,6 @@
     /* Espaciado interno entre elementos */
     box-sizing: border-box;
     /* Incluye el padding en el ancho total */
-    max-height: 400vh;
-
 }
 
 .menu {
@@ -164,14 +156,11 @@ body {
 
 
 }
-.card-header2  {
-    width: 100%; /* Cambia el ancho a un porcentaje deseado */
-    height: 100vh;
-    margin-left: 5%; /* Cambia el margen izquierdo a un porcentaje deseado */
-    border-radius: 34px;
-    margin-top: 20px;
-}
 
+.containera{
+height: 100vh;
+
+}
     
 
 /* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
@@ -355,26 +344,12 @@ body {
     /* Borde gris delgado */
     color: #606060;
     text-align: center;
-    text-decoration: none ;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bolder;}
-
-.product-button {
-    margin-left: 20px;
-    padding: 10px 30px;
-    text-align: center;
-    color: #ffff;
-    text-decoration: none !important; 
+    text-decoration: none;
     display: inline-block;
     font-size: 16px;
     font-weight: bolder;
-    border: 1px solid #202123;
-    border-radius: 20px;
-    background-color: #202123;
 
 }
-
 /*Para evitar que los botones cambien de color a azul y no tengan subrayado al pasar el ratón sobre ellos 
 */.days-button:hover {
   text-decoration: none; /* Elimina el subrayado al pasar el ratón */
@@ -385,11 +360,6 @@ body {
     text-decoration: none; /* Elimina el subrayado al pasar el ratón */
     color: gray; /* Mantén el color del texto gris al pasar el ratón */
     background-color: white; /* Mantén el fondo blanco al pasar el ratón */
-  }
-  .product-button:hover{
-    text-decoration: none; /* Elimina el subrayado al pasar el ratón */
-    color: gray; /* Mantén el color del texto gris al pasar el ratón */
-    background-color:#202123 /*Mantén el fondo blanco al pasar el ratón */
   }
   #myChart{
     width: 40% !important;
