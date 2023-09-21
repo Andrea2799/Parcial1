@@ -32,11 +32,7 @@
     /* Alineación del texto a la izquierda */
     font-size: 30px;
     /* Tamaño del texto */
-<<<<<<< HEAD
-    width: 100hv;
-=======
     max-height: 100vh;
->>>>>>> eebd24bb8cc97326932010507a98a66c54b76d3e
     height: 300;
     /* Ancho total */
     position: fixed;
@@ -73,8 +69,7 @@
     margin-top: 100px;
     /* Espacio entre el contenedor horizontal y la imagen */
     max-height: 100vh;
-  
-   
+    
     /* Ancho del contenedor */
     overflow-y: auto;
     /* para el scroll*/
@@ -146,8 +141,8 @@ body {
 }
 
 .card-header  {
-    width: 700px !important;
-    height: 387px;
+    width: 600px !important;
+    height: 600px;
     margin-left:45px;
    border-radius: 34px;
     margin-top:20px;
@@ -157,8 +152,8 @@ body {
 
 .card-header1  {
     width: 250px;
-    height: 387px;;
-    margin-left: 30px;
+    height: 600px;
+    margin-left: 10px;
   border-radius: 34px;
   margin-top:20px;
 
@@ -172,7 +167,10 @@ body {
     margin-top: 20px;
 }
 
-    
+.responsive-img {
+    max-width: 100vh;
+    height: auto;
+}
 
 /* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
 
@@ -392,7 +390,9 @@ body {
     background-color:#202123 /*Mantén el fondo blanco al pasar el ratón */
   }
   #myChart{
-    width: 40% !important;
-    height: 40%!important ;
-    margin-left: 200px;
+    width: 50vh !important;
+    height: 50vh !important ;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
   }
