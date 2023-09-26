@@ -12,7 +12,8 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="styles.css">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="styleformorders.css">
 </head>
 
 <body>
@@ -50,15 +51,16 @@
                 </div>
                 <!-- Table -->
                 <!-- Horizontal container -->
-                <div class="horizontal-container" style="display: flex; align-items: center;">
+                <div class="horizontal-container" style="display: flex; align-items: center; justify-content: center;">
                     <!-- Left column -->
                     <div class="left-column">
-                        <div style="display: flex; flex-direction: column;">
-                            <b>List of pending orders</b>
-                            <p style="color: #8c8c8d; font-size: 18px;">These are the orders that are pending
-                            </p>
+                        <div style="display: flex; flex-direction: column; text-align: center;">
+                            <b style="font-family: 'YourFont', sans-serif; font-size: 24px;">LIST OF PENDING ORDERS</b>
+                            <p style="color: #000007; font-size: 18px; font-family: 'YourFont', sans-serif;">These are the orders that are pending</p>
                         </div>
                     </div>
+                </div>
+                
                     <!-- Right column -->
                     <ul class="navbar-nav ml-auto">
                         <li class="navbar-nav dropdown">
@@ -84,31 +86,30 @@
 
 
         </div>
-
         <div class="additional-container " style="display: flex; flex-wrap: wrap; align-items: flex-start;">
             <!-- Pending Orders section -->
             <section>
                 <div class="container">
-                    <div class="row">
+                    <div class="justify-content-center">
                         <div class="col-lg-12">
                             <h2>Pending Orders</h2>
-                            <table class="table table-bordered">
-                                <thead>
+                            <table class="table table-bordered custom-table mx-auto" style="background-color: transparent;">
+                                <thead class="text-center">                                <thead>
                                     <tr>
                                         <th>ID</th>
-                                        <th>Client</th>
-                                        <th>Product</th>
-                                        <th>Quantity</th>
-                                        <th>Date</th>
-                                        <th>Status</th>
-                                        <th>Category</th>
-                                        <th>Price</th>
+                                        <th>CLIENT</th>
+                                        <th>PRODUCT</th>
+                                        <th>QUANTITY</th>
+                                        <th>DATE</th>
+                                        <th>STATUS</th>
+                                        <th>CATEGORY</th>
+                                        <th>PRICE</th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
                                         <td>1</td>
-                                        <td>Client 1</td>
+                                        <td>Gustavo Smith</td>
                                         <td>Smartphone</td>
                                         <td>3</td>
                                         <td>2023-09-19</td>
@@ -121,10 +122,19 @@
                                                 <a class="dropdown-item" href="#" onclick="changeStatus(1, 'Done')">Done</a>
                                                 <a class="dropdown-item" href="#" onclick="changeStatus(1, 'In Process')">In Process</a>
                                                 <a class="dropdown-item" href="#" onclick="changeStatus(1, 'Cancelled')">Cancelled</a>
+                                            
                                             </div>
                                         </td>
                                         <td>Electronics</td>
                                         <td>$300</td>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-primary">Editar</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-danger">Borrar</button>
+                                    </td>
+                                </tr>
                                     </tr>
                                     <tr>
                                         <td>2</td>
@@ -145,7 +155,16 @@
                                         </td>
                                         <td>Electronics</td>
                                         <td>$200</td>
-                                    </tr>
+                                        <tr data-id="1">
+                                            <td>1</td>
+                                            <!-- Resto de las columnas -->
+                                            <td class="text-center">
+                                                <button class="btn btn-primary edit-button">Editar</button>
+                                            </td>
+                                            <td class="text-center">
+                                                <button class="btn btn-danger delete-button">Borrar</button>
+                                            </td>
+                                        </tr>
                                     
                                     <tr>
                                         <td>3</td>
@@ -166,6 +185,13 @@
                                         </td>    
                                         <td>Electronics</td>
                                         <td>$600</td>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-primary">Editar</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-danger">Borrar</button>
+                                    </td>
                                     </tr>
                                     <tr>
                                         <td>4</td>
@@ -186,6 +212,13 @@
                                         </td>  
                                         <td>Electronics</td>
                                         <td>$80</td>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-primary">Editar</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-danger">Borrar</button>
+                                    </td>
                                     </tr>
                                     <tr>
                                         <td>5</td>
@@ -206,6 +239,13 @@
                                         </td>  
                                         <td>Electronics</td>
                                         <td>$500</td>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-primary">Editar</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-danger">Borrar</button>
+                                    </td>
                                     </tr>
                                     <tr>
                                         <td>6</td>
@@ -226,6 +266,13 @@
                                         </td>  
                                         <td>Appliances</td>
                                         <td>$700</td>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-primary">Editar</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-danger">Borrar</button>
+                                    </td>
                                     </tr>
                                     <tr>
                                         <td>7</td>
@@ -246,6 +293,13 @@
                                         </td>  
                                         <td>Office</td>
                                         <td>$150</td>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-primary">Editar</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-danger">Borrar</button>
+                                    </td>
                                     </tr>
                                     <tr>
                                         <td>8</td>
@@ -266,6 +320,13 @@
                                         </td>  
                                         <td>Electronics</td>
                                         <td>$250</td>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-primary">Editar</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-danger">Borrar</button>
+                                    </td>
                                     </tr>
                                     <tr>
                                         <td>9</td>
@@ -286,6 +347,13 @@
                                         </td>  
                                         <td>Computers</td>
                                         <td>$50</td>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-primary">Editar</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-danger">Borrar</button>
+                                    </td>
                                     </tr>
                                     <tr>
                                         <td>10</td>
@@ -306,6 +374,13 @@
                                         </td>  
                                         <td>Computers</td>
                                         <td>$30</td>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-primary">Editar</button>
+                                    </td>
+                                    <td class="text-center">
+                                        <button class="btn btn-danger">Borrar</button>
+                                    </td>
                                     </tr>
                                 </tbody>
                             </table>
@@ -313,6 +388,34 @@
                     </div>
                 </div>
             </section>
+            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script>
+    $(document).ready(function () {
+        // Manejar el evento de clic en el botón "Editar"
+        $(".edit-button").click(function () {
+            // Obtener el ID de la fila
+            const rowId = $(this).closest("tr").data("id");
+
+            // Realizar alguna acción de edición aquí, como abrir un formulario de edición
+            // o cargar los datos en un formulario de edición.
+            alert(`Editar pedido con ID ${rowId}`);
+        });
+
+        // Manejar el evento de clic en el botón "Borrar"
+        $(".delete-button").click(function () {
+            // Obtener el ID de la fila
+            const rowId = $(this).closest("tr").data("id");
+
+            // Realizar alguna acción de borrado aquí, como confirmación y eliminación de la fila.
+            if (confirm(`¿Desea borrar el pedido con ID ${rowId}?`)) {
+                // Borrar la fila de la tabla
+                $(this).closest("tr").remove();
+            }
+        });
+    });
+</script>
+
+
 
             <!-- Other sections (charts or other elements) can go here -->
 
