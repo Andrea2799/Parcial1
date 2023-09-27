@@ -19,6 +19,23 @@
     justify-content: center;
 }
 
+details {
+
+    border: 1px solid #4e4e4e;
+    padding: 10px;
+    border-radius: 4px;
+    margin-bottom: 20px;
+    cursor: pointer;
+}
+
+.text {
+    margin-top:  15px;
+}
+
+summary {
+    color: #fcff66;
+}
+
 
 /* para el contenido dentro del contenedor */
 #sidebar-container {
