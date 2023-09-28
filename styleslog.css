@@ -3,7 +3,7 @@ body{
 	font-family: 'Poppins', sans-serif;
 	font-weight: 300;
 	line-height: 1.7;
-	color: #ffeba7;
+	color: #ffffff;
 	background-color: #1f2029;
   overflow: hidden;
   height: 100vh;
@@ -13,7 +13,7 @@ a:hover {
 	text-decoration: none;
 }
 .link {
-  color: #ffeba7;
+  color: #ffffff;
 }
 .link:hover {
   color: #c4c3ca;
@@ -52,7 +52,7 @@ display: none;
   padding: 0;
   margin: 10px auto;
   cursor: pointer;
-  background-color: #ffeba7;
+  background-color: #ffffff;
 }
 .checkbox:checked + label:before,
 .checkbox:not(:checked) + label:before{
@@ -61,7 +61,7 @@ display: none;
   width: 36px;
   height: 36px;
   border-radius: 50%;
-  color: #ffeba7;
+  color: #ffffff;
   background-color: #020305;
   font-family: 'unicons';
   content: '\eb4f';
@@ -174,12 +174,12 @@ display: none;
   display: -ms-inline-flexbox;
   display: inline-flex;
   align-items: center;
-  background-color: #ffeba7;
+  background-color: #ffffff;
   color: #000000;
 }
 .btn:hover{  
   background-color: #000000;
-  color: #ffeba7;
+  color: #ffffff;
   box-shadow: 0 8px 24px 0 rgba(16,39,112,.2);
 }
 
