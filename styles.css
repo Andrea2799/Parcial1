@@ -103,15 +103,19 @@ body {
     
 }
 
-
-
 .title-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+    font-size: 22px
+}
+.title-container1 {
     display: flex;
     /* Hace que los elementos dentro del contenedor se muestren en línea */
     align-items: center;
     /* Centra verticalmente los elementos dentro del contenedor */
-    width: auto;
-    font-size: 22px
+    max-width: 100vh;
+   
 }
 
 .card-header {

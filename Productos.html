@@ -14,14 +14,14 @@
 
 <body>
     <div class="d-flex">
-        
+
         <div class="black-container">
-           
+
             <div id="sidebar-container">
                 <div class="logo">
                     <img src="logo.jpg" alt="Logotipo TECNOSERVICE">
                 </div>
-             
+
                 <div class="menu-container" id="menu-container">
                     <div class="menu">
                         <a href="#" class="my-custom-block"><i class="ion-md-apps"></i>Overview</a>
@@ -46,19 +46,19 @@
                         <a href="#" class="my-custom-block" id="Log-button"><i class="ion-md-open"></i>Log out</a>
                     </div>
                 </div>
-                
-                
+
+
                 <div class="horizontal-container" style="display: flex; align-items: center;">
-                  
+
                     <div class="left-column">
                         <div style="display: flex; flex-direction: column; margin-left: 50px !important;">
                             <b>Products</b>
                         </div>
                     </div>
-                  
+
                     <ul class="navbar-nav ml-auto">
                         <li class="navbar-nav dropdown">
-                            <div class="position-relative"> 
+                            <div class="position-relative">
                                 <a href="#" class="my-custom-block" id="perfil-button"
                                     style="color:black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 16px !important; background-color: transparent !important;font-weight: normal !important;">
                                     <img src="perfil.png" class="img-fluid rounded-circle avatar mr-2 small-avatar">
@@ -67,7 +67,7 @@
                                 </a>
                                 <div id="hidden-buttons-container5" class="position-absolute"
                                     style="top: 100%; left: 0; display: none;">
-                                    
+
                                     <a href="#" class="my-custom-block" id="hidden-button-5"
                                         style="color: black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 14px !important; background-color: transparent !important;font-weight: normal !important;">Cerrar
                                         sesión</a>
@@ -89,44 +89,63 @@
 
 
                 <div class="card-header2 bg-light" style="flex: 1; margin-right: 10px;margin-top: 20px;  ">
-                    <div class="title-container" >
-                        <div class="title"> <a href="#" class="product-button font-family: 'Source Sans 3', sans-serif"
-                                id="hidden-button-6,">Add Product</a>
+                    <div class="title-container1">
+                        <form method="post" action="bd.PHP">
+                           
+                            <label for="nombre">ID_Productos:</label>
+                            <input type="text" id="ID_Productos"name="ID_Productos" required>
+
+                            <label for="nombre">Nombre:</label>
+                            <input type="text" id="Nombre" name="Nombre" required>
+
+                            <label for="descripcion">Descripción:</label>
+                            <input type="text" id="Descripcion" name="Descripcion" required>
+
+                            <label for="precio">Precio:</label>
+                            <input type="text" id="Precio" name="Precio" required>
+
+                            <label for="tipo_licencia">Tipo de Licencia:</label>
+                            <input type="text" id="Tipo_De_Licencia" name="Tipo_De_Licencia" required>
+
+                            <label for="version">Versión:</label>
+                            <input type="text" id="Version" name="Version" required>
+
+                            <input type="submit" value="Agregar Producto"
+                                class="product-button font-family: 'Source Sans 3', sans-serif" id="hidden-button-6">
+                        </form>
+                          <div=tablaproductos>
+                            <table class="table">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>Nombre</th>
+                                        <th>Descripción</th>
+                                        <th>Precio</th>
+                                        <th>Tipo de Licencia</th>
+                                        <th>Versión</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+
+
+                                </tbody>
+                            </table>
+                        </div>
                         </div>
 
+
                     </div>
-                    <table class="table">
-                        <thead>
-                            <tr>
-                                <th>ID</th>
-                                <th>Nombre</th>
-                                <th>Descripción</th>
-                                <th>Precio</th>
-                                <th>Tipo de Licencia</th>
-                                <th>Versión</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                           
-                            <tr>
-                                <td>1</td>
-                                <td>Producto 1</td>
-                                <td>Descripción del Producto 1</td>
-                                <td>100.00</td>
-                                <td>Licencia A</td>
-                                <td>1.0</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Producto 2</td>
-                                <td>Descripción del Producto 2</td>
-                                <td>75.00</td>
-                                <td>Licencia B</td>
-                                <td>2.0</td>
-                            </tr>
-                           
-                        </tbody>
-                    </table>
+
+
+
 
 
                 </div>
