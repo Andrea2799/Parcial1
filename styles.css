@@ -67,9 +67,7 @@
     /* para establecer el ancho deseado para cada elemento en una fila, en este caso
     se queria el ultimo elemento en la suiguiente fila */
     padding: 10px;
-    /* Espaciado interno entre elementos */
     box-sizing: border-box;
-    /* Incluye el padding en el ancho total */
     max-height: 400vh;
 
 }
@@ -270,7 +268,7 @@ body {
 }
 
 
-/* "Sales Performance" */
+
 .title {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 22px;
