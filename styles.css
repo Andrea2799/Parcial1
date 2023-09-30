@@ -1,20 +1,14 @@
 /* ////////////////////////////////////// aqui todo los relacionado con los contenedores y menus/////////////// */
 .black-container {
-    /*Este es contenedor negro */
     background-color: #000;
     min-height: 100vh;
-    /*para que ocupe el alto de la pantalla*/
     width: 240px;
-    /*Tamaño del ancho*/
     position: fixed;
-    /*Para fijarlo en la Pantalla*/
     overflow-y: auto;
-
 
 }
 
 #sidebar-container {
-    /*Este es el contenedor del logo */
     padding: 0.875rem 1.25rem;
 }
 
@@ -22,22 +16,19 @@
 .horizontal-container {
     font-family: 'Source Sans 3', sans-serif;
     background-color: #fff;
-    /* fondo blanco */
+    
     color: #202123;
-    /* texto */
+  
     padding: 10px;
     text-align: left;
-    /* texto a la izquierda*/
+   
     font-size: 30px;
     max-height: 100vh;
     height: 300;
     position: fixed;
     top: 0px;
     left: 240px;
-    /*Izquierdo*/
     right: 0px;
-    /*Derecho */
-
     display: flex;
     align-items: center;
     flex-grow: 1;
