@@ -144,6 +144,9 @@ body {
     margin-left: 5%;
     border-radius: 34px;
     margin-top: 20px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
 }
 
 .responsive-img {
@@ -336,6 +339,7 @@ body {
     border-radius: 20px;
     background-color: #202123;
 }
+
 
 /*Para evitar que los botones cambien de color a azul y no tengan subrayado al pasar el ratón sobre ellos 
 */
