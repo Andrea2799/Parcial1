@@ -37,6 +37,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     }
 }
 
+
+$sql = "SELECT * FROM productos";
+$result = $conn->query($sql);
+
+// Mostrar los datos en la tabla HTML
+if ($result->num_rows > 0) {
+    while ($row = $result->fetch_assoc()) {
+        echo "<tr>";
+        echo "<td>" . $row["ID_Productos"] . "</td>";
+        echo "<td>" . $row["Nombre"] . "</td>";
+        echo "<td>" . $row["Descripcion"] . "</td>";
+        echo "<td>" . $row["Precio"] . "</td>";
+        echo "<td>" . $row["Tipo_De_Licencia"] . "</td>";
+        echo "<td>" . $row["Version"] . "</td>";
+        echo "</tr>";
+    }
+} else {
+    echo "<tr><td colspan='6'>No se encontraron registros</td></tr>";
+}
+
 $conn->close();
 ?>
 

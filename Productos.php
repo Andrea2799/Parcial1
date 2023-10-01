@@ -32,7 +32,7 @@
                         <div id="hidden-buttons-container">
                             <a href="#" class="my-custom-block" id="hidden-button-1"><i
                                     class="ion-md-mail"></i>Messages</a>
-                            <a href="Productos.html" class="my-custom-block" id="hidden-button-2"><i
+                            <a href="Productos.php" class="my-custom-block" id="hidden-button-2"><i
                                     class="ion-md-cart"></i>Products</a>
                             <a href="formorders.html" class="my-custom-block" id="hidden-button-3"><i
                                     class="ion-md-book"></i>Orders</a>
@@ -86,48 +86,59 @@
             style="display: flex; flex-wrap: wrap; align-items: flex-start;  width:100%; height: 100%;">
 
             <section>
+    <div class="card-header2 bg-light" style="flex: 1; margin-right: 10px;margin-top: 20px;">
+        <div class="title-container1"> 
+            <div id="tablaproductos">
+                <table class="table">
+                    <thead>
+                        <tr>
+                            <th>ID</th>
+                            <th>Nombre</th>
+                            <th>Descripción</th>
+                            <th>Precio</th>
+                            <th>Tipo de Licencia</th>
+                            <th>Versión</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php
+                        $servername = "localhost";
+                        $username = "root";
+                        $password = "19994710";
+                        $dbname = "crmtecnoservice";
 
+                        $conn = new mysqli($servername, $username, $password, $dbname);
 
-                <div class="card-header2 bg-light" style="flex: 1; margin-right: 10px;margin-top: 20px;  ">
-                    <div class="title-container1">
-                        
-                          <div=tablaproductos>
-                            <table class="table">
-                                <thead>
-                                    <tr>
-                                        <th>ID</th>
-                                        <th>Nombre</th>
-                                        <th>Descripción</th>
-                                        <th>Precio</th>
-                                        <th>Tipo de Licencia</th>
-                                        <th>Versión</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                        <td></td>
-                                    </tr>
+                        if ($conn->connect_error) {
+                            die("Error de conexión: " . $conn->connect_error);
+                        }
 
+                        $sql = "SELECT * FROM productos";
+                        $result = $conn->query($sql);
 
-                                </tbody>
-                            </table>
-                        </div>
-                        </div>
+                        if ($result->num_rows > 0) {
+                            while ($row = $result->fetch_assoc()) {
+                                echo "<tr>";
+                                echo "<td>" . $row["ID_Productos"] . "</td>";
+                                echo "<td>" . $row["Nombre"] . "</td>";
+                                echo "<td>" . $row["Descripcion"] . "</td>";
+                                echo "<td>" . $row["Precio"] . "</td>";
+                                echo "<td>" . $row["Tipo_De_Licencia"] . "</td>";
+                                echo "<td>" . $row["Version"] . "</td>";
+                                echo "</tr>";
+                            }
+                        } else {
+                            echo "<tr><td colspan='6'>No se encontraron registros</td></tr>";
+                        }
 
-
-                    </div>
-
-
-
-
-
-                </div>
-            </section>
+                        $conn->close();
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</section>
         </div>
     </div>
 

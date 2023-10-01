@@ -104,7 +104,6 @@ body {
     display: flex;
     /* Hace que los elementos dentro del contenedor se muestren en línea */
     align-items: center;
-    /* Centra verticalmente los elementos dentro del contenedor */
     max-width: 100vh;
    
 }
