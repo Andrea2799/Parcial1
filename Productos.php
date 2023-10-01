@@ -82,13 +82,14 @@
 
         </div>
 
-        <div class="additional-container"
-            style="display: flex; flex-wrap: wrap; align-items: flex-start;  width:100%; height: 100%;">
-
-            <section>
-    <div class="card-header2 bg-light" style="flex: 1; margin-right: 10px;margin-top: 20px;">
-        <div class="title-container1"> 
-            <div id="tablaproductos">
+        <div class="additional-container" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; width: 100%; height: 100vh;">
+    <section style="flex: 1; display: flex; justify-content: center; align-items: center;">
+        <div class="card-header2 bg-light" style="flex: 1; margin-right: 10px; margin-top: 20px;">
+            <div class="title-container1"> 
+             <a href="productosadd.html" class="my-custom-block" class="product-add"
+               style="font-family: 'Source Sans 3', sans-serif; margin-top: 10px;">Agregar Productos</a>
+            </div>
+                <div id="tablaproductos">
                 <table class="table">
                     <thead>
                         <tr>
@@ -135,7 +136,7 @@
                         ?>
                     </tbody>
                 </table>
-            </div>
+            
         </div>
     </div>
 </section>
