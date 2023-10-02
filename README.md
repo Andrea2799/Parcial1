@@ -17,6 +17,8 @@ Tecnoservice CRM consists of two screens, a main one called: index.html and a se
 This screen serves as the entry point to the application. Provides access to the main functions and offers an overview of the most important activities and data.
 ## Summary Screen (summary):
 The summary screen presents a consolidated view of data critical to decision making. Here, users can get an overview of key metrics and track their progress.
+## Porducts Screen (Porducts):
+The products screen shows a table connected to a database called crmtecnoservice that shows a list of the products found in the store
 
 # Multimedia Resources
 1. Company logo.
@@ -28,11 +30,11 @@ The summary screen presents a consolidated view of data critical to decision mak
 
 2. Text File (TXT): This file contains the creation of a database called CRMDATABASE. You can access it en route to the TXT file.
 
+3. PHP files:
+
 # Base de Datos MySQL
 The system uses a MySQL database to store data. Specific tables have been created to manage the information. Some of the key tables are listed below: 
 1. PRODUCTS.
-2. SALE.
-3. UPDATE.
 
 # set up
 To run it locally you need:
@@ -41,6 +43,7 @@ To run it locally you need:
 ## programs: 
 2. Visual studio code
 3. Mysql server
+3. Xampp
 
 # Installation
 you need write or copy this in your git bash: git clone https://example.com

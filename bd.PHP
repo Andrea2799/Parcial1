@@ -22,14 +22,26 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $Version = $_POST["Version"];
 
     
-    $sql = "INSERT INTO productos (ID_Productos, Nombre, Descripcion, Precio, Tipo_De_Licencia, Version) VALUES ('$ID_Productos', '$Nombre', '$Descripcion', '$Precio', '$Tipo_De_Licencia', '$Version')";
     
-    if ($conn->query($sql) === TRUE) {
-        $mensaje = "";
+    // Verificar si el ID ya existe en la base de datos
+    $check_sql = "SELECT ID_Productos FROM productos WHERE ID_Productos = '$ID_Productos'";
+    $check_result = $conn->query($check_sql);
+
+    if ($check_result->num_rows > 0) {
+        $mensaje = "The ID already exists, it cannot be repeated.";
     } else {
-        $mensaje = "Error al agregar el producto: " . $conn->error;
+        // El ID no existe, se puede insertar
+        $sql = "INSERT INTO productos (ID_Productos, Nombre, Descripcion, Precio, Tipo_De_Licencia, Version) VALUES ('$ID_Productos', '$Nombre', '$Descripcion', '$Precio', '$Tipo_De_Licencia', '$Version')";
+    
+        if ($conn->query($sql) === TRUE) {
+            $mensaje = "Product added successfully.";
+        } else {
+            $mensaje = "Error adding product: " . $conn->error;
+        }
     }
 }
+
+
 
 $conn->close();
 ?>
@@ -58,8 +70,8 @@ $conn->close();
 <body>
     
     <div id="mensaje" style="font-family: 'Source Sans 3', sans-serif; display: none; color: #000000; background-color: #ffff; text-align: center;padding: 50px; border-radius: 5px"><?php echo $mensaje; ?> 
-The form was added successfully. <br>
-<a href="Productos.php" id="hidden-button-2"><iclass="ion-md-cart"></i>see</a>
+
+<a href="Productos.php" id="hidden-button-2"><iclass="ion-md-cart"><br></i>see</a>
 
 </div>
     
