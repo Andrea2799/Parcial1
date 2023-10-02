@@ -29,7 +29,7 @@ details {
 }
 
 .text {
-    margin-top:  15px;
+    margin-top: 15px;
 }
 
 summary {
@@ -98,7 +98,7 @@ summary {
     flex-wrap: wrap;
     /* para bajar la secciones a la siguiente fila*/
     background-color: #f3f3f3;
-    
+
 
 }
 
@@ -160,108 +160,117 @@ body {
     font-size: 22px
 }
 
-.card-header  {
+.card-header {
     width: 700px !important;
     height: 387px;
-    margin-left:45px;
-   border-radius: 34px;
-    margin-top:20px;
+    margin-left: 45px;
+    border-radius: 34px;
+    margin-top: 20px;
 
 
 }
 
-.card-header1  {
+.card-header1 {
     width: 250px;
-    height: 387px;;
+    height: 387px;
+    ;
     margin-left: 30px;
-  border-radius: 34px;
-  margin-top:20px;
+    border-radius: 34px;
+    margin-top: 20px;
 
 
-  
+
 }
 
 .table-container {
- 
+
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh; /* Esto centrará verticalmente en la pantalla */
+    height: 100vh;
+    /* Esto centrará verticalmente en la pantalla */
 }
 
-    
-    
-.containera{
-height: 100vh;
+
+
+.containera {
+    height: 100vh;
 
 }
 
 .horizontal-table {
     display: flex;
     flex-direction: row;
-    justify-content: space-between; /* Alinea los elementos a lo largo del espacio disponible */
-    width: 100%; /* Ocupa todo el ancho disponible */
+    justify-content: space-between;
+    /* Alinea los elementos a lo largo del espacio disponible */
+    width: 100%;
+    /* Ocupa todo el ancho disponible */
 }
 
 .horizontal-table td {
-    flex: 1; /* Hace que las celdas ocupen el mismo espacio horizontalmente */
-    padding: 5px; /* Añade espacio entre las celdas si es necesario */
-    border: 1px solid #ccc; /* Añade bordes a las celdas si es necesario */
+    flex: 1;
+    /* Hace que las celdas ocupen el mismo espacio horizontalmente */
+    padding: 5px;
+    /* Añade espacio entre las celdas si es necesario */
+    border: 1px solid #ccc;
+    /* Añade bordes a las celdas si es necesario */
 }
 
 .horizontal-container {
-    display: flex; /* Utilizamos flexbox para alinear elementos horizontalmente */
-    align-items: center; /* Alinea los elementos verticalmente al centro */
+    display: flex;
+    /* Utilizamos flexbox para alinear elementos horizontalmente */
+    align-items: center;
+    /* Alinea los elementos verticalmente al centro */
 }
 
-        .table {
-            width: 100%;
-            max-width: 100%;
-        }
+.table {
+    width: 100%;
+    max-width: 100%;
+}
 
-        .table th, .table td {
-            text-align: center;
-        }
+.table th,
+.table td {
+    text-align: center;
+}
 
-        /* Estilos para las celdas de acciones (botones) */
-        .table .edit-button, .table .delete-button {
-            padding: 3px 8px;
-            margin: 0 5px;
-        }
+/* Estilos para las celdas de acciones (botones) */
+.table .edit-button,
+.table .delete-button {
+    padding: 3px 8px;
+    margin: 0 5px;
+}
 
-        .table .edit-button {
-            background-color: #007bff;
-            color: white;
-        }
+.table .edit-button {
+    background-color: #007bff;
+    color: white;
+}
 
-        .table .delete-button {
-            background-color: #dc3545;
-            color: white;
-        }
-
-        /* Estilos para las filas impares */
-        .table tbody tr:nth-child(odd) {
-            background-color: #f2f2f2;
-        }
-
-        .table-rounded {
-            border-collapse: separate;
-            border-spacing: 2;
-        }
-    
-        .table-rounded th,
-        .table-rounded td {
-            border-radius: 10px; /* Ajusta el valor según tus preferencias */
-        }
-
-/* Añade estilos adicionales según sea necesario */
+.table .delete-button {
+    background-color: #dc3545;
+    color: white;
+}
 
 
-/* Estilos adicionales según sea necesario */
+.table tbody tr:nth-child(odd) {
+    background-color: #000000;
+}
+
+.table-rounded {
+    border-collapse: separate;
+    border-spacing: 2;
+}
+
+.table-rounded th,
+.table-rounded td {
+    border-radius: 5px;
+  
+}
 
 
 
-    
+
+
+
 
 /* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
 
@@ -408,6 +417,7 @@ height: 100vh;
     margin-top: 10px;
 
 }
+
 .title1 {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 22px;
@@ -450,19 +460,77 @@ height: 100vh;
     font-weight: bolder;
 
 }
+
 /*Para evitar que los botones cambien de color a azul y no tengan subrayado al pasar el ratón sobre ellos 
-*/.days-button:hover {
-  text-decoration: none; /* Elimina el subrayado al pasar el ratón */
-  color: gray; /* Mantén el color del texto gris al pasar el ratón */
-  background-color: white; /* Mantén el fondo blanco al pasar el ratón */
+*/
+.days-button:hover {
+    text-decoration: none;
+    /* Elimina el subrayado al pasar el ratón */
+    color: gray;
+    /* Mantén el color del texto gris al pasar el ratón */
+    background-color: white;
+    /* Mantén el fondo blanco al pasar el ratón */
 }
-.export-button:hover{
-    text-decoration: none; /* Elimina el subrayado al pasar el ratón */
-    color: gray; /* Mantén el color del texto gris al pasar el ratón */
-    background-color: white; /* Mantén el fondo blanco al pasar el ratón */
-  }
-  #myChart{
+
+.export-button:hover {
+    text-decoration: none;
+    /* Elimina el subrayado al pasar el ratón */
+    color: gray;
+    /* Mantén el color del texto gris al pasar el ratón */
+    background-color: white;
+    /* Mantén el fondo blanco al pasar el ratón */
+}
+
+#myChart {
     width: 40% !important;
-    height: 40%!important ;
+    height: 40% !important;
     margin-left: 200px;
-  }
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+}
+
+.btn-gray {
+    background-color: gray;
+}
+
+.btn-green {
+    background-color: green;
+}
+
+.btn-yellow {
+    background-color: yellow;
+}
+
+.btn-red {
+    background-color: red;
+}
+
+
+
