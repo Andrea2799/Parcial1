@@ -196,6 +196,70 @@ height: 100vh;
 
 }
 
+.horizontal-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between; /* Alinea los elementos a lo largo del espacio disponible */
+    width: 100%; /* Ocupa todo el ancho disponible */
+}
+
+.horizontal-table td {
+    flex: 1; /* Hace que las celdas ocupen el mismo espacio horizontalmente */
+    padding: 5px; /* Añade espacio entre las celdas si es necesario */
+    border: 1px solid #ccc; /* Añade bordes a las celdas si es necesario */
+}
+
+.horizontal-container {
+    display: flex; /* Utilizamos flexbox para alinear elementos horizontalmente */
+    align-items: center; /* Alinea los elementos verticalmente al centro */
+}
+
+        .table {
+            width: 100%;
+            max-width: 100%;
+        }
+
+        .table th, .table td {
+            text-align: center;
+        }
+
+        /* Estilos para las celdas de acciones (botones) */
+        .table .edit-button, .table .delete-button {
+            padding: 3px 8px;
+            margin: 0 5px;
+        }
+
+        .table .edit-button {
+            background-color: #007bff;
+            color: white;
+        }
+
+        .table .delete-button {
+            background-color: #dc3545;
+            color: white;
+        }
+
+        /* Estilos para las filas impares */
+        .table tbody tr:nth-child(odd) {
+            background-color: #f2f2f2;
+        }
+
+        .table-rounded {
+            border-collapse: separate;
+            border-spacing: 2;
+        }
+    
+        .table-rounded th,
+        .table-rounded td {
+            border-radius: 10px; /* Ajusta el valor según tus preferencias */
+        }
+
+/* Añade estilos adicionales según sea necesario */
+
+
+/* Estilos adicionales según sea necesario */
+
+
 
     
 
