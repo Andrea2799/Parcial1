@@ -286,29 +286,6 @@ body {
 }
 
 
-.export-button {
-    margin-left: 130px;
-    border-radius: 20px;
-    padding: 10px 20px;
-    border: 1px solid #ebebeb;
-    /* Borde gris delgado */
-    color: #606060;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    cursor: pointer;
-    text-decoration: none;
-    font-weight: bolder;
-}
-
-
-
-
-
-/*Para evitar que los botones cambien de color a azul y no tengan subrayado al pasar el ratón sobre ellos 
-*/
-
 
 #myChart {
     width: 50vh !important;

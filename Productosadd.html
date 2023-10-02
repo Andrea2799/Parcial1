@@ -69,9 +69,9 @@
                                 <div id="hidden-buttons-container5" class="position-absolute"
                                     style="top: 100%; left: 0; display: none;">
 
-                                    <a href="#" class="my-custom-block" id="hidden-button-5"
-                                        style="color: black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 14px !important; background-color: transparent !important;font-weight: normal !important;">Cerrar
-                                        sesión</a>
+                                    <a href="login.html" class="my-custom-block" id="hidden-button-5"
+                                        style="color: black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 14px !important; background-color: transparent !important;font-weight: normal !important;">Log
+                                        out</a>
                                 </div>
                                 </a>
                         </li>
@@ -88,8 +88,7 @@
             <section style="flex: 1;  height: 100vh; display: flex; justify-content: center; align-items: center;">
                 <div class="card-header2 bg-light"
                     style="flex: 1;  height: 100vh; display: flex; justify-content: center; align-items: center;">
-                  
-                    <form method="post" action="bd.PHP" style="text-align: center;">
+                    <form method="post" action="bd.PHP" style="text-align: center; "onsubmit="return confirm('¿Are you sure to add this product?');">
 
                         <label for="nombre">ID_Products:</label><br>
                         <input type="text" id="ID_Productos" name="ID_Productos" required><br>
@@ -110,7 +109,7 @@
                         <input type="text" id="Version" name="Version" required><br>
 
                         <input type="submit" value="Add Product" class="product-button"
-                        style="font-family: 'Source Sans 3', sans-serif; margin-top: 10px;"><br><br><br>
+                        style="font-family: 'Source Sans 3', sans-serif;border-radius: 20px; margin-top: 10px;background-color: #202123;text-decoration: none; color: #ffffff;"><br><br><br>
                     </form>
                 </div>
             </section>

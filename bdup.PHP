@@ -10,24 +10,20 @@ if ($conn->connect_error) {
     die("Error de conexión: " . $conn->connect_error);
 } 
 
+
 $mensaje = ""; 
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    
-    $ID_Productos = $_POST["ID_Productos"];
-    $Nombre = $_POST["Nombre"];
-    $Descripcion = $_POST["Descripcion"];
-    $Precio = $_POST["Precio"];
-    $Tipo_De_Licencia= $_POST["Tipo_De_Licencia"];
-    $Version = $_POST["Version"];
+    $id_producto = $_POST["id_producto"];
 
     
-    $sql = "INSERT INTO productos (ID_Productos, Nombre, Descripcion, Precio, Tipo_De_Licencia, Version) VALUES ('$ID_Productos', '$Nombre', '$Descripcion', '$Precio', '$Tipo_De_Licencia', '$Version')";
-    
-    if ($conn->query($sql) === TRUE) {
-        $mensaje = "";
+    $sql = "DELETE FROM productos WHERE ID_Productos = '$id_producto'";
+    $result = $conn->query($sql);
+
+    if ($conn->affected_rows > 0) {
+        $mensaje = "The product was successfully removed";
     } else {
-        $mensaje = "Error al agregar el producto: " . $conn->error;
+        $mensaje = "Sorry the product was not found";
     }
 }
 
@@ -52,14 +48,13 @@ $conn->close();
             background-color: #000;
         }
 
-       
     </style>
 </head>
 <body>
     
-    <div id="mensaje" style="font-family: 'Source Sans 3', sans-serif; display: none; color: #000000; background-color: #ffff; text-align: center;padding: 50px; border-radius: 5px"><?php echo $mensaje; ?> 
-The form was added successfully. <br>
-<a href="Productos.php" id="hidden-button-2"><iclass="ion-md-cart"></i>see</a>
+    <div id="mensaje" style="font-family: 'Source Sans 3', sans-serif; display: none; color: #000000; background-color: #ffff; text-align: center; padding: 50px; border-radius: 5px"><?php echo $mensaje; ?> 
+       <br>
+     <a href="Productos.php" id="hidden-button-2"><iclass="ion-md-cart"></i>see</a>
 
 </div>
     
@@ -73,3 +68,4 @@ The form was added successfully. <br>
     </script>
 </body>
 </html>
+
