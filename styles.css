@@ -302,56 +302,13 @@ body {
     font-weight: bolder;
 }
 
-.days-button {
-    margin-left: 20px;
-    border-radius: 20px;
-    padding: 10px 20px;
-    border: 1px solid #ebebeb;
-    /* Borde gris delgado */
-    color: #606060;
-    text-align: center;
-    text-decoration: none;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bolder;
-}
 
-.product-button {
-    margin-left: 20px;
-    padding: 10px 30px;
-    text-align: center;
-    color: #ffff;
-    text-decoration: none !important;
-    display: inline-block;
-    font-size: 16px;
-    font-weight: bolder;
-    border: 1px solid #202123;
-    border-radius: 20px;
-    background-color: #202123;
-}
+
 
 
 /*Para evitar que los botones cambien de color a azul y no tengan subrayado al pasar el ratón sobre ellos 
 */
-.days-button:hover {
-    text-decoration: none;
-    color: gray;
-    background-color: white;
- }
 
-.export-button:hover {
-    text-decoration: none;
-    color: gray;
-    background-color: white;
-   
-}
-
-.product-button:hover {
-    text-decoration: none;
-    color: gray;
-    background-color: #202123
-       
-}
 
 #myChart {
     width: 50vh !important;

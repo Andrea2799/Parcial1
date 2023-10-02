@@ -1,3 +1,40 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "19994710";
+$dbname = "crmtecnoservice";
+
+$conn = new mysqli($servername, $username, $password, $dbname);
+
+
+if ($conn->connect_error) {
+    die("Error de conexión: " . $conn->connect_error);    
+}
+
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    
+    $ID_Productos = $_POST["ID_Productos"];
+    $Nombre = $_POST["Nombre"];
+    $Descripcion = $_POST["Descripcion"];
+    $Precio = $_POST["Precio"];
+    $Tipo_De_Licencia= $_POST["Tipo_De_Licencia"];
+    $Version = $_POST["Version"];
+
+    
+    $sql = "INSERT INTO productos (ID_Productos,Nombre, Descripcion, Precio, Tipo_De_Licencia, Version) VALUES ('$ID_Productos', '$Nombre', '$Descripcion', '$Precio', '$Tipo_De_Licencia', '$Version')";
+    
+    if ($conn->query($sql) === TRUE) {
+        
+       
+
+    } else {
+        echo "Error al agregar el producto: " . $conn->error;
+    }
+}
+$conn->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,21 +121,22 @@
 
         <div class="additional-container" style="display: flex; flex-wrap: wrap; justify-content: center; align-items: flex-start; width: 100%; height: 100vh;">
     <section style="flex: 1; display: flex; justify-content: center; align-items: center;">
-        <div class="card-header2 bg-light" style="flex: 1; margin-right: 10px; margin-top: 20px;">
-            <div class="title-container1"> 
-             <a href="productosadd.html" class="my-custom-block" class="product-add"
-               style="font-family: 'Source Sans 3', sans-serif; margin-top: 10px;">Agregar Productos</a>
-            </div>
+           <div class="card-header2 bg-light" style="flex: 1; margin-right: 10px; margin-top: 20px;">
+           
                 <div id="tablaproductos">
+                <div class="title-container1">
+            <a href="productosadd.html" class="my-custom-block" class="product-add"
+               style="font-family: 'Source Sans 3', sans-serif; margin-top: 10px;background-color: #202123;text-decoration: none; color: #ffffff;">Add Products</a> 
+            </div>
                 <table class="table">
                     <thead>
                         <tr>
                             <th>ID</th>
-                            <th>Nombre</th>
-                            <th>Descripción</th>
-                            <th>Precio</th>
-                            <th>Tipo de Licencia</th>
-                            <th>Versión</th>
+                            <th>Name</th>
+                            <th>Descriptión</th>
+                            <th>Price</th>
+                            <th>Type of license</th>
+                            <th>Version</th>
                         </tr>
                     </thead>
                     <tbody>
