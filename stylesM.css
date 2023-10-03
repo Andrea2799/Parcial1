@@ -1,17 +1,11 @@
 /* ////////////////////////////////////// aqui todo los relacionado con los contenedores y menus/////////////// */
 .black-container {
     background-color: #000;
-    /* Color negro */
     min-height: 100vh;
-    /* Alto mínimo igual al viewport para el scroll */
     width: 240px;
-    /* Ancho del contenedor negro */
     position: fixed;
-    /* Fijar posición para que quede a la izquierda */
     overflow-y: auto;
-    /* Aplicar scroll al contenedor completo */
     max-height: 100vh;
-    /* Establecer una altura máxima igual al viewport */
 }
 
 .table-container {
@@ -19,14 +13,7 @@
     justify-content: center;
 }
 
-details {
 
-    border: 1px solid #4e4e4e;
-    padding: 10px;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
 
 .text {
     margin-top: 15px;
@@ -37,66 +24,44 @@ summary {
 }
 
 
-/* para el contenido dentro del contenedor */
 #sidebar-container {
     padding: 0.875rem 1.25rem;
 }
 
-/* contenedor de bienvenida */
 .horizontal-container {
     font-family: 'Source Sans 3', sans-serif;
     background-color: #fff;
-    /* Color de fondo */
     color: #202123;
-    /* Color de texto */
     padding: 10px;
-    /* Espaciado interno */
     text-align: left;
-    /* Alineación del texto a la izquierda */
     font-size: 30px;
-    /* Tamaño del texto */
     width: 1126px;
     height: 300;
-    /* Ancho total */
     position: fixed;
-    /* Fijar posición */
     top: 0px;
-    /* Alineación en la parte superior */
     left: 240px;
-    /* Alineación en el borde izquierdo */
     right: 0px;
-    /* Alineación en el borde derecho */
     margin-top: 0px;
-    /* Margen superior para separar del menú */
     display: flex;
     align-items: center;
     flex-grow: 1;
-    /* Hace que este contenedor ocupe todo el espacio disponible */
     text-align: left;
-    /* Alinea el texto a la izquierda */
+   
 }
 
-/* Estilo para el contenedor principal d-flex */
+
 .d-flex {
     display: flex;
 }
 
-/* Estilo para el contenedor de la imagen */
-
 .additional-container {
-    /* Agrega estilos según sea necesario */
     margin-left: 230px;
-    /* Espacio entre el contenedor negro y la imagen */
     margin-top: 100px;
-    /* Espacio entre el contenedor horizontal y la imagen */
     max-height: 440px;
 
     max-height: 520px;
-    /* Ancho del contenedor */
     overflow-y: auto;
-    /* para el scroll*/
     flex-wrap: wrap;
-    /* para bajar la secciones a la siguiente fila*/
     background-color: #f3f3f3;
 
 
@@ -104,12 +69,9 @@ summary {
 
 .additional-container section {
     width: 33%;
-    /* para establecer el ancho deseado para cada elemento en una fila, en este caso
-    se queria el ultimo elemento en la suiguiente fila */
     padding: 10px;
-    /* Espaciado interno entre elementos */
     box-sizing: border-box;
-    /* Incluye el padding en el ancho total */
+   
 }
 
 .menu {
@@ -118,17 +80,14 @@ summary {
 
 .menu a {
     font-family: 'Source Sans 3', sans-serif;
-    /* Fuente 'Source Sans 3' */
     color: white;
-    /* Color blanco */
     text-decoration: none;
-    /* Sin subrayado */
     width: 10px;
 
 
 }
 
-/* Resto de tus estilos */
+
 :root {
     --primary: #000000;
     --light: #000000;
@@ -142,20 +101,27 @@ body {
 }
 
 
-.left-column {
-    flex: 1;
-    /* La columna izquierda se expandirá para ocupar todo el espacio disponible */
-    margin-right: 20px;
-    /* Añade un espacio entre las columnas si lo deseas */
+
+.container {
+    margin-left: auto; 
+    margin-right: auto; 
+    
 }
 
 
-/* Estilo para el contenedor del título y el botón */
+
+
+.left-column {
+    flex: 1;
+    margin-right: 20px;
+    
+}
+
+
+
 .title-container {
     display: flex;
-    /* Hace que los elementos dentro del contenedor se muestren en línea */
     align-items: center;
-    /* Centra verticalmente los elementos dentro del contenedor */
     width: auto;
     font-size: 22px
 }
@@ -188,7 +154,7 @@ body {
     justify-content: center;
     align-items: center;
     height: 100vh;
-    /* Esto centrará verticalmente en la pantalla */
+    
 }
 
 
@@ -202,25 +168,21 @@ body {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* Alinea los elementos a lo largo del espacio disponible */
     width: 100%;
-    /* Ocupa todo el ancho disponible */
+    
 }
 
 .horizontal-table td {
     flex: 1;
-    /* Hace que las celdas ocupen el mismo espacio horizontalmente */
     padding: 5px;
-    /* Añade espacio entre las celdas si es necesario */
     border: 1px solid #ccc;
-    /* Añade bordes a las celdas si es necesario */
+   
 }
 
 .horizontal-container {
     display: flex;
-    /* Utilizamos flexbox para alinear elementos horizontalmente */
     align-items: center;
-    /* Alinea los elementos verticalmente al centro */
+    
 }
 
 .table {
@@ -233,7 +195,7 @@ body {
     text-align: center;
 }
 
-/* Estilos para las celdas de acciones (botones) */
+
 .table .edit-button,
 .table .delete-button {
     padding: 3px 8px;
@@ -266,6 +228,7 @@ body {
   
 }
 
+
 /* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
 
 .small-avatar {
@@ -275,11 +238,8 @@ body {
 
 .logo {
     width: 147px;
-    /* Ajusta el tamaño según tus necesidades */
     height: auto;
-    /* Para mantener la proporción de aspecto */
     margin-bottom: 15px;
-    /* Espacio opcional entre el logotipo y el menú */
 }
 
 .my-custom-block {
@@ -291,16 +251,14 @@ body {
     font-size: 18px;
     white-space: nowrap;
     border-radius: 20px;
-    /* Bordes circulares */
     padding: 8px;
-    /* Espaciado interno para hacer que el elemento sea más grande */
     transition: background-color 0.3s ease;
-    /* Agregamos una transición suave para el cambio de color de fondo */
+
 }
 
 .my-custom-block i {
     margin-right: 14px;
-    /* Ajusta este valor según el espacio deseado entre el icono y el texto */
+
 }
 
 .my-custom-block:first-child {
@@ -309,24 +267,22 @@ body {
 }
 
 #hidden-buttons-container {
-    /* para ocultar los botones sin que se defacen */
 
     height: 0;
     overflow: hidden;
     opacity: 0;
     transition: height 0.3s ease, opacity 0.3s ease;
-    /* Agregamos una transición suave */
+
 }
 
 #hidden-buttons-container.show {
     height: auto;
-    /* Mostrar el contenedor ajustando su altura automáticamente */
     opacity: 1;
 }
 
 #custom-view-button.active+.hidden-button {
     margin-left: 0;
-    /* Cuando el botón "Custom View" está activo, muestra los botones ocultos */
+
 }
 
 #hidden-button-1,
@@ -455,24 +411,18 @@ body {
 
 }
 
-/*Para evitar que los botones cambien de color a azul y no tengan subrayado al pasar el ratón sobre ellos 
-*/
+ 
 .days-button:hover {
     text-decoration: none;
-    /* Elimina el subrayado al pasar el ratón */
     color: gray;
-    /* Mantén el color del texto gris al pasar el ratón */
     background-color: white;
-    /* Mantén el fondo blanco al pasar el ratón */
 }
 
 .export-button:hover {
     text-decoration: none;
-    /* Elimina el subrayado al pasar el ratón */
     color: gray;
-    /* Mantén el color del texto gris al pasar el ratón */
     background-color: white;
-    /* Mantén el fondo blanco al pasar el ratón */
+
 }
 
 #myChart {
@@ -525,6 +475,94 @@ body {
 .btn-red {
     background-color: red;
 }
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+
+.client-list table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.client-list th, .client-list td {
+    border: 1px solid #ffffff;
+    padding: 8px;
+    text-align: left;
+}
+
+.client-list th,
+.client-list td {
+    background-color: #ffffff;
+    font-size: 12px; /* Tamaño de fuente más pequeño */
+    padding: 4px 8px; 
+}
+
+/* Estilos específicos para la página de clientes */
+.client-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    /* Otros estilos específicos para esta página */
+}
+
+/* Cambiamos el nombre del contenedor a .client-container */
+.client-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+/* Estilos de la lista de clientes */
+.client-container .client-list table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.client-container .client-list th, .client-container .client-list td {
+    border: 1px solid #000000;
+    padding: 18px;
+    text-align: left;
+}
+
+.client-container .client-list th {
+    background-color: #ffffff;
+}
+
+
+/* Estilos del encabezado */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+#addClientBtn {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+
+
+
+
 
 
 
