@@ -19,6 +19,16 @@ This screen serves as the entry point to the application. Provides access to the
 The summary screen presents a consolidated view of data critical to decision making. Here, users can get an overview of key metrics and track their progress.
 ## Porducts Screen (Porducts):
 The products screen shows a table connected to a database called crmtecnoservice that shows a list of the products found in the store
+## Orders Screen (Orders):
+This orders screen shows a table in which there are several orders that are in some kind of process, in the pending button you can modify their status.
+## Customers Screen (Customers):
+The customers screen also shows a table, but this one shows the record of the customers that have entered the page and shows their personal data.
+## Login Screen(login):
+Login screen where you confirm that you are in the database to give you access to the page.
+## Help Screen (help):
+Help screen with frequently asked user questions
+## Chat Screen (messages):
+Message screen with support
 
 # Multimedia Resources
 1. Company logo.

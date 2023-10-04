@@ -499,7 +499,7 @@ body {
 .client-list th,
 .client-list td {
     background-color: #ffffff;
-    font-size: 14px; /* Tamaño de fuente más pequeño */
+    font-size: 13px; /* Tamaño de fuente más pequeño */
     padding: 4px 8px; 
 }
 
@@ -522,7 +522,7 @@ body {
 .client-container .client-list table {
     border-collapse: collapse;
     width: 100%;
-    background-color: #ffffff;
+    background-color: #e70000;
 }
 
 .client-container .client-list th, .client-container .client-list td {
