@@ -324,11 +324,9 @@ body {
 
 .my-custom-block:hover {
     background-color: gray;
-    /* Fondo gris cuando se pasa el ratón por encima */
     color: white;
-    /* Cambia el color del texto a blanco */
     text-decoration: none;
-    /* Quita el subrayado */
+    
 }
 
 
@@ -355,13 +353,10 @@ body {
 }
 
 
-/* Estilo para el título "Sales Performance" */
 .title {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 22px;
-    /* Tamaño del título */
     margin-right: 80px;
-    /* Añade 40px de espacio a la derecha del título para separarlo del botón */
     font-weight: bolder;
     color: #202123;
     margin-top: 10px;
@@ -371,7 +366,6 @@ body {
 .title1 {
     font-family: 'Source Sans 3', sans-serif;
     font-size: 22px;
-    /* Tamaño del título */
     font-weight: bolder;
     color: #202123;
     margin-left: 50px;
@@ -379,13 +373,11 @@ body {
 
 }
 
-/* Estilo para el botón "Export Data" */
 .export-button {
     margin-left: 130px;
     border-radius: 20px;
     padding: 10px 20px;
     border: 1px solid #ebebeb;
-    /* Borde gris delgado */
     color: #606060;
     text-align: center;
     text-decoration: none;
@@ -499,30 +491,30 @@ body {
 .client-list th,
 .client-list td {
     background-color: #ffffff;
-    font-size: 13px; /* Tamaño de fuente más pequeño */
+    font-size: 13px; 
     padding: 4px 8px; 
 }
 
-/* Estilos específicos para la página de clientes */
+
 .client-page {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    /* Otros estilos específicos para esta página */
+    
 }
 
-/* Cambiamos el nombre del contenedor a .client-container */
+
 .client-container {
     display: flex;
     justify-content: space-between;
     margin: 20px;
 }
 
-/* Estilos de la lista de clientes */
+
 .client-container .client-list table {
     border-collapse: collapse;
     width: 100%;
-    background-color: #e70000;
+    background-color: #ffffff;
 }
 
 .client-container .client-list th, .client-container .client-list td {
@@ -535,8 +527,6 @@ body {
     background-color: #ffffff;
 }
 
-
-/* Estilos del encabezado */
 header {
     display: flex;
     justify-content: space-between;
