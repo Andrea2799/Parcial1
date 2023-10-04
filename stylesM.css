@@ -499,7 +499,7 @@ body {
 .client-list th,
 .client-list td {
     background-color: #ffffff;
-    font-size: 14px; /* Tamaño de fuente más pequeño */
+    font-size: 13px; /* Tamaño de fuente más pequeño */
     padding: 4px 8px; 
 }
 
