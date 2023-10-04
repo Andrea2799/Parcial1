@@ -11,7 +11,7 @@ This project represents the creation and development of Tecnoservice CRM, a Cust
 4. Testing Date: 04/10/2023.
 5. Startup Date: 04/10/2023.
 
-# Project summary
+# Project Screen:
 Tecnoservice CRM consists of two screens, a main one called: index.html and a secondary one called summary.html
 ##  Home Screen (index):
 This screen serves as the entry point to the application. Provides access to the main functions and offers an overview of the most important activities and data.
@@ -30,7 +30,12 @@ The products screen shows a table connected to a database called crmtecnoservice
 
 2. Text File (TXT): This file contains the creation of a database called CRMDATABASE. You can access it en route to the TXT file.
 
-3. PHP files:
+3. PHP files: The project has three PHP files:
+### bd.php
+### bdup.php
+### productos.php
+
+These files are connected to the CRM Tecnoservice database
 
 # Base de Datos MySQL
 The system uses a MySQL database to store data. Specific tables have been created to manage the information. Some of the key tables are listed below: 

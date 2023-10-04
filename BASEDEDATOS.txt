@@ -6,22 +6,13 @@ Precio double,
 Tipo_De_Licencia varchar(25),
 Version double );
 
-create table VENTA (
+create table Contacto (
+ID int(5) primary key,
+Name varchar(25),
+last_Name varchar(25),
+Nombre_compañia varchar(30),
+Celular int(15),
+Email varchar(50));
 
-ID_Venta int (5) primary key,
-Cliente int(15),
-Producto varchar(30),
-Fecha date,
-Unidades int(20));
 
-
-create table ACTUALIZACION (
-
-ID_Actualizacion int (5) primary key,
-Producto varchar(30),
-Version_Anterior varchar(30),
-Version_Nueva varchar(30),
-Notas varchar(50));
-
-describe ACTUALIZACION
 
