@@ -34,12 +34,14 @@ The products screen shows a table connected to a database called crmtecnoservice
 ### bd.php
 ### bdup.php
 ### productos.php
+### blog.php
 
 These files are connected to the CRM Tecnoservice database
 
 # Base de Datos MySQL
 The system uses a MySQL database to store data. Specific tables have been created to manage the information. Some of the key tables are listed below: 
 1. PRODUCTS.
+2. LOG IN.
 
 # set up
 To run it locally you need:
