@@ -302,6 +302,7 @@ body {
     bottom: 20px;
     right: 20px;
     width: 800px;
+    max-height: 100vh;
     background-color: #ffffff;
     border: 3px solid #000000;
     border-radius: 5px;

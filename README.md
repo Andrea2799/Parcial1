@@ -23,6 +23,12 @@ The products screen shows a table connected to a database called crmtecnoservice
 This orders screen shows a table in which there are several orders that are in some kind of process, in the pending button you can modify their status.
 ## Customers Screen (Customers):
 The customers screen also shows a table, but this one shows the record of the customers that have entered the page and shows their personal data.
+## Login Screen(login):
+Login screen where you confirm that you are in the database to give you access to the page.
+## Help Screen (help):
+Help screen with frequently asked user questions
+## Chat Screen (messages):
+Message screen with support
 
 # Multimedia Resources
 1. Company logo.
