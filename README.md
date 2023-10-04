@@ -53,7 +53,8 @@ To run it locally you need:
 3. Xampp
 
 # Installation
-you need write or copy this in your git bash: git clone https://example.com
+1. you need write or copy this in your git bash: git clone https://example.com
+2. 
 
 # Collaboration
 1. mateo_betancur82201@elpoli.edu.co
