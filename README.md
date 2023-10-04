@@ -73,4 +73,4 @@ To run it locally you need:
 
 # Project status
 Project status
-The project is currently in the development, beta testing, production phase.
+The project is currently completed and ready for production
