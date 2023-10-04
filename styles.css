@@ -102,7 +102,6 @@ body {
 }
 .title-container1 {
     display: flex;
-    /* Hace que los elementos dentro del contenedor se muestren en línea */
     align-items: center;
     max-width: 100vh;
    
