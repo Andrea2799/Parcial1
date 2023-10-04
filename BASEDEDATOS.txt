@@ -11,8 +11,10 @@ ID int(5) primary key,
 Name varchar(25),
 last_Name varchar(25),
 Nombre_compañia varchar(30),
-Celular int(15),
+Celular varchar(15),
 Email varchar(50));
 
 
+desc contacto;
 
+A
