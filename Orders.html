@@ -20,7 +20,6 @@
     
 <script>
         function changeStatus(buttonId, newStatus) {
-            // Actualiza el contenido del botón con el nuevo estado
             document.getElementById(`statusDropdown${buttonId}`).textContent = newStatus;
         }
     </script>
@@ -36,19 +35,13 @@
     <script>
         function changeStatus(buttonId, newStatus) {
             const button = $(`#statusDropdown${buttonId}`);
-            const colorClass = getColorClassByStatus(newStatus); // Obtiene la clase de color correspondiente
+            const colorClass = getColorClassByStatus(newStatus); 
         
-            // Cambia el texto del botón
             button.text(newStatus);
-        
-            // Quita cualquier clase de color anterior
             button.removeClass("btn-gray btn-green btn-yellow btn-red");
-        
-            // Agrega la clase de color correspondiente
             button.addClass(colorClass);
         }
         
-        // Función para obtener la clase de color según el estado
         function getColorClassByStatus(status) {
             switch (status) {
                 case 'Pending':
@@ -60,20 +53,17 @@
                 case 'Cancelled':
                     return 'btn-red';
                 default:
-                    return 'btn-gray'; // Clase de color predeterminada para cualquier otro estado
+                    return 'btn-gray'; 
             }
         }
         
     </script>
     <div class="d-flex">
-        <!-- Black container -->
         <div class="black-container">
-            <!-- Container content -->
             <div id="sidebar-container">
                 <div class="logo">
                     <img src="logo.jpg" alt="TECNOSERVICE Logo">
                 </div>
-                <!-- Scroll content -->
                 <div class="menu-container" id="menu-container">
                     <div class="menu">
                         <a href="#" class="my-custom-block"><i class="ion-md-apps"></i>Overview</a>
@@ -84,11 +74,11 @@
                         <div id="hidden-buttons-container">
                             <a href="#" class="my-custom-block" id="hidden-button-1"><i
                                     class="ion-md-mail"></i>Messages</a>
-                            <a href="#" class="my-custom-block" id="hidden-button-2"><i
+                            <a href="Productos.php" class="my-custom-block" id="hidden-button-2"><i
                                     class="ion-md-cart"></i>Products</a>
                             <a href="Orders.html" class="my-custom-block" id="hidden-button-3"><i
                                     class="ion-md-book"></i>Orders</a>
-                            <a href="#" class="my-custom-block" id="hidden-button-4"><i
+                            <a href="Customers.html" class="my-custom-block" id="hidden-button-4"><i
                                     class="ion-md-person"></i>Customers</a>
                         </div>
                         <hr style="width: 186px; height: 1px; background-color: grey; border: none; margin: 10px 0;">
@@ -98,15 +88,10 @@
                         <a href="#" class="my-custom-block" id="Log-button"><i class="ion-md-open"></i>Log out</a>
                     </div>
                 </div>
-                <!-- Table -->
-                <!-- Horizontal container -->
-
-                <!-- Right column -->
                 <div class="horizontal-container" style="display: flex; align-items: center;">
 
                     <div class="horizontal-container"
                         style="display: flex; align-items: center; justify-content: center;">
-                        <!-- Left column -->
                         <div class="left-column">
                             <div style="display: flex; flex-direction: column; text-align: center;">
                                 <b style="font-family: 'YourFont', sans-serif; font-size: 24px;">LIST OF PENDING
@@ -146,11 +131,10 @@
 
     </div>
     <div class="additional-container " style="display: flex; flex-wrap: wrap; align-items: flex-start;">
-        <!-- Pending Orders section -->
         <section>
             <div class="container mx-auto">
                 <div class="row justify-content-center">
-                    <div class="col-lg-1 text-center">
+                    <div class="col-lg-10 text-center">
                         <h2>Pending Orders</h2>
                         <table class="table table-rounded">
                             <thead class="table-light">
@@ -456,34 +440,19 @@
         <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
         <script>
             $(document).ready(function () {
-                // Manejar el evento de clic en el botón "Editar"
                 $(".edit-button").click(function () {
-                    // Obtener el ID de la fila
                     const rowId = $(this).closest("tr").data("id");
-
-                    // Realizar alguna acción de edición aquí, como abrir un formulario de edición
-                    // o cargar los datos en un formulario de edición.
                     alert(`Editar pedido con ID ${rowId}`);
                 });
 
-                // Manejar el evento de clic en el botón "Borrar"
                 $(".delete-button").click(function () {
-                    // Obtener el ID de la fila
                     const rowId = $(this).closest("tr").data("id");
-
-                    // Realizar alguna acción de borrado aquí, como confirmación y eliminación de la fila.
                     if (confirm(`¿Desea borrar el pedido con ID ${rowId}?`)) {
-                        // Borrar la fila de la tabla
                         $(this).closest("tr").remove();
                     }
                 });
             });
         </script>
-
-
-
-        <!-- Other sections (charts or other elements) can go here -->
-
     </div>
     </div>
 
@@ -496,7 +465,6 @@
             });
         });
     </script>
-    <!-- To make the custom-view button expand -->
     <script>
         const customViewButton = document.getElementById('custom-view-button');
         const hiddenButtonsContainer = document.getElementById('hidden-buttons-container');
@@ -508,14 +476,12 @@
     </script>
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <script>
-        // Your chart scripts or other functionalities can go here
     </script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script>
         $(document).ready(function () {
-            // Inicializa los componentes de Bootstrap que requieren JavaScript
             $('[data-toggle="dropdown"]').dropdown();
         });
     </script>
