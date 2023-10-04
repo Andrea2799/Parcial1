@@ -1,0 +1,371 @@
+/* ////////////////////////////////////// aqui todo los relacionado con los contenedores y menus/////////////// */
+.black-container {
+    background-color: #000;
+    min-height: 100vh;
+    width: 240px;
+    position: fixed;
+    overflow-y: auto;
+
+}
+
+#sidebar-container {
+    padding: 0.875rem 1.25rem;
+}
+
+
+.horizontal-container {
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: #fff;
+    
+    color: #202123;
+  
+    padding: 10px;
+    text-align: left;
+   
+    font-size: 30px;
+    max-height: 100vh;
+    height: 300;
+    position: fixed;
+    top: 0px;
+    left: 240px;
+    right: 0px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    /* Hace que este contenedor ocupe todo el espacio disponible */
+    text-align: left;
+    /* Alinea el texto a la izquierda */
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+
+.additional-container {
+    margin-left: 230px;
+    margin-top: 100px;
+    max-height: 100vh;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    background-color: #f3f3f3;
+}
+
+
+.additional-container section {
+    width: 33%;
+    /* para establecer el ancho deseado para cada elemento en una fila, en este caso
+    se queria el ultimo elemento en la suiguiente fila */
+    padding: 10px;
+    box-sizing: border-box;
+    max-height: 400vh;
+
+}
+
+.menu {
+    width: 18rem;
+}
+
+.menu a {
+    font-family: 'Source Sans 3', sans-serif;
+    color: white;
+    text-decoration: none;
+    /* para quitarle el subrayado al texto */
+    width: 10px;
+}
+
+:root {
+    --primary: #000000;
+    --light: #000000;
+    --grey: #fefefe;
+}
+
+body {
+    overflow: hidden;
+    font-weight: 300;
+    color: black;
+}
+
+
+.left-column {
+    flex: 1;
+  margin-right: 20px;
+    
+}
+
+.title-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+    font-size: 22px
+}
+.title-container1 {
+    display: flex;
+    /* Hace que los elementos dentro del contenedor se muestren en línea */
+    align-items: center;
+    max-width: 100vh;
+   
+}
+
+.card-header {
+    width: 600px !important;
+    height: 600px;
+    margin-left: 45px;
+    border-radius: 34px;
+    margin-top: 20px;
+
+
+}
+
+.card-header1 {
+    width: 250px;
+    height: 600px;
+    margin-left: 10px;
+    border-radius: 34px;
+    margin-top: 20px;
+
+
+}
+
+.card-header2 {
+    width: 100%;
+    height: 100%;
+    margin-left: 5%;
+    border-radius: 34px;
+    margin-top: 20px;
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+.responsive-img {
+    max-width: 100vh;
+    height: auto;
+}
+
+/* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
+
+.small-avatar {
+    width: 30px;
+
+}
+
+.logo {
+    width: 147px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.my-custom-block {
+    display: block;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 18px;
+    white-space: nowrap;
+    border-radius: 20px;
+    padding: 8px;
+    /* Espaciado interno para hacer que el elemento sea más grande */
+    transition: background-color 0.3s ease;
+    /* Agregamos una transición suave para el cambio de color de fondo */
+}
+
+.my-custom-block i {
+    margin-right: 14px;
+}
+
+.my-custom-block:first-child {
+    font-weight: bold;
+
+}
+
+#hidden-buttons-container {
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+  }
+
+#hidden-buttons-container.show {
+    height: auto;
+    opacity: 1;
+}
+
+#custom-view-button.active+.hidden-button {
+    margin-left: 0;
+  
+}
+
+#hidden-button-1,
+#hidden-button-2,
+#hidden-button-3,
+#hidden-button-4 {
+    color: gray;
+
+}
+
+#custom-view-button {
+
+    font-size: 16px;
+}
+
+#Summary-button {
+    font-size: 16px;
+}
+
+#Help-button {
+    font-size: 16px;
+    color: gray;
+}
+
+#Contact-button {
+    font-size: 16px;
+    color: gray;
+}
+
+#Log-button {
+
+    font-size: 16px;
+
+}
+
+#settings-button {
+    color: gray;
+}
+
+.my-custom-block:hover {
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+}
+
+
+.my-custom-button {
+    font-family: 'Source Sans 3', sans-serif;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: inherit;
+    color: inherit;
+    font-size: 16px;
+    margin-right: 200px;
+    text-decoration: none;
+}
+
+.show {
+    display: block !important;
+}
+
+#hidden-buttons-container2 {
+    display: none;
+}
+
+
+
+.title {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 22px;
+    margin-right: 80px;
+    font-weight: bolder;
+    color: #202123;
+    margin-top: 10px;
+
+}
+
+.title1 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 22px;
+    font-weight: bolder;
+    color: #202123;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+
+
+#myChart {
+    width: 50vh !important;
+    height: 50vh !important;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+}
+
+
+/* Para la pantalla de help */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f3f3f3;
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 5000px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #ffffff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+
+h1 {
+    color: #000000;
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+p {
+    line-height: 1.5;
+    font-size: 16px;
+}
+
+h2 {
+    color: #333;
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+li {
+    margin-bottom: 10px;
+}
+
+.contact-info {
+    border-top: 1px solid #ccc;
+    margin-top: 30px;
+    padding-top: 20px;
+}
+
+.contact-info ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.contact-info li {
+    margin-bottom: 10px;
+}
+
+.contact-info li strong {
+    display: block;
+    font-weight: bold;
+}
+
+.container a {
+    color: #007BFF;
+    text-decoration: underline;
+    transition: color 0.3s;
+}
+
+.container a:hover {
+    color: #0056b3;
+}
+
