@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CRM TECNOSERVICE</title>
+    <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap-reboot.min.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@300&display=swap" rel="stylesheet">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="styleformorders.css">
+</head>
+
+<body>
+    <div class="d-flex">
+      
+        <div class="black-container">
+         
+            <div id="sidebar-container">
+                <div class="logo">
+                    <img src="logo.jpg" alt="TECNOSERVICE Logo">
+                </div>
+               
+                <div class="menu-container" id="menu-container">
+                    <div class="menu">
+                        <a href="index.html" class="my-custom-block"><i class="ion-md-apps"></i>Overview</a>
+                        <a href="Summary1.html" class="my-custom-block" id="Summary-button"><i
+                                class="ion-md-funnel"></i>Summary</a>
+                        <a href="#" class="my-custom-block" id="custom-view-button"><i
+                                class="ion-md-arrow-dropdown"></i>Custom view</a>
+                        <div id="hidden-buttons-container">
+                            <a href="#" class="my-custom-block" id="hidden-button-1"><i
+                                    class="ion-md-mail"></i>Messages</a>
+                            <a href="Productos.php" class="my-custom-block" id="hidden-button-2"><i
+                                    class="ion-md-cart"></i>Products</a>
+                            <a href="formorders.html" class="my-custom-block" id="hidden-button-3"><i
+                                    class="ion-md-book"></i>Orders</a>
+                            <a href="#" class="my-custom-block" id="hidden-button-4"><i
+                                    class="ion-md-person"></i>Customers</a>
+                        </div>
+                        <hr style="width: 186px; height: 1px; background-color: grey; border: none; margin: 10px 0;">
+                        <a href="#" class="my-custom-block" id="settings-button"><i class="ion-md-cog"></i>Settings</a>
+                        <a href="#" class="my-custom-block" id="Help-button">Help</a>
+                        <a href="#" class="my-custom-block" id="Contact-button">Contact us</a>
+                        <a href="#" class="my-custom-block" id="Log-button"><i class="ion-md-open"></i>Log out</a>
+                    </div>
+                </div>
+               
+                <div class="horizontal-container" style="display: flex; align-items: center; justify-content: center;">
+                    
+                    <div class="left-column">
+                        <div style="display: flex; flex-direction: column; text-align: center;">
+                            <b style="font-family: 'YourFont', sans-serif; font-size: 24px;">LIST OF PENDING ORDERS</b>
+                            <p style="color: #000007; font-size: 18px; font-family: 'YourFont', sans-serif;">These are
+                                the orders that are pending</p>
+                        </div>
+                    </div>
+                </div>
+
+               
+                <ul class="navbar-nav ml-auto">
+                    <li class="navbar-nav dropdown">
+                        <div class="position-relative">
+                            <a href="#" class="my-custom-block" id="perfil-button"
+                                style="color:black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 16px !important; background-color: transparent !important;font-weight: normal !important;">
+                                <img src="perfil.png" class="img-fluid rounded-circle avatar mr-2 small-avatar">
+                                David Cordoba
+                                <i class="ion-md-arrow-dropdown"></i>
+                            </a>
+                            <div id="hidden-buttons-container5" class="position-absolute"
+                                style="top: 100%; left: 0; display: none;">
+                                <a href="login.html" class="my-custom-block" id="hidden-button-5"
+                                    style="color: black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 14px !important; background-color: transparent !important;font-weight: normal !important;">Log
+                                    out</a>
+                            </div>
+                            </a>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+
+    </div>
+    <div class="additional-container " style="display: flex; flex-wrap: wrap; align-items: flex-start;">
+       
+        <section>
+            <div class="container mx-auto">
+                <div class="row justify-content-center">
+                    <div class="col-lg-1 text-center">
+                        <h2>Pending Orders</h2>
+                        <table class="table table-bordered custom-table mx-auto" style="background-color: transparent;">
+                            <thead class="text-center">
+                                <thead>
+                                    <tr>
+                                        <th>ID</th>
+                                        <th>CLIENT</th>
+                                        <th>PRODUCT</th>
+                                        <th>QUANTITY</th>
+                                        <th>DATE</th>
+                                        <th class="text-center">STATUS</th>
+                                        <th>CATEGORY</th>
+                                        <th>PRICE</th>
+                                        <th colspan="2" class="text-center">OPTIONS</th>
+                                    </tr>
+                                    <tr>
+                                        <td>1</td>
+                                        <td>Gustavo Smith</td>
+                                        <td>Smartphone</td>
+                                        <td>3</td>
+                                        <td>2023-09-19</td>
+                                        <td class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                id="statusDropdown1" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown1">
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(1, 'Pending')">Pending</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(1, 'Done')">Done</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(1, 'In Process')">In Process</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(1, 'Cancelled')">Cancelled</a>
+                                            </div>
+                                        </td>
+                                        <td>Electronics</td>
+                                        <td>$300</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-primary">Editar</button>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-danger">Borrar</button>
+                                        </td>
+                                        <td>
+                                        </td>
+                                    </tr>
+
+                                    </tr>
+                                    </tr>
+                                    <tr>
+                                        <td>2</td>
+                                        <td>Client 2</td>
+                                        <td>Tablet</td>
+                                        <td>2</td>
+                                        <td>2023-09-18</td>
+                                        <td class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown2">
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Pending')">Pending</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Done')">Done</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'In Process')">In Process</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Cancelled')">Cancelled</a>
+                                            </div>
+                                        </td>
+                                        <td>Electronics</td>
+                                        <td>$200</td>
+                                        <td class="text-center">
+                                            <button class="btn btn-primary">Editar</button>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-danger">Borrar</button>
+                                        </td>
+                                    </tr>
+
+                                    <tr>
+                                        <td>3</td>
+                                        <td>Client 3</td>
+                                        <td>Laptop</td>
+                                        <td>1</td>
+                                        <td>2023-09-17</td>
+                                        <td class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown3">
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Pending')">Pending</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Done')">Done</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'In Process')">In Process</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Cancelled')">Cancelled</a>
+                                            </div>
+                                        </td>
+                                        <td>Electronics</td>
+                                        <td>$600</td>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-primary">Editar</button>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-danger">Borrar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>4</td>
+                                        <td>Client 4</td>
+                                        <td>Headphones</td>
+                                        <td>4</td>
+                                        <td>2023-09-16</td>
+                                        <td class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown4">
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Pending')">Pending</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Done')">Done</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'In Process')">In Process</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Cancelled')">Cancelled</a>
+                                            </div>
+                                        </td>
+                                        <td>Electronics</td>
+                                        <td>$80</td>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-primary">Editar</button>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-danger">Borrar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>5</td>
+                                        <td>Client 5</td>
+                                        <td>Smart TV</td>
+                                        <td>1</td>
+                                        <td>2023-09-15</td>
+                                        <td class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown5">
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Pending')">Pending</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Done')">Done</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'In Process')">In Process</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Cancelled')">Cancelled</a>
+                                            </div>
+                                        </td>
+                                        <td>Electronics</td>
+                                        <td>$500</td>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-primary">Editar</button>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-danger">Borrar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>6</td>
+                                        <td>Client 6</td>
+                                        <td>Refrigerator</td>
+                                        <td>2</td>
+                                        <td>2023-09-14</td>
+                                        <td class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown6">
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Pending')">Pending</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Done')">Done</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'In Process')">In Process</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Cancelled')">Cancelled</a>
+                                            </div>
+                                        </td>
+                                        <td>Appliances</td>
+                                        <td>$700</td>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-primary">Editar</button>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-danger">Borrar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>7</td>
+                                        <td>Client 7</td>
+                                        <td>Printer</td>
+                                        <td>2</td>
+                                        <td>2023-09-13</td>
+                                        <td class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown7">
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Pending')">Pending</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Done')">Done</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'In Process')">In Process</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Cancelled')">Cancelled</a>
+                                            </div>
+                                        </td>
+                                        <td>Office</td>
+                                        <td>$150</td>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-primary">Editar</button>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-danger">Borrar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>8</td>
+                                        <td>Client 8</td>
+                                        <td>Monitor</td>
+                                        <td>3</td>
+                                        <td>2023-09-12</td>
+                                        <td class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown8">
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Pending')">Pending</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Done')">Done</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'In Process')">In Process</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Cancelled')">Cancelled</a>
+                                            </div>
+                                        </td>
+                                        <td>Electronics</td>
+                                        <td>$250</td>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-primary">Editar</button>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-danger">Borrar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>9</td>
+                                        <td>Client 9</td>
+                                        <td>Keyboard</td>
+                                        <td>5</td>
+                                        <td>2023-09-11</td>
+                                        <td class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown9">
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Pending')">Pending</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Done')">Done</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'In Process')">In Process</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Cancelled')">Cancelled</a>
+                                            </div>
+                                        </td>
+                                        <td>Computers</td>
+                                        <td>$50</td>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-primary">Editar</button>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-danger">Borrar</button>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>10</td>
+                                        <td>Client 10</td>
+                                        <td>Mouse</td>
+                                        <td>6</td>
+                                        <td>2023-09-10</td>
+                                        <td class="dropdown">
+                                            <button class="btn btn-secondary dropdown-toggle" type="button"
+                                                id="statusDropdown2" data-toggle="dropdown" aria-haspopup="true"
+                                                aria-expanded="false">
+                                                Pending
+                                            </button>
+                                            <div class="dropdown-menu" aria-labelledby="statusDropdown10">
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Pending')">Pending</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Done')">Done</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'In Process')">In Process</a>
+                                                <a class="dropdown-item" href="#"
+                                                    onclick="changeStatus(2, 'Cancelled')">Cancelled</a>
+                                            </div>
+                                        </td>
+                                        <td>Computers</td>
+                                        <td>$30</td>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-primary">Editar</button>
+                                        </td>
+                                        <td class="text-center">
+                                            <button class="btn btn-danger">Borrar</button>
+                                        </td>
+                                    </tr>
+                                    </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <script>
+            $(document).ready(function () {
+                // Manejar el evento de clic en el botón "Editar"
+                $(".edit-button").click(function () {
+                    // Obtener el ID de la fila
+                    const rowId = $(this).closest("tr").data("id");
+
+                    // Realizar alguna acción de edición aquí, como abrir un formulario de edición
+                    // o cargar los datos en un formulario de edición.
+                    alert(`Editar pedido con ID ${rowId}`);
+                });
+
+                // Manejar el evento de clic en el botón "Borrar"
+                $(".delete-button").click(function () {
+                    // Obtener el ID de la fila
+                    const rowId = $(this).closest("tr").data("id");
+
+                    // Realizar alguna acción de borrado aquí, como confirmación y eliminación de la fila.
+                    if (confirm(`¿Desea borrar el pedido con ID ${rowId}?`)) {
+                        // Borrar la fila de la tabla
+                        $(this).closest("tr").remove();
+                    }
+                });
+            });
+        </script>
+
+
+
+        <!-- Other sections (charts or other elements) can go here -->
+
+    </div>
+    </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#perfil-button").click(function (e) {
+                e.preventDefault();
+                $("#hidden-buttons-container5").toggle();
+            });
+        });
+    </script>
+    <!-- To make the custom-view button expand -->
+    <script>
+        const customViewButton = document.getElementById('custom-view-button');
+        const hiddenButtonsContainer = document.getElementById('hidden-buttons-container');
+        customViewButton.addEventListener('click', () => {
+            hiddenButtonsContainer.classList.toggle('show');
+        });
+
+        const profileDropdown = document.getElementById('profile-dropdown');
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script>
+        // Your chart scripts or other functionalities can go here
+    </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script>
+        $(document).ready(function () {
+            // Inicializa los componentes de Bootstrap que requieren JavaScript
+            $('[data-toggle="dropdown"]').dropdown();
+        });
+    </script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+</body>
+
+</html>
