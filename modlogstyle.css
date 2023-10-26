@@ -7,7 +7,7 @@
 }
 
 body{
-    background-image: url(logo.jpg);
+    background-image: url(../Parcial1/backgmod.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
@@ -113,7 +113,7 @@ main{
     margin-top: 20px;
     padding: 10px;
     border: none;
-    background: #F2F2F2;
+    background: #ffffff;
     font-size: 16px;
     outline: none;
 }
