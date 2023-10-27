@@ -15,7 +15,7 @@
     if(mysqli_num_rows($verificar_email) > 0){
         echo '
             <script>
-                alert("This email it is already in use");
+               alert("This email it is already in use");
                 window.location="../loginmod.html";
             </script>
         ';
@@ -27,6 +27,20 @@
         echo '
             <script>
                 alert("This username it is already token");
+                window.location="../loginmod.html";
+            </script>
+        ';
+        exit();
+    }
+
+    //Verificar que no sea vacio
+    if(empty($user) || empty($name) || empty($email) || empty($pass)){
+
+     
+
+        echo '
+            <script>
+                alert("Please, fill the required data");
                 window.location="../loginmod.html";
             </script>
         ';
