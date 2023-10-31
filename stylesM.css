@@ -1,0 +1,654 @@
+/* ////////////////////////////////////// aqui todo los relacionado con los contenedores y menus/////////////// */
+.black-container {
+    background-color: #000;
+    min-height: 100vh;
+    width: 240px;
+    position: fixed;
+    overflow-y: auto;
+    max-height: 100vh;
+}
+
+.table-container {
+    display: flex;
+    justify-content: center;
+}
+
+
+
+.text {
+    margin-top: 15px;
+}
+
+summary {
+    color: #fcff66;
+}
+
+
+#sidebar-container {
+    padding: 0.875rem 1.25rem;
+}
+
+.horizontal-container {
+    font-family: 'Source Sans 3', sans-serif;
+    background-color: #fff;
+    color: #202123;
+    padding: 10px;
+    text-align: left;
+    font-size: 30px;
+    width: 1126px;
+    height: 300;
+    position: fixed;
+    top: 0px;
+    left: 240px;
+    right: 0px;
+    margin-top: 0px;
+    display: flex;
+    align-items: center;
+    flex-grow: 1;
+    text-align: left;
+   
+}
+
+
+.d-flex {
+    display: flex;
+}
+
+.additional-container {
+    margin-left: 230px;
+    margin-top: 100px;
+    max-height: 440px;
+
+    max-height: 520px;
+    overflow-y: auto;
+    flex-wrap: wrap;
+    background-color: #f3f3f3;
+
+
+}
+
+.additional-container section {
+    width: 33%;
+    padding: 10px;
+    box-sizing: border-box;
+   
+}
+
+.menu {
+    width: 18rem;
+}
+
+.menu a {
+    font-family: 'Source Sans 3', sans-serif;
+    color: white;
+    text-decoration: none;
+    width: 10px;
+
+
+}
+
+
+:root {
+    --primary: #000000;
+    --light: #000000;
+    --grey: #fefefe;
+}
+
+body {
+    overflow: hidden;
+    font-weight: 300;
+    color: black;
+}
+
+
+
+.container {
+    margin-left: auto; 
+    margin-right: auto; 
+    
+}
+
+
+
+
+.left-column {
+    flex: 1;
+    margin-right: 20px;
+    
+}
+
+
+
+.title-container {
+    display: flex;
+    align-items: center;
+    width: auto;
+    font-size: 22px
+}
+
+.card-header {
+    width: 700px !important;
+    height: 387px;
+    margin-left: 45px;
+    border-radius: 34px;
+    margin-top: 20px;
+
+
+}
+
+.card-header1 {
+    width: 250px;
+    height: 387px;
+    ;
+    margin-left: 30px;
+    border-radius: 34px;
+    margin-top: 20px;
+
+
+
+}
+
+.table-container {
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    
+}
+
+
+
+.containera {
+    height: 100vh;
+
+}
+
+.horizontal-table {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    
+}
+
+.horizontal-table td {
+    flex: 1;
+    padding: 5px;
+    border: 1px solid #ccc;
+   
+}
+
+.horizontal-container {
+    display: flex;
+    align-items: center;
+    
+}
+
+.table {
+    width: 100%;
+    max-width: 100%;
+}
+
+.table th,
+.table td {
+    text-align: center;
+}
+
+
+.table .edit-button,
+.table .delete-button {
+    padding: 3px 8px;
+    margin: 0 5px;
+}
+
+.table .edit-button {
+    background-color: #007bff;
+    color: white;
+}
+
+.table .delete-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+
+.table tbody tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+.table-rounded {
+    border-collapse: separate;
+    border-spacing: 2;
+}
+
+.table-rounded th,
+.table-rounded td {
+    border-radius: 5px;
+  
+}
+
+
+/* ////////////////////////////////////// aqui todo los relacionado los botones tipos de lestras y etc/////////////// */
+
+.small-avatar {
+    width: 30px;
+
+}
+
+.logo {
+    width: 147px;
+    height: auto;
+    margin-bottom: 15px;
+}
+
+.my-custom-block {
+    display: block;
+    margin-bottom: 25px;
+    display: flex;
+    align-items: center;
+    margin-right: 10px;
+    font-size: 18px;
+    white-space: nowrap;
+    border-radius: 20px;
+    padding: 8px;
+    transition: background-color 0.3s ease;
+
+}
+
+.my-custom-block i {
+    margin-right: 14px;
+
+}
+
+.my-custom-block:first-child {
+    font-weight: bold;
+
+}
+
+#hidden-buttons-container {
+
+    height: 0;
+    overflow: hidden;
+    opacity: 0;
+    transition: height 0.3s ease, opacity 0.3s ease;
+
+}
+
+#hidden-buttons-container.show {
+    height: auto;
+    opacity: 1;
+}
+
+#custom-view-button.active+.hidden-button {
+    margin-left: 0;
+
+}
+
+#hidden-button-1,
+#hidden-button-2,
+#hidden-button-3,
+#hidden-button-4 {
+    color: gray;
+
+}
+
+#custom-view-button {
+
+    font-size: 16px;
+}
+
+#Summary-button {
+    font-size: 16px;
+}
+
+#Help-button {
+    font-size: 16px;
+    color: gray;
+}
+
+#Contact-button {
+    font-size: 16px;
+    color: gray;
+}
+
+#Log-button {
+
+    font-size: 16px;
+
+}
+
+#settings-button {
+    color: gray;
+}
+
+.my-custom-block:hover {
+    background-color: gray;
+    color: white;
+    text-decoration: none;
+    
+}
+
+
+.my-custom-button {
+    font-family: 'Source Sans 3', sans-serif;
+    background: none;
+    border: none;
+    padding: 0;
+    margin: 0;
+    cursor: pointer;
+    font-size: inherit;
+    color: inherit;
+    font-size: 16px;
+    margin-right: 200px;
+    text-decoration: none;
+}
+
+.show {
+    display: block !important;
+}
+
+#hidden-buttons-container2 {
+    display: none;
+}
+
+
+.title {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 22px;
+    margin-right: 80px;
+    font-weight: bolder;
+    color: #202123;
+    margin-top: 10px;
+
+}
+
+.title1 {
+    font-family: 'Source Sans 3', sans-serif;
+    font-size: 22px;
+    font-weight: bolder;
+    color: #202123;
+    margin-left: 50px;
+    margin-top: 20px;
+
+}
+
+.export-button {
+    margin-left: 130px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ebebeb;
+    color: #606060;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.days-button {
+    margin-left: 20px;
+    border-radius: 20px;
+    padding: 10px 20px;
+    border: 1px solid #ebebeb;
+    /* Borde gris delgado */
+    color: #606060;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    font-weight: bolder;
+
+}
+
+ 
+.days-button:hover {
+    text-decoration: none;
+    color: gray;
+    background-color: white;
+}
+
+.export-button:hover {
+    text-decoration: none;
+    color: gray;
+    background-color: white;
+
+}
+
+#myChart {
+    width: 40% !important;
+    height: 40% !important;
+    margin-left: 200px;
+}
+
+.dropdown {
+    display: inline-block;
+    position: relative;
+}
+
+.dropdown-menu {
+    display: none;
+    position: absolute;
+    width: 100%;
+    overflow: auto;
+    box-shadow: 0px 10px 10px 0px rgba(0, 0, 0, 0.4);
+}
+
+.dropdown:hover .dropdown-menu {
+    display: block;
+}
+
+.dropdown-menu a {
+    display: block;
+    color: #000000;
+    padding: 5px;
+    text-decoration: none;
+}
+
+.dropdown-menu a:hover {
+    color: #FFFFFF;
+    background-color: #00A4BD;
+}
+
+.btn-gray {
+    background-color: gray;
+}
+
+.btn-green {
+    background-color: green;
+}
+
+.btn-yellow {
+    background-color: yellow;
+}
+
+.btn-red {
+    background-color: red;
+}
+
+
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+
+.client-list table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.client-list th, .client-list td {
+    border: 1px solid #ffffff;
+    padding: 8px;
+    text-align: left;
+}
+
+.client-list th,
+.client-list td {
+    background-color: #ffffff;
+    font-size: 13px; 
+    padding: 4px 8px; 
+}
+
+
+.client-page {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    
+}
+
+
+.client-container {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+
+.client-container .client-list table {
+    border-collapse: collapse;
+    width: 100%;
+    background-color: #ffffff;
+}
+
+.client-container .client-list th, .client-container .client-list td {
+    border: 1px solid #000000;
+    padding: 18px;
+    text-align: left;
+}
+
+.client-container .client-list th {
+    background-color: #ffffff;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #000000;
+    color: #fff;
+    padding: 10px 20px;
+}
+
+header h1 {
+    font-size: 24px;
+    margin: 0;
+}
+
+#addClientBtn {
+    background-color: #ffffff;
+    border: none;
+    color: #000000;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+    .seccion-perfil-usuario {
+        background-color: #f0f0f0;
+        padding: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        margin: 20px;
+    }
+
+    .perfil-usuario-header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .perfil-usuario-portada {
+        display: flex;
+        align-items: center;
+    }
+
+    .perfil-usuario-avatar img {
+        border-radius: 50%;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+    }
+
+    .boton-avatar {
+        margin-left: 10px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 50%;
+        width: 30px;
+        height: 30px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .boton-portada {
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        padding: 5px 10px;
+        margin-left: 20px;
+        cursor: pointer;
+    }
+
+    .perfil-usuario-body {
+        margin-top: 20px;
+    }
+
+    .titulo {
+        font-size: 24px;
+        margin: 0;
+    }
+
+    .texto {
+        font-size: 16px;
+        color: #555;
+    }
+
+    .perfil-usuario-footer {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 20px;
+    }
+
+    .lista-datos {
+        list-style: none;
+        padding: 0;
+    }
+
+    .lista-datos li {
+        margin: 5px 0;
+        display: flex;
+        align-items: center;
+    }
+
+    .lista-datos i {
+        margin-right: 5px;
+    }
+
+    .redes-sociales {
+        margin-top: 20px;
+    }
+
+    .boton-redes {
+        text-decoration: none;
+        margin-right: 10px;
+        color: #007bff;
+    }
+
+
+
+
+
+
+
+
+
+

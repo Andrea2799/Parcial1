@@ -1,0 +1,20 @@
+create table PRODUCTOS (
+ID_Productos int (5) primary key,
+Nombre varchar(25),
+Descripcion varchar(25),
+Precio double,
+Tipo_De_Licencia varchar(25),
+Version double );
+
+create table Contacto (
+ID int(5) primary key,
+Name varchar(25),
+last_Name varchar(25),
+Nombre_compañia varchar(30),
+Celular varchar(15),
+Email varchar(50));
+
+
+desc contacto;
+
+A
