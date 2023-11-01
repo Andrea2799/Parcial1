@@ -1,3 +1,17 @@
+<?php
+require 'funcs/conexion.php';
+require 'funcs/funcs.php';
+
+$errors = array();
+if (!empty($_POST)) {
+    $email = $mysqli->real_escape_string($_POST['email']);
+
+    if (!isEmail($email)) {
+        $errors[] = "Debes ingresar un correo electrónico válido";
+    }
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -18,4 +32,3 @@
 
 </body>
 </html>
- 
