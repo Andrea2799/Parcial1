@@ -8,7 +8,7 @@
     $validar_login = mysqli_query($conn, "SELECT * FROM usuarios WHERE email = '$email' and pass = '$pass'");
 
     if(mysqli_num_rows($validar_login) > 0){
-        header("location: ../index.html");
+        header("location: ../indexmod.html");
     }else{
         echo '
             <script>
