@@ -23,14 +23,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     
     
-    // Verificar si el ID ya existe en la base de datos
+    
     $check_sql = "SELECT ID_Productos FROM productos WHERE ID_Productos = '$ID_Productos'";
     $check_result = $conn->query($check_sql);
 
     if ($check_result->num_rows > 0) {
         $mensaje = "The ID already exists, it cannot be repeated.";
     } else {
-        // El ID no existe, se puede insertar
+        
         $sql = "INSERT INTO productos (ID_Productos, Nombre, Descripcion, Precio, Tipo_De_Licencia, Version) VALUES ('$ID_Productos', '$Nombre', '$Descripcion', '$Precio', '$Tipo_De_Licencia', '$Version')";
     
         if ($conn->query($sql) === TRUE) {
