@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>TECNOSERVICE</title>
+    <title>Dating Platform</title>
     <link rel="stylesheet" href="bootstrap-4.4.1-dist/css/bootstrap-reboot.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://unpkg.com/ionicons@4.5.10-0/dist/css/ionicons.min.css">
@@ -21,8 +21,8 @@
         <div class="black-container">
             <div id="sidebar-container">
 
-                <div class="logo">
-                    <img src="logo.jpg" alt="Logotipo TECNOSERVICE">
+                
+                    
                 </div>
 
                                <div class="menu-container" id="menu-container">
@@ -96,12 +96,12 @@
     <script>
         $(document).ready(function () {
             $("#perfil-button").click(function (e) {
-                e.preventDefault(); 
-                $("#hidden-buttons-container5").toggle(); 
+                e.preventDefault(); // Previene el comportamiento predeterminado del enlace
+                $("#hidden-buttons-container5").toggle(); // Muestra u oculta el botón "Cerrar sesión" al hacer clic en "perfil-button"
             });
         });
     </script>
-    
+    <!-- para hacer que el botón custom-view se despliegue -->
     <script>
         const customViewButton = document.getElementById('custom-view-button');
         const hiddenButtonsContainer = document.getElementById('hidden-buttons-container');
