@@ -57,112 +57,89 @@
                         <hr style="width: 186px; height: 1px; background-color: grey; border: none; margin: 10px 0;">
                         <a href="settings.html" class="my-custom-block" id="settings-button"><i
                                 class="ion-md-cog"></i>Settings</a>
-                        <a href="help.html" class="my-custom-block" id="Help-button">Quotes</a>
-                        <a href="contacto.html" class="my-custom-block" id="Contact-button">Contact us</a>
-                        <a href="login.html" class="my-custom-block" id="Log-button"><i class="ion-md-open"></i>Log
-                            out</a>
-                        <a href="Summary1.html" class="my-custom-block" id="Summary-button"><i
-                                class="ion-md-funnel"></i>Summary</a>
-                        <a href="#" class="my-custom-block" id="custom-view-button"><i
-                                class="ion-md-arrow-dropdown"></i>Custom view</a>
-                        <div id="hidden-buttons-container">
-                            <a href="messages.html" class="my-custom-block" id="hidden-button-1"><i
-                                    class="ion-md-mail"></i>Messages</a>
-                            <a href="Productos.php" class="my-custom-block" id="hidden-button-2"><i
-                                    class="ion-md-cart"></i>Products</a>
-                            <a href="Orders.html" class="my-custom-block" id="hidden-button-3"><i
-                                    class="ion-md-book"></i>Orders</a>
-                            <a href="Customers.html" class="my-custom-block" id="hidden-button-4"><i
-                                    class="ion-md-person"></i>Customers</a>
-                        </div>
-                        <hr style="width: 186px; height: 1px; background-color: grey; border: none; margin: 10px 0;">
-                        <a href="settings.html" class="my-custom-block" id="settings-button"><i
-                                class="ion-md-cog"></i>Settings</a>
-                        <a href="help.html" class="my-custom-block" id="Help-button">Quotes</a>
-                        <a href="contacto.html" class="my-custom-block" id="Contact-button">Contact us</a>
-                        <a href="login.html" class="my-custom-block" id="Log-button"><i class="ion-md-open"></i>Log
+                        <a href="Perfil.html" class="my-custom-block" id="Contact-button">Edit Profile</a>
+                        <a href="loginmod.html" class="my-custom-block" id="Log-button"><i class="ion-md-open"></i>Log
                             out</a>
                     </div>
                 </div>
-
-
-                <div class="horizontal-container" style="display: flex; align-items: center;">
-
-                    <div class="horizontal-container"
-                        style="display: flex; align-items: center; justify-content: center;">
-                        <ul class="navbar-nav ml-auto">
-                            <li class="navbar-nav dropdown">
-                                <div class="position-relative">
-                                    <a href="#" class="my-custom-block" id="perfil-button"
-                                        style="color:black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 16px !important; background-color: transparent !important;font-weight: normal !important;">
-                                        <img src="perfil.png" class="img-fluid rounded-circle avatar mr-2 small-avatar">
-                                        David Cordoba
-                                        <i class="ion-md-arrow-dropdown"></i>
-                                    </a>
-                                    <div id="hidden-buttons-container5" class="position-absolute"
-                                        style="top: 100%; left: 0; display: none;">
-
-                                        <a href="login.html" class="my-custom-block" id="hidden-button-5"
-                                            style="color: black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 14px !important; background-color: transparent !important;font-weight: normal !important;">Log
-                                            out</a>
-                                    </div>
-                                    </a>
-                            </li>
-                        </ul>
-                    </div>
-
-
-                </div>
-
             </div>
-
-
         </div>
-        <div class="container" style="margin-top: 50px; text-align: center;">
-            <h1>Editar perfil</h1>
-            <form action="actualizar_perfil.php" method="post">
-                <label for="nombre">Nombre:</label>
-                <input type="text" id="name" name="name" placeholder="Nombre actual" required>
+    </div>
 
-                <label for="email">Correo electrónico:</label>
-                <input type="email" id="email" name="email" placeholder="correo@actual.com" required>
+    <div class="horizontal-container" style="display: flex; align-items: center; justify-content: center;">
+        <ul class="navbar-nav ml-auto">
+            <li class="navbar-nav dropdown">
+                <div class="position-relative">
+                    <a href="#" class="my-custom-block" id="perfil-button"
+                        style="color: black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 16px !important; background-color: transparent !important;font-weight: normal !important;">
+                        <img src="perfil.png" class="img-fluid rounded-circle avatar mr-2 small-avatar">
+                        David Cordoba
+                        <i class="ion-md-arrow-dropdown"></i>
+                    </a>
+                    <div id="hidden-buttons-container4" class="position-absolute"
+                        style="top: 50%; left: 0; display: none;">
+                        <a href="Perfil.html" class="my-custom-block" id="hidden-button-4"
+                            style="color: black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 14px !important; background-color: transparent !important;font-weight: normal !important;">Edit
+                            Profile</a>
+                    </div>
 
-                <label for="contrasena">Contraseña:</label>
-                <input type="password" id="password" name="password" placeholder="********" required>
+                    <div id="hidden-buttons-container5" class="position-absolute"
+                        style="top: 100%; left: 0; display: none;">
+                        <a href="loginmod.html" class="my-custom-block" id="hidden-button-5"
+                            style="color: black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 14px !important; background-color: transparent !important;font-weight: normal !important;">Log
+                            out</a>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
 
-                <label for="nueva_contrasena">Nueva contraseña:</label>
-                <input type="password" id="nueva_contrasena" name="nueva_contrasena" placeholder="Nueva contraseña">
+    <div class="container">
+        <h1>EDIT PROFILE</h1>
+        <form action="actualizar_perfil.php" method="post">
+            <label for="nombre">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Current Name" required>
 
-                <label for="confirmar_contrasena">Confirmar nueva contraseña:</label>
-                <input type="password" id="confirmar_contrasena" name="confirmar_contrasena"
-                    placeholder="Confirmar nueva contraseña">
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" placeholder="email@actual.com" required>
 
-                <input type="submit" value="Actualizar perfil">
-            </form>
+            <label for="contrasena">Password:</label>
+            <input type="password" id="password" name="password" placeholder="********" required>
+
+            <label for="nueva_contrasena">New Password:</label>
+            <input type="password" id="nueva_contrasena" name="nueva_contrasena" placeholder="New password">
+
+            <label for="confirmar_contrasena">Confirm Password:</label>
+            <input type="password" id="confirmar_contrasena" name="confirmar_contrasena"
+                placeholder="Confirm New Password">
+
+            <input type="submit" value="Update Profile">
+        </form>
+    </div>
 
 
 
-            <script src="script.js"></script>
+    <script src="script.js"></script>
 
-            <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-            <script>
-                $(document).ready(function () {
-                    $("#perfil-button").click(function (e) {
-                        e.preventDefault();
-                        $("#hidden-buttons-container5").toggle();
-                    });
-                });
-            </script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("#perfil-button").click(function (e) {
+                e.preventDefault();
+                $("#hidden-buttons-container5").toggle();
+            });
+        });
+    </script>
 
-            <script>
-                const customViewButton = document.getElementById('custom-view-button');
-                const hiddenButtonsContainer = document.getElementById('hidden-buttons-container');
-                customViewButton.addEventListener('click', () => {
-                    hiddenButtonsContainer.classList.toggle('show');
-                });
+    <script>
+        const customViewButton = document.getElementById('custom-view-button');
+        const hiddenButtonsContainer = document.getElementById('hidden-buttons-container');
+        customViewButton.addEventListener('click', () => {
+            hiddenButtonsContainer.classList.toggle('show');
+        });
 
-                const profileDropdown = document.getElementById('profile-dropdown');
-            </script>
+        const profileDropdown = document.getElementById('profile-dropdown');
+    </script>
 
 </body>
 
