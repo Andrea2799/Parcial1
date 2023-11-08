@@ -1,36 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cambiar Contraseña</title>
+</head>
+<body>
+<div class="container">
+    <h2>Cambiar Contraseña</h2>
+    <form action="procesar_cambio_contrasena.php" method="POST">
+        <label for="email">Email:</label>
+        <input type="email" name="email" id="email" required>
+        <label for="password">Nueva Contraseña:</label>
+        <input type="password" name="password" id="password" required>
+        <button type="submit">Cambiar Contraseña</button>
+    </form>
+</div>
+</body>
+</html>
+
 <?php
-// Conexión a la base de datos
-$servername = "localhost";
-$username = "root";
-$password = "19994710Andrea";
-$dbname = "modlog";
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Verificar la conexión
-if ($conn->connect_error) {
-    die("Conexión fallida: " . $conn->connect_error);
-}
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    $token = $_POST['token'];
-    $password = $_POST['password'];
+    $email = $_POST['email'];
+    $new_password = $_POST['password'];
 
-    // Verificar si el token es válido y aún está dentro del período de validez (debes implementar esta verificación)
+    // Hash de la nueva contraseña
+    $hashedPassword = password_hash($new_password, PASSWORD_BCRYPT);
+    
+    // Conexión a la base de datos
+    $servername = "localhost";
+    $username = "root";
+    $password = "19994710Andrea";
+    $dbname = "modlog";
+    
+    $conn = new mysqli($servername, $username, $password, $dbname);
+    
+    if ($conn->connect_error) {
+        die("Conexión fallida: " . $conn->connect_error);
+    }
+    
+    // Sentencia preparada para actualizar la contraseña
+    $sql = "UPDATE usuarios SET pass = ? WHERE email = ?";
+  
 
-    // Actualizar la contraseña en la base de datos
-    $hashedPassword = password_hash($password, PASSWORD_BCRYPT);
-    $sql = "UPDATE usuarios SET pass='$hashedPassword' WHERE token='$token'";
-    $conn->query($sql);
+    if ($stmt = $conn->prepare($sql)) {
+        $stmt->bind_param("ss", $hashedPassword, $email);
 
-    // Limpia el token en la base de datos
-    $sql = "UPDATE usuarios SET token=NULL, token_expiracion=NULL WHERE token='$token'";
-    $conn->query($sql);
+        if ($stmt->execute()) {
+            // Contraseña actualizada con éxito
+            echo "Contraseña actualizada con éxito. Puede <a href='loginmod.html'>iniciar sesión</a> con su nueva contraseña.";
+        } else {
+            echo "Error al actualizar la contraseña: " . $stmt->error;
+        }
 
-    // Redirigir al usuario a una página de éxito o inicio de sesión
-    header("Location: cambio_contrasena_exitoso.php");
+        $stmt->close();
+    } else {
+        echo "Error en la preparación de la consulta: " . $conn->error;
+    }
+    
+    $conn->close();
 }
-
-// Cerrar la conexión a la base de datos
-$conn->close();
 ?>
+
