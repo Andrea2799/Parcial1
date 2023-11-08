@@ -14,11 +14,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
     $pass = $_POST['password'];
 
-    // Hash de la nueva contraseña
-    $hashedPassword = password_hash($pass, PASSWORD_BCRYPT);
-
     // Actualizar la contraseña en la base de datos
-    $sql = "UPDATE usuarios SET pass='$hashedPassword' WHERE email='$email'";
+    $sql = "UPDATE usuarios SET pass='$pass' WHERE email='$email'";|
     $conn->query($sql);
 
     // Redirigir al usuario a una página de éxito o inicio de sesión
