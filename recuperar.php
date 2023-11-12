@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "19994710";
 $dbname = "modlogin_registerdb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
       
         header("Location: cambiar_contraseña.php");
     } else {
-              echo "El correo electrónico no existe en nuestra base de datos.";
+              echo "The email does not exist, please enter a valid email"; 
     }
 }
 
@@ -36,16 +36,38 @@ $conn->close();
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Recuperar Contraseña</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .container button {
+            margin-top: 30px;
+            
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Recuperar Contraseña</h2>
+    <h2>Recover Password</h2>
     <form action="" method="POST">
-        <label for="email">
-                        Enter Email:</label>
+        <label for="email">Enter Email:</label>
         <input type="email" name="email" id="email" required>
-        <button type="submit">validate</button>
+        <button type="submit">Validate</button>
     </form>
 </div>
 

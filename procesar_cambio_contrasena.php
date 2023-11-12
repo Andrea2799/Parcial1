@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "19994710";
 $dbname = "modlogin_registerdb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -15,7 +15,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $pass = $_POST['password'];
 
     // Actualizar la contraseña en la base de datos
-    $sql = "UPDATE usuarios SET pass='$pass' WHERE email='$email'";|
+    $sql = "UPDATE usuarios SET pass='$pass' WHERE email='$email'";
     $conn->query($sql);
 
     // Redirigir al usuario a una página de éxito o inicio de sesión
