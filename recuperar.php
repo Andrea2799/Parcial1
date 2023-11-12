@@ -6,11 +6,11 @@ $dbname = "modlogin_registerdb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
-
 if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
+$message = "";  
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
 
@@ -18,14 +18,12 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // El correo electrónico existe en la base de datos
-      
+       
         header("Location: cambiar_contraseña.php");
     } else {
-              echo "The email does not exist, please enter a valid email"; 
+        $message = "The email does not exist, please enter a valid email";
     }
 }
-
 
 $conn->close();
 ?>
@@ -56,7 +54,6 @@ $conn->close();
 
         .container button {
             margin-top: 30px;
-            
         }
     </style>
 </head>
@@ -64,6 +61,12 @@ $conn->close();
 
 <div class="container">
     <h2>Recover Password</h2>
+    
+    <!-- Muestra la variable mesanje -->
+    <?php if (!empty($message)): ?>
+        <p style="color: red;"><?php echo $message; ?></p>
+    <?php endif; ?>
+    
     <form action="" method="POST">
         <label for="email">Enter Email:</label>
         <input type="email" name="email" id="email" required>
