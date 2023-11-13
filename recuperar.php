@@ -10,7 +10,8 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-$message = "";  
+$message = "";
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_POST['email'];
 
@@ -18,7 +19,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-       
+        // Almacena el correo en una variable de sesión
+        session_start();
+        $_SESSION['reset_email'] = $email;
+
         header("Location: cambiar_contraseña.php");
     } else {
         $message = "The email does not exist, please enter a valid email";
@@ -33,7 +37,7 @@ $conn->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar Contraseña</title>
+    <title>Recover Password</title>
     <style>
         body {
             display: flex;
@@ -61,12 +65,12 @@ $conn->close();
 
 <div class="container">
     <h2>Recover Password</h2>
-    
-    <!-- Muestra la variable mesanje -->
+
+    <!-- Muestra la variable mensaje -->
     <?php if (!empty($message)): ?>
         <p style="color: red;"><?php echo $message; ?></p>
     <?php endif; ?>
-    
+
     <form action="" method="POST">
         <label for="email">Enter Email:</label>
         <input type="email" name="email" id="email" required>
