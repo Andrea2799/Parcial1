@@ -75,16 +75,16 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         <p><?php echo $error_message; ?></p>
     <?php endif; ?>
 
-    <form action="" method="POST">
-        <label for="email">Email:</label><br>
-        <input type="text" name="email" id="email" value="<?php echo isset($_SESSION['reset_email']) ? $_SESSION['reset_email'] : ''; ?>" readonly><br><p>
-        <label for="password">New Password:</label><br>
-        <input type="password" name="password" id="password" required><br><p>
-        <!-- Nuevo campo para confirmar la contraseña -->
-        <label for="confirm_password">Confirm Password:</label><br>
-        <input type="password" name="confirm_password" id="confirm_password" required><br><p>
-        <button type="submit">Change Password</button>
-    </form>
+    <form action="procesar_cambio_contrasena.php" method="POST">
+    <label for="email">Email:</label><br>
+    <input type="text" name="reset_email" id="email" value="<?php echo isset($_SESSION['reset_email']) ? $_SESSION['reset_email'] : ''; ?>" readonly><br><p>
+    <label for="password">New Password:</label><br>
+    <input type="password" name="password" id="password" required><br><p>
+    <!-- confirmar contraseña-->
+    <label for="confirm_password">Confirm Password:</label><br>
+    <input type="password" name="confirm_password" id="confirm_password" required><br><p>
+    <button type="submit">Change Password</button>
+</form>
 </div>
 </body>
 </html>

@@ -10,26 +10,59 @@ if ($conn->connect_error) {
     die("Conexión fallida: " . $conn->connect_error);
 }
 
-// Redirige a la página de recuperación si no se accede correctamente
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
     header("Location: recuperar.php");
     exit;
 }
 
-$email = $_POST['email'];
+$email = $_POST['reset_email'];
 $pass = $_POST['password'];
 
-// Actualizar la contraseña en la base de datos
+// en esta sentencia se actualiza en la base de datos la nueva password
 $sql = "UPDATE usuarios SET pass='$pass' WHERE email='$email'";
 $conn->query($sql);
 
-// Verifica si hubo errores al actualizar la contraseña
 if ($conn->error) {
     echo "Error al actualizar la contraseña: " . $conn->error;
 } else {
-    // Muestra un mensaje de éxito o error
-    echo "Contraseña actualizada con éxito. Puede <a href='loginmod.html'>iniciar sesión</a> con su nueva contraseña.";
+    // Mensaje de éxito
+    $success_message = "Password updated successfully. 
+    You can <a href='loginmod.html'>log in</a> with your new password.";
 }
 
 $conn->close();
 ?>
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        #result-container {
+            text-align: center;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+    </style>
+</head>
+<body>
+    <div id="result-container">
+        <?php if (isset($success_message)): ?>
+            <p><?php echo $success_message; ?></p>
+        <?php endif; ?>
+    </div>
+</body>
+</html>
