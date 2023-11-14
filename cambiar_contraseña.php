@@ -23,11 +23,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
         if (!preg_match('/^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/', $new_password)) {
             $error_message = "Error: The password must be at least 8 characters long, contain at least one uppercase letter, and include at least one special character.";
         } else {
-            // Resto del código para cambiar la contraseña
+            
             require_once 'procesar_cambio_contrasena.php';
-            // ...
-        
-            // Redirige a la página de éxito
+            
             header("Location: procesar_cambio_contrasena.php");
             exit;
         }

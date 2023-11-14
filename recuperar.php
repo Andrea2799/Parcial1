@@ -19,7 +19,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $result = $conn->query($sql);
 
     if ($result->num_rows > 0) {
-        // Almacena el correo en una variable de sesión
+      
         session_start();
         $_SESSION['reset_email'] = $email;
 
