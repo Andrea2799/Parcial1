@@ -8,6 +8,7 @@ if (!isset($_SESSION['reset_email'])) {
 }
 
 $error_message = "";
+$success_message = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $email = $_SESSION['reset_email'];
@@ -18,15 +19,18 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if ($new_password !== $confirm_password) {
         $error_message = "Error: The password and confirmation password do not match.";
     } else {
-        // Resto del código para cambiar la contraseña
-        // ...
-
-        // Finaliza la sesión después de cambiar la contraseña
-        unset($_SESSION['reset_email']);
-
-        // Redirige a la página procesar_cambio_contraseña.php
-        header("Location: procesar_cambio_contrasena.php");
-        exit; // Asegura que el script se detenga después de la redirección
+        // Verificar que la contraseña cumple con los requisitos
+        if (!preg_match('/^(?=.*[A-Z])(?=.*\d)(?=.*[!@#$%^&*()_+])[A-Za-z\d!@#$%^&*()_+]{8,}$/', $new_password)) {
+            $error_message = "Error: The password must be at least 8 characters long, contain at least one uppercase letter, and include at least one special character.";
+        } else {
+            // Resto del código para cambiar la contraseña
+            require_once 'procesar_cambio_contrasena.php';
+            // ...
+        
+            // Redirige a la página de éxito
+            header("Location: procesar_cambio_contrasena.php");
+            exit;
+        }
     }
 }
 ?>
@@ -65,6 +69,10 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             color: red;
             margin-bottom: 10px;
         }
+
+        .success-message {
+            color: green;
+        }
     </style>
 </head>
 <body>
@@ -73,18 +81,20 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     <?php if (!empty($error_message)): ?>
         <p><?php echo $error_message; ?></p>
+    <?php elseif (!empty($success_message)): ?>
+        <p class="success-message"><?php echo $success_message; ?></p>
     <?php endif; ?>
 
-    <form action="procesar_cambio_contrasena.php" method="POST">
-    <label for="email">Email:</label><br>
-    <input type="text" name="reset_email" id="email" value="<?php echo isset($_SESSION['reset_email']) ? $_SESSION['reset_email'] : ''; ?>" readonly><br><p>
-    <label for="password">New Password:</label><br>
-    <input type="password" name="password" id="password" required><br><p>
-    <!-- confirmar contraseña-->
-    <label for="confirm_password">Confirm Password:</label><br>
-    <input type="password" name="confirm_password" id="confirm_password" required><br><p>
-    <button type="submit">Change Password</button>
-</form>
+    <form action="" method="POST">
+        <label for="email">Email:</label><br>
+        <input type="text" name="reset_email" id="email" value="<?php echo isset($_SESSION['reset_email']) ? $_SESSION['reset_email'] : ''; ?>" readonly><br><p>
+        <label for="password">New Password:</label><br>
+        <input type="password" name="password" id="password" required><br><p>
+        <!-- confirmar contraseña-->
+        <label for="confirm_password">Confirm Password:</label><br>
+        <input type="password" name="confirm_password" id="confirm_password" required><br><p>
+        <button type="submit">Change Password</button>
+    </form>
 </div>
 </body>
 </html>

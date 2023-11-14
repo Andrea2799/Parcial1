@@ -11,23 +11,28 @@ if ($conn->connect_error) {
 }
 
 if ($_SERVER["REQUEST_METHOD"] != "POST") {
-    header("Location: recuperar.php");
-    exit;
+    // header("Location: recuperar.php"); // Eliminado para evitar redirección
+    // exit; // También eliminado
 }
 
-$email = $_POST['reset_email'];
-$pass = $_POST['password'];
+$email = isset($_POST['reset_email']) ? $_POST['reset_email'] : '';
+$pass = isset($_POST['password']) ? $_POST['password'] : '';
+$confirm_pass = isset($_POST['confirm_password']) ? $_POST['confirm_password'] : '';
 
-// en esta sentencia se actualiza en la base de datos la nueva password
-$sql = "UPDATE usuarios SET pass='$pass' WHERE email='$email'";
-$conn->query($sql);
-
-if ($conn->error) {
-    echo "Error al actualizar la contraseña: " . $conn->error;
+// Verificar que las contraseñas coincidan
+if ($pass != $confirm_pass) {
+    $error_message = "Passwords do not match. He tries again.<a href='cambiar_contraseña.php'>back</a>";
 } else {
-    // Mensaje de éxito
-    $success_message = "Password updated successfully. 
-    You can <a href='loginmod.html'>log in</a> with your new password.";
+    // en esta sentencia se actualiza en la base de datos la nueva password
+    $sql = "UPDATE usuarios SET pass='$pass' WHERE email='$email'";
+    $conn->query($sql);
+
+    if ($conn->error) {
+        echo "Error al actualizar la contraseña: " . $conn->error;
+    } else {
+        // Mensaje de éxito
+        $success_message = "Password updated successfully. You can <a href='loginmod.html'>log in</a> with your new password.";
+    }
 }
 
 $conn->close();
@@ -62,6 +67,8 @@ $conn->close();
     <div id="result-container">
         <?php if (isset($success_message)): ?>
             <p><?php echo $success_message; ?></p>
+        <?php elseif (isset($error_message)): ?>
+            <p style="color: red;"><?php echo $error_message; ?></p>
         <?php endif; ?>
     </div>
 </body>
