@@ -1,15 +1,35 @@
 <?php
-require 'funcs/conexion.php';
-require 'funcs/funcs.php';
+$servername = "localhost";
+$username = "root";
+$password = "19994710";
+$dbname = "modlogin_registerdb";
 
-$errors = array();
-if (!empty($_POST)) {
-    $email = $mysqli->real_escape_string($_POST['email']);
+$conn = new mysqli($servername, $username, $password, $dbname);
 
-    if (!isEmail($email)) {
-        $errors[] = "Debes ingresar un correo electrónico válido";
+if ($conn->connect_error) {
+    die("Conexión fallida: " . $conn->connect_error);
+}
+
+$message = "";
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    $email = $_POST['email'];
+
+    $sql = "SELECT * FROM usuarios WHERE email = '$email'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows > 0) {
+      
+        session_start();
+        $_SESSION['reset_email'] = $email;
+
+        header("Location: cambiar_contraseña.php");
+    } else {
+        $message = "The email does not exist, please enter a valid email";
     }
 }
+
+$conn->close();
 ?>
 
 <!DOCTYPE html>
@@ -17,16 +37,44 @@ if (!empty($_POST)) {
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Recuperar Contraseña</title>
+    <title>Recover Password</title>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .container {
+            text-align: center;
+            width: 300px;
+            padding: 20px;
+            border: 1px solid #ccc;
+            font-family: 'Source Sans 3', sans-serif;
+        }
+
+        .container button {
+            margin-top: 30px;
+        }
+    </style>
 </head>
 <body>
 
 <div class="container">
-    <h2>Recuperar Contraseña</h2>
-    <form action="procesar_recuperacion.php" method="POST">
-        <label for="email">Ingresar Email:</label>
+    <h2>Recover Password</h2>
+
+    <!-- Muestra la variable mensaje -->
+    <?php if (!empty($message)): ?>
+        <p style="color: red;"><?php echo $message; ?></p>
+    <?php endif; ?>
+
+    <form action="" method="POST">
+        <label for="email">Enter Email:</label>
         <input type="email" name="email" id="email" required>
-        <button type="submit">Enviar</button>
+        <button type="submit">Validate</button>
     </form>
 </div>
 

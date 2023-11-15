@@ -1,20 +1,15 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "19994710";
 $dbname = "modlogin_registerdb";
-
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar conexión
-/*
-if($conn){
-    echo 'Conectado exitosamente a la Base de datos';
-}else{
-    echo ' No se ha podido conectar a la base de datos';
-}*/
+if($conn->connect_error){
+    die("Conexión fallida: " . $conn->connect_error);
+}
 
-
-
+// Resto del código si es necesario
 ?>
