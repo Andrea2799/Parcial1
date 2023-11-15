@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "19994710";
+$password = "";
 $dbname = "modlogin_registerdb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -66,7 +66,7 @@ $conn->close();
 <div class="container">
     <h2>Recover Password</h2>
 
-    <!-- Muestra la variable mensaje -->
+    <!--  mensaje -->
     <?php if (!empty($message)): ?>
         <p style="color: red;"><?php echo $message; ?></p>
     <?php endif; ?>

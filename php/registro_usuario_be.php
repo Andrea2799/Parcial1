@@ -1,5 +1,5 @@
 <?php
-include 'modconn.php'; // Asegúrate de ajustar la ruta según la estructura de carpetas de tu proyecto
+include 'modconn.php'; 
 
 $name = $_POST['name'];
 $email = $_POST['email'];
@@ -9,7 +9,7 @@ $pass = $_POST['pass'];
 $query  = "INSERT INTO usuarios(name, email, user, pass) 
             VALUES('$name', '$email', '$user' ,'$pass')"; 
 
-// Verificar que el correo no se repita en la base de datos
+
 $verificar_email = mysqli_query($conn, "SELECT * FROM usuarios WHERE email='$email'");
 if(mysqli_num_rows($verificar_email) > 0){
     echo '
@@ -21,7 +21,7 @@ if(mysqli_num_rows($verificar_email) > 0){
     exit();
 }
 
-// Verificar que el nombre de usuario no se repita en la base de datos
+/
 $verificar_user = mysqli_query($conn, "SELECT * FROM usuarios WHERE user='$user'");
 if(mysqli_num_rows($verificar_user) > 0){
     echo '
@@ -33,7 +33,7 @@ if(mysqli_num_rows($verificar_user) > 0){
     exit();
 }
 
-// Verificar que no sea vacío
+
 if(empty($user) || empty($name) || empty($email) || empty($pass)){
     echo '
         <script>
