@@ -4,18 +4,16 @@ $username = "root";
 $password = "19994710";
 $dbname = "modlogin_registerdb";
 
-// Crear la conexión a la base de datos
 $conexion = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar la conexión
 if ($conexion->connect_error) {
     die("Error de conexión a la base de datos: " . $conexion->connect_error);
 }
 
-// Verificar si se envió el formulario
+
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-    // Recoger los datos del formulario
-    $id_usuario = $_POST["id_usuario"]; // Nuevo campo para el ID de usuario
+  
+    $id_usuario = $_POST["id_usuario"]; 
     $nombre_usuario = $_POST["nombre"];
     $fecha = $_POST["fecha"];
     $hora = $_POST["hora"];
@@ -24,7 +22,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $insertarCita = "INSERT INTO citas (id_usuario, nombre, fecha, hora) VALUES ('$id_usuario', '$nombre_usuario', '$fecha', '$hora')";
 
     if ($conexion->query($insertarCita) === TRUE) {
-        echo "Cita programada con éxito.";
+        header("Location: tabladecitas.html");
+            
     } else {
         echo "Error al programar la cita: " . $conexion->error;
     }
