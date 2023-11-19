@@ -5,19 +5,19 @@ $password = "19994710";
 $dbname = "modlogin_registerdb";
 
 // Crear la conexión a la base de datos
-$conexion = new mysqli($servername, $username, $password, $dbname);
+$conexion_usuarios = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar la conexión
-if ($conexion->connect_error) {
-    die("Error de conexión a la base de datos: " . $conexion->connect_error);
+if ($conexion_usuarios->connect_error) {
+    die("Error de conexión a la base de datos de usuarios: " . $conexion_usuarios->connect_error);
 }
 
-// Consultar los datos de la tabla citas
-$queryCitas = "SELECT id_cita, id_usuario, nombre, fecha, hora FROM citas";
-$resultCitas = $conexion->query($queryCitas);
+// Consulta para obtener la lista de usuarios
+$queryUsuarios = "SELECT ID, name FROM usuarios";
+$resultUsuarios = $conexion_usuarios->query($queryUsuarios);
 
-// Cerrar la conexión a la base de datos
-$conexion->close();
+// Cerrar la conexión a la base de datos de usuarios
+$conexion_usuarios->close();
 ?>
 
 <!DOCTYPE html>
@@ -25,45 +25,31 @@ $conexion->close();
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tabla de Citas</title>
+    <title>Mis Horarios</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
 
 <body>
     <div class="container mt-4">
-        <h1 class="text-center">Tabla de Citas</h1>
-        
-        <?php
-        // Verificar si hay datos en la tabla citas
-        if ($resultCitas->num_rows > 0) {
-            echo '<table class="table table-bordered">
-                    <thead>
-                        <tr>
-                            <th>ID Cita</th>
-                            <th>ID Usuario</th>
-                            <th>Nombre</th>
-                            <th>Fecha</th>
-                            <th>Hora</th>
-                        </tr>
-                    </thead>
-                    <tbody>';
+        <h1 class="text-center">Mis Horarios</h1>
 
-            // Mostrar los datos en la tabla
-            while ($rowCita = $resultCitas->fetch_assoc()) {
-                echo '<tr>
-                        <td>' . $rowCita['id_cita'] . '</td>
-                        <td>' . $rowCita['id_usuario'] . '</td>
-                        <td>' . $rowCita['nombre'] . '</td>
-                        <td>' . $rowCita['fecha'] . '</td>
-                        <td>' . $rowCita['hora'] . '</td>
-                    </tr>';
-            }
+        <form action="mis_horarios.php" method="post">
+            <div class="form-group">
+                <label for="usuario">Selecciona tu usuario:</label>
+                <select name="usuario" id="usuario" class="form-control">
+                    <?php
+                    // Mostrar opciones del dropdown con los nombres de los usuarios
+                    if ($resultUsuarios->num_rows > 0) {
+                        while ($rowUsuario = $resultUsuarios->fetch_assoc()) {
+                            echo "<option value='" . $rowUsuario['ID'] . "'>" . $rowUsuario['name'] . "</option>";
+                        }
+                    }
+                    ?>
+                </select>
+            </div>
 
-            echo '</tbody></table>';
-        } else {
-            echo '<p class="text-center">No hay citas registradas.</p>';
-        }
-        ?>
+            <button type="submit" class="btn btn-primary">Ver Mis Horarios</button>
+        </form>
     </div>
 </body>
 </html>

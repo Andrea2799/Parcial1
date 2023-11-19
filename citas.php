@@ -22,7 +22,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $insertarCita = "INSERT INTO citas (id_usuario, nombre, fecha, hora) VALUES ('$id_usuario', '$nombre_usuario', '$fecha', '$hora')";
 
     if ($conexion->query($insertarCita) === TRUE) {
-        header("Location: tabladecitas.html");
+        header("Location: tabladecitas.php");
             
     } else {
         echo "Error al programar la cita: " . $conexion->error;
@@ -78,6 +78,7 @@ $conexion->close();
         </form>
     </div>
 
+    
     <script>
     document.addEventListener('DOMContentLoaded', function () {
 
@@ -85,9 +86,9 @@ $conexion->close();
         const campoHora = document.getElementById('hora');
 
         flatpickr(campoFecha, {
-            enableTime: true,  // Habilita la selección de fecha y tiempo
-            dateFormat: "Y-m-d H:i",  // Formato de fecha y hora
-            minDate: "today",  // Para evitar seleccionar fechas pasadas
+            enableTime: true,  
+            dateFormat: "Y-m-d H:i",  
+            minDate: "today",
             onChange: function (selectedDates, dateStr, instance) {
                 const eventoFecha = new CustomEvent('fechaSeleccionada', {
                     detail: {
