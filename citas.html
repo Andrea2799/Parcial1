@@ -14,55 +14,63 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
-
 </head>
 
 <body>
-    <h1>Assign Appointments</h1>
+    <div class="container">
+        <h1 class="text-center mt-4">Assign Appointments</h1>
 
-       <div id="calendario"></div>
+        <div id="calendario"></div>
 
-    
-    <div id="horas-disponibles">
-        <h2>Available Hours</h2>
-        <ul id="lista-horas">
-           
-        </ul>
+        <div id="horas-disponibles">
+            <h2>Available Hours</h2>
+            <ul id="lista-horas"></ul>
+        </div>
+
+        <form id="formulario-cita" class="mx-auto mt-4">
+            <label for="nombre">Name:</label>
+            <input type="text" id="nombre" required class="form-control">
+
+            <label for="fecha">Date and Time:</label>
+            <input type="text" id="fecha" readonly class="form-control">
+
+            <label for="hora">Hours:</label>
+            <input type="text" id="hora" readonly class="form-control">
+
+            <button type="submit" class="btn btn-primary mt-3">Schedule Appointment</button>
+        </form>
     </div>
 
-    <form id="formulario-cita">
-        <label for="nombre">Name:</label>
-        <input type="text" id="nombre" required>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
 
-        <label for="fecha">Date:</label>
-        <input type="text" id="fecha" readonly>
+            const campoFecha = document.getElementById('fecha');
+            const campoHora = document.getElementById('hora');
 
-        <label for="hora">Hours:</label>
-        <select id="hora" required>
-        </select>
+            flatpickr(campoFecha, {
+                enableTime: true,  // Habilita la selección de fecha y tiempo
+                dateFormat: "Y-m-d H:i",  // Formato de fecha y hora
+                minDate: "today",  // Para evitar seleccionar fechas pasadas
+                onChange: function (selectedDates, dateStr, instance) {
+                    const eventoFecha = new CustomEvent('fechaSeleccionada', {
+                        detail: {
+                            fecha: selectedDates[0]
+                        }
+                    });
+                    calendario.dispatchEvent(eventoFecha);
+                }
+            });
 
-        <button type="submit">Schedule Appointment</button>
-    </form>
+            // Utiliza Flatpickr para seleccionar la hora
+            flatpickr(campoHora, {
+                enableTime: true,
+                noCalendar: true,
+                dateFormat: "H:i",
+            });
+        });
 
-<script>
-document.addEventListener('DOMContentLoaded', function () {
-    
-    const campoFecha = document.getElementById('fecha');
-    flatpickr(campoFecha, {
-        enableTime: false,  // Si solo deseas seleccionar fecha
-        dateFormat: "Y-m-d",  // Formato de fecha, puedes personalizar según tus necesidades
-        minDate: "today",  // Para evitar seleccionar fechas pasadas
-        onChange: function (selectedDates, dateStr, instance) {
-            const eventoFecha = new CustomEvent('fechaSeleccionada', { detail: { fecha: selectedDates[0] } });
-            calendario.dispatchEvent(eventoFecha);
-        }
-    });
-});
-
-
-
-</script>
-
+    </script>
 
 </body>
+
 </html>
