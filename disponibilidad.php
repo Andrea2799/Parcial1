@@ -28,12 +28,11 @@ $conexion_usuarios->close();
     <title>Mis Horarios</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 </head>
-
 <body>
     <div class="container mt-4">
         <h1 class="text-center">Mis Horarios</h1>
 
-        <form action="mis_horarios.php" method="post">
+        <form id="horarios-form">
             <div class="form-group">
                 <label for="usuario">Selecciona tu usuario:</label>
                 <select name="usuario" id="usuario" class="form-control">
@@ -50,6 +49,37 @@ $conexion_usuarios->close();
 
             <button type="submit" class="btn btn-primary">Ver Mis Horarios</button>
         </form>
+
+        <!-- Contenedor para mostrar los horarios -->
+        <div id="horarios-container" class="mt-4"></div>
     </div>
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            // Manejar el envío del formulario mediante AJAX
+            $('#horarios-form').submit(function (event) {
+                event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
+
+                // Obtener el valor seleccionado del usuario
+                var selectedUser = $('#usuario').val();
+
+                // Realizar la solicitud AJAX
+                $.ajax({
+                    type: 'POST',
+                    url: 'obtener_horarios.php',
+                    data: { usuario: selectedUser },
+                    success: function (response) {
+                        // Actualizar el contenido del contenedor con los horarios disponibles
+                        $('#horarios-container').html(response);
+                    },
+                    error: function () {
+                        alert('Error al obtener los horarios.');
+                    }
+                });
+            });
+        });
+    </script>
 </body>
 </html>
+
