@@ -10,10 +10,8 @@ if ($conexion->connect_error) {
     die("Error de conexión a la base de datos: " . $conexion->connect_error);
 }
 
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  
-    $id_usuario = $_POST["id_usuario"]; 
+    $id_usuario = $_POST["id_usuario"];
     $nombre_usuario = $_POST["nombre"];
     $fecha = $_POST["fecha"];
     $hora = $_POST["hora"];
@@ -23,7 +21,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
     if ($conexion->query($insertarCita) === TRUE) {
         header("Location: tabladecitas.php");
-            
+        exit();
     } else {
         echo "Error al programar la cita: " . $conexion->error;
     }
@@ -132,37 +130,40 @@ $conexion->close();
         </div>
 
         <div class="additional-container" style="display: flex; flex-wrap: wrap; width:100%; height: 100%;">
-        <section style="flex: 1;  height: 100vh; display: flex; justify-content: center; align-items: center;">
+        <section style="flex: 1; height: 100vh; display: flex; justify-content: center; align-items: center;">
             <div class="card-header2 bg-light"
-                style="flex: 1;  height: 100vh; display: flex; justify-content: center; align-items: center;">
+                style="flex: 1; height: 100vh; display: flex; justify-content: center; align-items: center;">
                 <div class="container">
-        <h1 class="text-center mt-4"></h1>
+                    <h1 class="text-center mt-4"></h1>
 
-        <div id="calendario"></div>
+                    <div id="calendario"></div>
 
-        <div id="horas-disponibles">
-            <h2>Available Hours</h2>
-            <ul id="lista-horas"></ul>
-        </div>
+                    <div id="horas-disponibles">
+                        <h2>Available Hours</h2>
+                        <ul id="lista-horas"></ul>
+                    </div>
 
-        <div id="formulario-cita" class="mx-auto mt-4 d-flex flex-column justify-content-center">
-    <label for="id_usuario">User ID:</label>
-    <input type="text" name="id_usuario" id="id_usuario" required class="form-control">
+                    <form method="POST" action="tabladecitas.php"> 
+                        <div id="formulario-cita" class="mx-auto mt-4 d-flex flex-column justify-content-center">
+                            <label for="id_usuario">User ID:</label>
+                            <input type="text" name="id_usuario" id="id_usuario" required class="form-control">
 
-    <label for="nombre">Name:</label>
-    <input type="text" name="nombre" id="nombre" required class="form-control">
+                            <label for="nombre">Name:</label>
+                            <input type="text" name="nombre" id="nombre" required class="form-control">
 
-    <label for="fecha">Date and Time:</label>
-    <input type="text" name="fecha" id="fecha" readonly class="form-control">
+                            <label for="fecha">Date and Time:</label>
+                            <input type="text" name="fecha" id="fecha" readonly class="form-control">
 
-    <label for="hora">Hours:</label>
-    <input type="text" name="hora" id="hora" readonly class="form-control">
+                            <label for="hora">Hours:</label>
+                            <input type="text" name="hora" id="hora" readonly class="form-control">
 
-    <button type="submit" class="btn btn-primary mt-3">Schedule Appointment</button>
-</div>
-
+                            <button type="submit" class="btn btn-primary mt-3">Schedule Appointment</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
     </div>
-
     
     <script>
     document.addEventListener('DOMContentLoaded', function () {
