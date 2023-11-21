@@ -57,10 +57,10 @@ $conexion_usuarios->close();
                             class="ion-md-arrow-dropdown"></i>Quotes</a>
 
                     <div id="hidden-buttons-container">
-                        <a href="citas.php" class="my-custom-block" id="hidden-button-1"><i
-                                class="ion-md-mail"></i>schedule</a>
-                        <a href="" class="my-custom-block" id="hidden-button-2"><i
-                                class="ion-md-cart"></i>Products</a>
+                    <a href="citas.php" class="my-custom-block" id="hidden-button-1"><i
+                                class="ion-md-mail"></i>enter availability</a>
+                        <a href="disponibilidad.php" class="my-custom-block" id="hidden-button-2"><i
+                                class="ion-md-cart"></i><b>see availability</b></a>
                         <a href="" class="my-custom-block" id="hidden-button-3"><i
                                 class="ion-md-book"></i>Orders</a>
                         <a href="" class="my-custom-block" id="hidden-button-4"><i
@@ -117,10 +117,11 @@ $conexion_usuarios->close();
    <br> 
    <br> 
    <br> 
+    
     <div class="container mt-4">
         <h1 class="text-center">Mis Horarios</h1>
 
-        <form id="horarios-form">
+        <form action="mis_horarios.php" method="post">
             <div class="form-group">
                 <label for="usuario">Selecciona tu usuario:</label>
                 <select name="usuario" id="usuario" class="form-control">
@@ -137,37 +138,7 @@ $conexion_usuarios->close();
 
             <button type="submit" class="btn btn-primary">Ver Mis Horarios</button>
         </form>
-
-        <!-- Contenedor para mostrar los horarios -->
-        <div id="horarios-container" class="mt-4"></div>
     </div>
-
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script>
-        $(document).ready(function () {
-            // Manejar el envío del formulario mediante AJAX
-            $('#horarios-form').submit(function (event) {
-                event.preventDefault(); // Evitar el comportamiento predeterminado del formulario
-
-                // Obtener el valor seleccionado del usuario
-                var selectedUser = $('#usuario').val();
-
-                // Realizar la solicitud AJAX
-                $.ajax({
-                    type: 'POST',
-                    url: 'obtener_horarios.php',
-                    data: { usuario: selectedUser },
-                    success: function (response) {
-                        // Actualizar el contenido del contenedor con los horarios disponibles
-                        $('#horarios-container').html(response);
-                    },
-                    error: function () {
-                        alert('Error al obtener los horarios.');
-                    }
-                });
-            });
-        });
-    </script>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
