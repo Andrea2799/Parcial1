@@ -4,19 +4,18 @@ $username = "root";
 $password = "";
 $dbname = "modlogin_registerdb";
 
-// Crear la conexión a la base de datos
+
 $conexion_citas = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar la conexión
 if ($conexion_citas->connect_error) {
     die("Error de conexión a la base de datos de citas: " . $conexion_citas->connect_error);
 }
 
-// Consulta para obtener la lista de nombres de la tabla "citas"
+
 $queryNombres = "SELECT DISTINCT nombre FROM citas";
 $resultNombres = $conexion_citas->query($queryNombres);
 
-// Cerrar la conexión a la base de datos de citas
+
 $conexion_citas->close();
 ?>
 
@@ -122,9 +121,9 @@ $conexion_citas->close();
         <h1 class="text-center">Mis Horarios</h1>
 
         <!-- Parte relevante del formulario en tu página actual (mis_horarios.php) -->
-        <form action="mis_horarios.php" method="post">
+        <form action="historial.php" method="post">
             <div class="form-group">
-                <label for="nombre">Selecciona un nombre:</label>
+                <label for="nombre">Select a user:</label>
                 <select name="nombre" id="nombre" class="form-control">
                     <?php
                     // Mostrar opciones del dropdown con los nombres de la tabla "citas"
@@ -137,7 +136,7 @@ $conexion_citas->close();
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary" name="ver_horarios">Ver Mis Horarios</button>
+            <button type="submit" class="btn btn-primary" name="ver_horarios">See My Schedules</button>
         </form>
     </div>
 
