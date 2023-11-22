@@ -1,3 +1,25 @@
+<?php
+$servername = "localhost";
+$username = "root";
+$password = "19994710";
+$dbname = "modlogin_registerdb";
+
+// Crear la conexión a la base de datos
+$conexion_usuarios = new mysqli($servername, $username, $password, $dbname);
+
+// Verificar la conexión
+if ($conexion_usuarios->connect_error) {
+    die("Error de conexión a la base de datos de usuarios: " . $conexion_usuarios->connect_error);
+}
+
+// Consulta para obtener la lista de usuarios
+$queryUsuarios = "SELECT ID, name FROM usuarios";
+$resultUsuarios = $conexion_usuarios->query($queryUsuarios);
+
+// Cerrar la conexión a la base de datos de usuarios
+$conexion_usuarios->close();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -12,7 +34,7 @@
     <link rel="stylesheet" href="styles.css">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
-
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
 </head>
 
@@ -35,10 +57,10 @@
                             class="ion-md-arrow-dropdown"></i>Quotes</a>
 
                     <div id="hidden-buttons-container">
-                        <a href="citas.php" class="my-custom-block" id="hidden-button-1"><i
-                                class="ion-md-mail"></i>schedule</a>
-                        <a href="" class="my-custom-block" id="hidden-button-2"><i
-                                class="ion-md-cart"></i>Products</a>
+                    <a href="citas.php" class="my-custom-block" id="hidden-button-1"><i
+                                class="ion-md-mail"></i>enter availability</a>
+                        <a href="disponibilidad.php" class="my-custom-block" id="hidden-button-2"><i
+                                class="ion-md-cart"></i><b>see availability</b></a>
                         <a href="" class="my-custom-block" id="hidden-button-3"><i
                                 class="ion-md-book"></i>Orders</a>
                         <a href="" class="my-custom-block" id="hidden-button-4"><i
@@ -91,7 +113,32 @@
     </div>
     </div>
     </div>
+   <br> 
+   <br> 
+   <br> 
+   <br> 
+    
+    <div class="container mt-4">
+        <h1 class="text-center">Mis Horarios</h1>
 
+        <form action="mis_horarios.php" method="post">
+            <div class="form-group">
+                <label for="usuario">Selecciona tu usuario:</label>
+                <select name="usuario" id="usuario" class="form-control">
+                    <?php
+                    // Mostrar opciones del dropdown con los nombres de los usuarios
+                    if ($resultUsuarios->num_rows > 0) {
+                        while ($rowUsuario = $resultUsuarios->fetch_assoc()) {
+                            echo "<option value='" . $rowUsuario['ID'] . "'>" . $rowUsuario['name'] . "</option>";
+                        }
+                    }
+                    ?>
+                </select>
+            </div>
+
+            <button type="submit" class="btn btn-primary">Ver Mis Horarios</button>
+        </form>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
@@ -117,3 +164,4 @@
 </body>
 
 </html>
+
