@@ -1,23 +1,23 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "19994710";
+$password = "";
 $dbname = "modlogin_registerdb";
 
 // Crear la conexión a la base de datos
-$conexion_usuarios = new mysqli($servername, $username, $password, $dbname);
+$conexion_citas = new mysqli($servername, $username, $password, $dbname);
 
 // Verificar la conexión
-if ($conexion_usuarios->connect_error) {
-    die("Error de conexión a la base de datos de usuarios: " . $conexion_usuarios->connect_error);
+if ($conexion_citas->connect_error) {
+    die("Error de conexión a la base de datos de citas: " . $conexion_citas->connect_error);
 }
 
-// Consulta para obtener la lista de usuarios
-$queryUsuarios = "SELECT ID, name FROM usuarios";
-$resultUsuarios = $conexion_usuarios->query($queryUsuarios);
+// Consulta para obtener la lista de nombres de la tabla "citas"
+$queryNombres = "SELECT DISTINCT nombre FROM citas";
+$resultNombres = $conexion_citas->query($queryNombres);
 
-// Cerrar la conexión a la base de datos de usuarios
-$conexion_usuarios->close();
+// Cerrar la conexión a la base de datos de citas
+$conexion_citas->close();
 ?>
 
 <!DOCTYPE html>
@@ -118,27 +118,31 @@ $conexion_usuarios->close();
    <br> 
    <br> 
     
-    <div class="container mt-4">
+   <div class="container mt-4">
         <h1 class="text-center">Mis Horarios</h1>
 
+        <!-- Parte relevante del formulario en tu página actual (mis_horarios.php) -->
         <form action="mis_horarios.php" method="post">
             <div class="form-group">
-                <label for="usuario">Selecciona tu usuario:</label>
-                <select name="usuario" id="usuario" class="form-control">
+                <label for="nombre">Selecciona un nombre:</label>
+                <select name="nombre" id="nombre" class="form-control">
                     <?php
-                    // Mostrar opciones del dropdown con los nombres de los usuarios
-                    if ($resultUsuarios->num_rows > 0) {
-                        while ($rowUsuario = $resultUsuarios->fetch_assoc()) {
-                            echo "<option value='" . $rowUsuario['ID'] . "'>" . $rowUsuario['name'] . "</option>";
+                    // Mostrar opciones del dropdown con los nombres de la tabla "citas"
+                    if ($resultNombres->num_rows > 0) {
+                        while ($rowNombre = $resultNombres->fetch_assoc()) {
+                            echo "<option value='" . $rowNombre['nombre'] . "'>" . $rowNombre['nombre'] . "</option>";
                         }
                     }
                     ?>
                 </select>
             </div>
 
-            <button type="submit" class="btn btn-primary">Ver Mis Horarios</button>
+            <button type="submit" class="btn btn-primary" name="ver_horarios">Ver Mis Horarios</button>
         </form>
     </div>
+
+
+  
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
