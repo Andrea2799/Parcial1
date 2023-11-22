@@ -4,15 +4,15 @@ $username = "root";
 $password = "";
 $dbname = "modlogin_registerdb";
 
-// Crear la conexión a la base de datos
+
 $conexion_citas = new mysqli($servername, $username, $password, $dbname);
 
-// Verificar la conexión
+
 if ($conexion_citas->connect_error) {
     die("Error de conexión a la base de datos de citas: " . $conexion_citas->connect_error);
 }
 
-// Obtener la información de la tabla "citas" basada en el nombre seleccionado
+
 if (isset($_POST['ver_horarios'])) {
     $nombreSeleccionado = $_POST['nombre'];
 
@@ -20,7 +20,7 @@ if (isset($_POST['ver_horarios'])) {
     $resultHorarios = $conexion_citas->query($queryHorarios);
 }
 
-// Cerrar la conexión a la base de datos de citas
+
 $conexion_citas->close();
 ?>
 
@@ -45,7 +45,7 @@ $conexion_citas->close();
     <div class="container mt-4">
         <h1 class="text-center">My Schedules for <?php echo isset($nombreSeleccionado) ? $nombreSeleccionado : ''; ?></h1>
 
-        <!-- Tabla para mostrar los horarios -->
+        
         <table class="table">
             <thead>
                 <tr>
@@ -57,14 +57,14 @@ $conexion_citas->close();
             </thead>
             <tbody>
                 <?php
-                // Mostrar los horarios obtenidos de la tabla "citas"
+                
                 if (isset($resultHorarios) && $resultHorarios->num_rows > 0) {
                     while ($rowHorario = $resultHorarios->fetch_assoc()) {
                         echo "<tr>";
                         echo "<td>" . $rowHorario['nombre'] . "</td>";
                         echo "<td>" . $rowHorario['fecha'] . "</td>";
                         echo "<td>" . $rowHorario['hora'] . "</td>";
-                        echo "<td>Additional Information</td>"; // Puedes ajustar esta columna según tus necesidades
+                        echo "<td>Additional Information</td>"; 
                         echo "</tr>";
                     }
                 } else {
