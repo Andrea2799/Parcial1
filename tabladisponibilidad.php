@@ -23,25 +23,24 @@
 </head>
 <body>
 
-<h2>Tabla de Citas</h2>
+<h2>Appointment Table</h2>
 
 <table>
     <tr>
-        <th>Nombre</th>
-        <th>Fecha</th>
-        <th>Hora</th>
+        <th>Name</th> 
+        <th>Date</th>
+        <th>Hours</th>
     </tr>
 
     <?php
    $servername = "localhost";
    $username = "root";
-   $password = "19994710";
+   $password = "";
    $dbname = "modlogin_registerdb";
 
-    // Crear conexión
-    $conexion = new mysqli($servername, $username, $password, $dbname);
 
-    // Verificar la conexión
+    $conexion = new mysqli($servername, $username, $password, $dbname);
+    
     if ($conexion->connect_error) {
         die("Error de conexión a la base de datos: " . $conexion->connect_error);
     }
@@ -50,7 +49,7 @@
     $consulta = "SELECT nombre, fecha, hora FROM citas";
     $resultado = $conexion->query($consulta);
 
-    // Mostrar los datos en la tabla
+    
     if ($resultado->num_rows > 0) {
         while ($fila = $resultado->fetch_assoc()) {
             echo "<tr>

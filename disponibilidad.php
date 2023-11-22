@@ -118,15 +118,15 @@ $conexion_citas->close();
    <br> 
     
    <div class="container mt-4">
-        <h1 class="text-center">Mis Horarios</h1>
+        <h1 class="text-center">My schedules</h1>
 
-        <!-- Parte relevante del formulario en tu página actual (mis_horarios.php) -->
+        
         <form action="historial.php" method="post">
             <div class="form-group">
                 <label for="nombre">Select a user:</label>
                 <select name="nombre" id="nombre" class="form-control">
                     <?php
-                    // Mostrar opciones del dropdown con los nombres de la tabla "citas"
+                    
                     if ($resultNombres->num_rows > 0) {
                         while ($rowNombre = $resultNombres->fetch_assoc()) {
                             echo "<option value='" . $rowNombre['nombre'] . "'>" . $rowNombre['nombre'] . "</option>";
@@ -147,12 +147,12 @@ $conexion_citas->close();
     <script>
         $(document).ready(function () {
             $("#perfil-button").click(function (e) {
-                e.preventDefault(); // Previene el comportamiento predeterminado del enlace
-                $("#hidden-buttons-container5").toggle(); // Muestra u oculta el botón "Cerrar sesión" al hacer clic en "perfil-button"
+                e.preventDefault(); 
+                $("#hidden-buttons-container5").toggle(); 
             });
         });
     </script>
-    <!-- para hacer que el botón custom-view se despliegue -->
+    
     <script>
         const customViewButton = document.getElementById('custom-view-button');
         const hiddenButtonsContainer = document.getElementById('hidden-buttons-container');

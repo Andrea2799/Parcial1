@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "";
+$password = "19994710Andrea";
 $dbname = "modlogin_registerdb";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
