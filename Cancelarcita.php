@@ -1,7 +1,7 @@
 <?php
 $servername = "localhost";
 $username = "root";
-$password = "19994710";
+$password = "";
 $dbname = "modlogin_registerdb";
 
 $idCita = $_GET['id'];
