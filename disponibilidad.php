@@ -48,7 +48,7 @@ $conexion_citas->close();
 
             <div class="menu-container" id="menu-container">
                 <div class="menu">
-                    <a href="indexmod.html" class="my-custom-block"><i class="ion-md-apps"></i>Overview</a>
+                    <a href="indexmod_admin.html" class="my-custom-block"><i class="ion-md-apps"></i>Overview</a>
                     <a href="" class="my-custom-block" id="Summary-button"><i
                             class="ion-md-funnel"></i>Summary</a>
 

@@ -87,7 +87,7 @@ $conexion->close();
 
             <div class="menu-container" id="menu-container">
                 <div class="menu">
-                    <a href="indexmod.html" class="my-custom-block"><i class="ion-md-apps"></i>Overview</a>
+                    <a href="indexmod_admin.html" class="my-custom-block"><i class="ion-md-apps"></i>Overview</a>
                     <a href="" class="my-custom-block" id="Summary-button"><i
                             class="ion-md-funnel"></i>Summary</a>
 
@@ -95,12 +95,12 @@ $conexion->close();
                             class="ion-md-arrow-dropdown"></i></b>Quotes<b></b></a>
 
                     <div id="hidden-buttons-container">
-                        <a href="citas.php" class="my-custom-block" id="hidden-button-1"><i
+                        <a href="citas_admin.php" class="my-custom-block" id="hidden-button-1"><i
                                 class="ion-md-mail"></i>enter availability</a>
-                        <a href="disponibilidad.php" class="my-custom-block" id="hidden-button-2"><i
+                        <a href="disponibilidad_admin.php" class="my-custom-block" id="hidden-button-2"><i
                                 class="ion-md-cart"></i><b>see availability</b></a>
                         <a href="" class="my-custom-block" id="hidden-button-3"><i
-                                class="ion-md-book"></i>Orders</a>
+                        class="ion-md-book"></i>Admin users</a>
                         <a href="" class="my-custom-block" id="hidden-button-4"><i
                                 class="ion-md-person"></i>Customers</a>
                     </div>
@@ -115,17 +115,12 @@ $conexion->close();
             </div>
         </div>
 
-
-
         <div class="horizontal-container" style="display: flex; align-items: center;">
 
-            <div class="left-column">
-                <div style="display: flex; flex-direction: column;">
-                    <b>Welcome
-                        <p style="color: #8c8c8d; font-size: 18px;">
-                        </p>
-                </div>
-            </div>
+<div style="display: flex; flex-direction: column;">
+    <b>Welcome administrator <span id="admin-name"></span></b>
+    <p style="color: #8c8c8d; font-size: 18px;"></p>
+</div>
 
 
             <ul class="navbar-nav ml-auto">
@@ -134,7 +129,7 @@ $conexion->close();
                         <a href="#" class="my-custom-block" id="perfil-button"
                             style="color:black !important; text-decoration: none !important; font-family: 'Source Sans 3', sans-serif !important; font-size: 16px !important; background-color: transparent !important;font-weight: normal !important;">
                             <img src="" class="img-fluid rounded-circle avatar mr-2 small-avatar">
-                            User
+                            <span id="user-name">User</span>
                             <i class="ion-md-arrow-dropdown"></i>
                         </a>
                         <div id="hidden-buttons-container5" class="position-absolute"
@@ -223,13 +218,38 @@ $conexion->close();
     });
 </script>
 
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script>
         $(document).ready(function () {
+            // Manejar el clic en #perfil-button para mostrar/ocultar #hidden-buttons-container5
             $("#perfil-button").click(function (e) {
                 e.preventDefault();
-                $("#hidden-buttons-container5").toggle(); // Muestra u oculta el botón "Cerrar sesión" al hacer clic en "perfil-button"
+                $("#hidden-buttons-container5").toggle();
+            });
+    
+            // Obtener el nombre del administrador usando AJAX
+            $.ajax({
+                url: "get_admin_name.php",
+                type: "GET",
+                success: function (data) {
+                    $("#admin-name").text(data);
+                },
+                error: function () {
+                    $("#admin-name").text("Error al obtener el nombre");
+                }
+            });
+
+
+        // Obtener el nombre de usuario usando AJAX
+            $.ajax({
+                url: "get_user_name.php", // Ajusta la URL según tu estructura de archivos
+                type: "GET",
+                success: function (data) {
+                    $("#user-name").text(data);
+                },
+                error: function () {
+                    $("#user-name").text("Error al obtener el nombre de usuario");
+                }
             });
         });
     </script>
