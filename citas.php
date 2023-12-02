@@ -10,40 +10,51 @@ if ($conexion->connect_error) {
     die("Error de conexión a la base de datos: " . $conexion->connect_error);
 }
 
+$error = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
-  
-    $id_usuario = $_POST["id_usuario"]; 
-    $nombre_usuario = $_POST["nombre"];
-    $fecha = $_POST["fecha"];
-    $hora = $_POST["hora"];
+    $id_usuario = trim($_POST["id_usuario"]);
+$nombre_usuario = trim($_POST["nombre"]);
+$fecha = trim($_POST["fecha"]);
+$hora = trim($_POST["hora"]);
 
-    // Insertar datos en la tabla de citas
-    $insertarCita = "INSERT INTO citas (id_usuario, nombre, fecha, hora) VALUES ('$id_usuario', '$nombre_usuario', '$fecha', '$hora')";
+// Verificar si ya existe una cita para el usuario y la fecha seleccionada
+$verificarCita = "SELECT * FROM citas WHERE id_usuario=? AND fecha=? AND hora=?";
 
-    if ($conexion->query($insertarCita) === TRUE) {
-        header("Location: tabladisponibilidad.php");
-            
-    } else {
-        echo "Error al programar la cita: " . $conexion->error;
+$stmt = $conexion->prepare($verificarCita);
+$stmt->bind_param("sss", $id_usuario, $fecha, $hora);
+$stmt->execute();
+echo "Consulta de verificación: " . $verificarCita . "<br>";
+
+$resultadoVerificacion = $stmt->get_result();
+
+if ($resultadoVerificacion->num_rows > 0) {
+    // Ya existe una cita para este usuario en la fecha y hora seleccionadas
+    $error = "Ya existe una cita para este usuario en la fecha y hora seleccionadas.";
+} else {
+        // Insertar datos en la tabla de citas
+        $insertarCita = "INSERT INTO citas (id_usuario, nombre, fecha, hora) VALUES (?, ?, ?, ?)";
+        
+        $stmt = $conexion->prepare($insertarCita);
+        $stmt->bind_param("ssss", $id_usuario, $nombre_usuario, $fecha, $hora);
+        
+        if ($stmt->execute()) {
+            header("Location: tabladisponibilidad.php");
+        } else {
+            echo "Error al programar la cita: " . $stmt->error;
+        }
     }
+    
+    $stmt->close();
 }
-/////////////////////////////////////////////////////
-// Crear la conexión a la base de datos
+
+// conexion a usuarios
 $conexion_usuarios = new mysqli($servername, $username, $password, $dbname);
-if ($conexion_usuarios->connect_error) {
-    die("Error de conexión a la base de datos de usuarios: " . $conexion_usuarios->connect_error);
-}
-
-// Consulta para obtener la lista de usuarios
-$queryUsuarios = "SELECT ID, name FROM usuarios";
-$resultUsuarios = $conexion_usuarios->query($queryUsuarios);
-
+// cierre de conexion
 $conexion_usuarios->close();
-
-
 $conexion->close();
 ?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -171,10 +182,14 @@ $conexion->close();
         </form>
     </div>
 
-    
+    <?php
+    if (!empty($error)) {
+        echo '<script>alert("' . $error . '");</script>';
+    }
+    ?>
+
     <script>
     document.addEventListener('DOMContentLoaded', function () {
-
         const campoFecha = document.getElementById('fecha');
         const campoHora = document.getElementById('hora');
 
@@ -198,6 +213,13 @@ $conexion->close();
             noCalendar: true,
             dateFormat: "H:i",
         });
+
+        // Agrega la siguiente función para mostrar una alerta si el servidor devuelve un mensaje de error
+        <?php
+        if (isset($_GET['error'])) {
+            echo 'alert("' . $_GET['error'] . '");';
+        }
+        ?>
     });
 </script>
 
