@@ -6,8 +6,9 @@ $email = $_POST['email'];
 $user = $_POST['user'];
 $pass = $_POST['pass'];
 
-$query  = "INSERT INTO usuarios(name, email, user, pass) 
-            VALUES('$name', '$email', '$user' ,'$pass')"; 
+// Agregar id_cargo con valor predeterminado
+$query  = "INSERT INTO usuarios(name, email, user, pass, id_cargo) 
+            VALUES('$name', '$email', '$user' ,'$pass', 2)";
 
 
 $verificar_email = mysqli_query($conn, "SELECT * FROM usuarios WHERE email='$email'");
@@ -21,7 +22,6 @@ if(mysqli_num_rows($verificar_email) > 0){
     exit();
 }
 
-/
 $verificar_user = mysqli_query($conn, "SELECT * FROM usuarios WHERE user='$user'");
 if(mysqli_num_rows($verificar_user) > 0){
     echo '
@@ -33,8 +33,7 @@ if(mysqli_num_rows($verificar_user) > 0){
     exit();
 }
 
-
-if(empty($user) || empty($name) || empty($email) || empty($pass)){
+if(empty($user) || empty($name) || empty($email) || empty($pass) ){
     echo '
         <script>
             alert("Please, fill the required data");
