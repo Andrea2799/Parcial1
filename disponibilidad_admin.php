@@ -35,6 +35,23 @@ $conexion_citas->close();
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 
+
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-button img {
+            width: 50px;
+            /* Ajusta el tamaño según tus preferencias */
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
+
 </head>
 
 <body style="background-color: #f3f3f3;">
@@ -109,6 +126,11 @@ $conexion_citas->close();
     </div>
     </div>
     </div>
+    <div class="whatsapp-button">
+        <a href="https://wa.me/3013519794" target="_blank">
+          <img src="whatsapp-icon-png.png" alt="WhatsApp">
+        </a>
+      </div>
    <br> 
    <br> 
    <br> 

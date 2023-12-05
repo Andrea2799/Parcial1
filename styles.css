@@ -343,3 +343,17 @@ button {
 button:hover {
     background-color: #0088cc;
 }
+
+.whatsapp-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    z-index: 1000;
+  }
+  
+  .whatsapp-button img {
+    width: 50px; /* Ajusta el tamaño según tus preferencias */
+    height: auto;
+    cursor: pointer;
+  }
+  
