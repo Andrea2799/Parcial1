@@ -20,7 +20,7 @@
             background-color: #f2f2f2;
         }
     </style>
-        <style>
+    <style>
         .whatsapp-button {
             position: fixed;
             bottom: 20px;
@@ -46,21 +46,15 @@
         <th>Date</th>
         <th>Hours</th>
     </tr>
-    <div class="whatsapp-button">
-        <a href="https://wa.me/3013519794" target="_blank">
-          <img src="whatsapp-icon-png.png" alt="WhatsApp">
-        </a>
-      </div>
-
+    
     <?php
-   $servername = "localhost";
-   $username = "root";
-   $password = "";
-   $dbname = "modlogin_registerdb";
-
+    $servername = "localhost";
+    $username = "root";
+    $password = "";
+    $dbname = "modlogin_registerdb";
 
     $conexion = new mysqli($servername, $username, $password, $dbname);
-    
+
     if ($conexion->connect_error) {
         die("Error de conexión a la base de datos: " . $conexion->connect_error);
     }
@@ -69,7 +63,6 @@
     $consulta = "SELECT nombre, fecha, hora FROM citas";
     $resultado = $conexion->query($consulta);
 
-    
     if ($resultado->num_rows > 0) {
         while ($fila = $resultado->fetch_assoc()) {
             echo "<tr>
@@ -87,6 +80,17 @@
     ?>
 
 </table>
+
+<div class="whatsapp-button">
+    <a href="https://wa.me/3013519794" target="_blank">
+        <img src="whatsapp-icon-png.png" alt="WhatsApp">
+    </a>
+</div>
+
+<!-- Botón para volver a indexmod.html -->
+<div style="margin-top: 20px;">
+    <a href="indexmod.html" class="btn btn-primary">back</a>
+</div>
 
 </body>
 </html>
