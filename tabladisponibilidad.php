@@ -20,6 +20,21 @@
             background-color: #f2f2f2;
         }
     </style>
+        <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-button img {
+            width: 50px;
+            /* Ajusta el tamaño según tus preferencias */
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
 </head>
 <body>
 
@@ -31,6 +46,11 @@
         <th>Date</th>
         <th>Hours</th>
     </tr>
+    <div class="whatsapp-button">
+        <a href="https://wa.me/3013519794" target="_blank">
+          <img src="whatsapp-icon-png.png" alt="WhatsApp">
+        </a>
+      </div>
 
     <?php
    $servername = "localhost";

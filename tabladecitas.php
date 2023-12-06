@@ -27,6 +27,21 @@ $conexion_usuarios->close();
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Mis Horarios</title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-button img {
+            width: 50px;
+            /* Ajusta el tamaño según tus preferencias */
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
 </head>
 
 <body>
@@ -51,5 +66,10 @@ $conexion_usuarios->close();
             <button type="submit" class="btn btn-primary">Ver Mis Horarios</button>
         </form>
     </div>
+    <div class="whatsapp-button">
+        <a href="https://wa.me/3013519794" target="_blank">
+          <img src="whatsapp-icon-png.png" alt="WhatsApp">
+        </a>
+      </div>
 </body>
 </html>

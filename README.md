@@ -29,6 +29,15 @@ Login screen where you confirm that you are in the database to give you access t
 Help screen with frequently asked user questions
 ## Chat Screen (messages):
 Message screen with support
+## Edit profile screen:
+This screen could not be functional as there were problems connecting to the database.
+## WhatsApp CTA button:
+A button was established that redirects to the SCRUM master's number in order to talk or ask about any questions.
+## Cancel appointment button:
+This could not be done, as there were problems with the appointment scheduling process.
+
+
+
 
 # Multimedia Resources
 1. Company logo.

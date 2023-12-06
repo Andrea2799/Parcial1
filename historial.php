@@ -133,6 +133,11 @@ $conexion_citas->close();
     </div>
     </div>
     </div>
+    <div class="whatsapp-button">
+            <a href="https://wa.me/3013519794" target="_blank">
+                <img src="whatsapp-icon-png.png" alt="WhatsApp">
+            </a>
+        </div>
    <br> 
    <br> 
    <br> 

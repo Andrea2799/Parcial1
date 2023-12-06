@@ -63,6 +63,21 @@ $conexion_usuarios->close();
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script>
+    <style>
+        .whatsapp-button {
+            position: fixed;
+            bottom: 20px;
+            right: 20px;
+            z-index: 1000;
+        }
+
+        .whatsapp-button img {
+            width: 50px;
+            /* Ajusta el tamaño según tus preferencias */
+            height: auto;
+            cursor: pointer;
+        }
+    </style>
     
    
    <script>
@@ -162,6 +177,11 @@ $conexion_usuarios->close();
     </div>
     </div>
     </div>
+    <div class="whatsapp-button">
+            <a href="https://wa.me/3013519794" target="_blank">
+                <img src="whatsapp-icon-png.png" alt="WhatsApp">
+            </a>
+        </div>
 
     <div class="container mt-4">
         <h1 class="text-center">Usuarios</h1>
