@@ -1,15 +1,14 @@
 
 # Introduction
-A CRM application is being built for partial 1 of the software construction project subject.
+In this readme we will be showing the screens of a new module of the CRM application, in which you can schedule, delete, register and or manage an appointment page
 
-This project represents the creation and development of Tecnoservice CRM, a Customer Relationship Management (CRM) solution designed for TECNOSERVICE. The fundamental purpose of this system is to improve customer relationship management, increase operational efficiency.
+note: this application is still in development
 
 # Dates
-1. Analysis Date: 08/13/2023.
-2. Design Date: 08/20/2023.
-3. Construction Date: 08/27/2023.
-4. Testing Date: 04/10/2023.
-5. Startup Date: 04/10/2023.
+This project is divided into three sprints:
+first sprint: 07/10/2023
+second srpint: 22/10/2023
+third sprint 0512/2023
 
 # Project Screen:
 Tecnoservice CRM consists of two screens, a main one called: index.html and a secondary one called summary.html
@@ -37,14 +36,24 @@ This screen could not be functional as there were problems connecting to the dat
 A button was established that redirects to the SCRUM master's number in order to talk or ask about any questions.
 ## Cancel appointment button:
 This could not be done, as there were problems with the appointment scheduling process.
+## disponibilidad screem: 
+The availability screen is used so that the user can see what available appointments other users have
+## citas screem:
+esta pantalla sirve para escoger una fecha y una hora que indidcara un horario disponible
+Note:there is a bug with the duplication of dates, save duplicate dates, this is still being fixed
+## historial screen:
+shows a table with the appointment history and should also show who scheduled appointments with that user
+
+## admin screens
+screens are created to which only the administrator has access 
+### indexmod_admin screen
+### disponibilidad_admin screen
+### historial_admin screen
+### citas_admin screen
+### users_admin screen
 
 
 
-
-# Multimedia Resources
-1. Company logo.
-2. Profile Photo.
-3. Other Images.
 
 # Files and Documentation
 1. CSS File: The project includes a custom CSS file for the look and feel of the app. You can find it in path to the CSS file.
@@ -61,13 +70,17 @@ This could not be done, as there were problems with the appointment scheduling p
 ### registro_usuario_be.php
 ### cambiar_contrasena.php
 ### actualizar_perfil.php
+### disponibilidad.php
+### citas.php
+### historial.php
 
 These files are connected to the CRM Tecnoservice database
 
 # Base de Datos MySQL
 The system uses a MySQL database to store data. Specific tables have been created to manage the information. Some of the key tables are listed below: 
-1. PRODUCTS.
-2. LOG IN.
+1. USUARIOS.
+2. CITAS.
+3. CARGO
 
 # set up
 To run it locally you need:
@@ -84,7 +97,8 @@ To run it locally you need:
 
 # Collaboration
 1. mateo_betancur82201@elpoli.edu.co
-2. Miguel_ortiz82192@elpoli.Edu.co
+2. andrea_coronado20212@elpoli.edu.co   
+3. Miguel_ortiz82192@elpoli.Edu.co
 4. Alejandro_82162@elpoli.edu.co
 
 # Project status
