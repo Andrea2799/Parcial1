@@ -6,9 +6,9 @@ note: this application is still in development
 
 # Dates
 This project is divided into three sprints:
-first sprint: 07/10/2023
-second srpint: 22/10/2023
-third sprint 0512/2023
+### first sprint: 07/10/2023
+### second srpint: 22/10/2023
+### third sprint 0512/2023
 
 # Project Screen:
 Tecnoservice CRM consists of two screens, a main one called: index.html and a secondary one called summary.html
