@@ -65,10 +65,10 @@ $result = $conexioncita->query($sql);
 if($result->num_rows >= 0) {
     while($row=$result->fetch_assoc()){
         if($row["id_usuario"] != 0){
-            echo " La cita no esta disponible";
+            echo " Appointment is not available";
         }
         else{
-            echo "La cita esta disponible";
+            echo "Appointment is available";
         }
 
     }
