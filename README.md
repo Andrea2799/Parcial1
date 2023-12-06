@@ -29,6 +29,8 @@ Login screen where you confirm that you are in the database to give you access t
 Help screen with frequently asked user questions
 ## Chat Screen (messages):
 Message screen with support
+## schedule an appointment
+This could not be done, as there were problems with the appointment scheduling logic.
 ## Edit profile screen:
 This screen could not be functional as there were problems connecting to the database.
 ## WhatsApp CTA button:
@@ -49,11 +51,16 @@ This could not be done, as there were problems with the appointment scheduling p
 
 2. Text File (TXT): This file contains the creation of a database called CRMDATABASE. You can access it en route to the TXT file.
 
-3. PHP files: The project has three PHP files:
+3. PHP files: The project has PHP files:
 ### bd.php
 ### bdup.php
 ### productos.php
 ### blog.php
+### login_user.php
+### modconn.php
+### registro_usuario_be.php
+### cambiar_contrasena.php
+### actualizar_perfil.php
 
 These files are connected to the CRM Tecnoservice database
 
@@ -78,7 +85,7 @@ To run it locally you need:
 # Collaboration
 1. mateo_betancur82201@elpoli.edu.co
 2. Miguel_ortiz82192@elpoli.Edu.co
-4. sebastian_garces82162@elpoli.edu.co
+4. Alejandro_82162@elpoli.edu.co
 
 # Project status
 Project status
